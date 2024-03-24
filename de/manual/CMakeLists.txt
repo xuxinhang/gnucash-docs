@@ -52,6 +52,13 @@ set (figures
         figures/Busnss_Tax_Organize.png
         figures/Busnss_Terms_Edit.png
         figures/Busnss_Terms_Organize.png
+        figures/Busnss_Bill_Edit.png
+        figures/Busnss_Bill_New.png
+        figures/Busnss_Bill_Payment.png
+        figures/Busnss_Bill_Post.png
+        figures/Busnss_Vendor_Job.png
+        figures/Busnss_Vendor_New_1.png
+        figures/Busnss_Vendor_New_2.png
         figures/CSV_Import_transactions_Preview.png
         figures/CSV_Transaction_Import_Assistant.png
         figures/Choose_Export_Settings.png

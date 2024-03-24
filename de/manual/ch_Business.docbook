@@ -2102,615 +2102,1047 @@
     </sect2>
   </sect1>
 <!-- start of A/P -->
-  <sect1 id="busnss-ap-components">
-    <title>Accounts Payable</title>
-
-    <para>&app; has an integrated accounts payable system. As with <emphasis>Accounts Receivable</emphasis>
-      you must have an <emphasis>Accounts Payable</emphasis> account set up under
-      <emphasis>Liabilities</emphasis> for each currency in which you will issue invoices. The
-      <emphasis>Accounts Payable</emphasis> accounts accrue the amounts you owe to others, so bills
-      credit these accounts and payments and credit memos debit these accounts. Generally you do not
-      directly work with this account but use the four integrated &app; A/P application components.
-      The A/P components are available from the &mc.bus.ven; sub-menu.
-    </para>
-
-    <para>These A/P components are:
-    </para>
-
-    <itemizedlist>
-      <listitem>
-        <para><guilabel>Vendors</guilabel> are people or companies from which you buy products or services on
-          credit.
-        </para>
-      </listitem>
-
-      <listitem>
-        <para><guilabel>Bills</guilabel> represent the physical bills vendors send to request payment from you. A
-          bill contains an itemized list of things you purchased.
-        </para>
-      </listitem>
-
-      <listitem>
-        <para><guilabel>Jobs</guilabel> (optional) is where you register Vendor Jobs. Jobs are a mechanism by
-          which you can group multiple bills from a particular vendor.
-        </para>
-      </listitem>
-
-      <listitem>
-        <para><guilabel>Process Payments</guilabel> is where you register payments to a vendor to whom you owe
-          money.
-        </para>
-      </listitem>
-    </itemizedlist>
-
-    <para>The following sections introduce the individual Accounts Payable application components.
-    </para>
-  </sect1>
-
   <sect1 id="busnss-ap-vendors">
-    <title>Vendors</title>
+    <title>Lieferanten</title>
 
-    <para>A vendor is a company or person from whom you purchase goods or services. Vendors must be registered
-      within the A/P system.
-    </para>
-
-    <sect2 id="busnss-ap-vendornew">
-      <title>New</title>
-
-      <para>To register a new vendor, select the &mc.bus.ven.new-ven; menu item. Fill in general information
-        about the vendor, such as Company Name, Address, Phone, Fax, etc. Below is a list of the
-        other options:
+    <abstract>
+      <para>In der Kreditorenbuchhaltung werden die Beträge erfasst, die Sie anderen schulden. Rechnungen von
+        Lieferaten werden auf diese Konten gutgeschrieben, während Zahlungen und Gutschriften diese
+        Konten belasten. Hierfür müssen Sie <emphasis>Kreditorenkonten</emphasis> für jede in
+        ihren Rechnungen verwendete Währung vom Typ <emphasis>Offene Verbindlichkeiten</emphasis>
+        einrichten, in welchem die Lieferantenrechnungen verbucht werden.
+        <tip>
+          <para>Im Allgemeinen arbeiten Sie nicht direkt mit diesen Konten, sondern nutzen in &app; die Anwendungen,
+            die für die Kreditorenbuchhaltung im Menü &mc.bus.ven; verfügbar sind.
+          </para>
+        </tip>
       </para>
 
-      <itemizedlist>
-        <listitem>
-          <para><guilabel>Identification - Vendor Number</guilabel> - can be any number by which you would like to
-            refer to this vendor. You may leave it blank and a number will be chosen automatically.
-            See <xref linkend="counters-book-options" /> for more info
-          </para>
-        </listitem>
-
-        <listitem>
-          <para><guilabel>Identification - Active</guilabel> - differentiates active vendors from inactive ones.
-            This is useful when you have many past vendors, and you want to see only those marked
-            active.
-          </para>
-        </listitem>
-
-        <listitem>
-          <para><guilabel>Payment Address - Name</guilabel> - is the contact name of the person to receive payments
-            you make.
-          </para>
-        </listitem>
-
-        <listitem>
-          <para><guilabel>Notes</guilabel> - records any additional comments about the vendor. Use it to track names
-            of contact people within the vendor&rsquo;s company, for example.
-          </para>
-        </listitem>
-
-        <listitem>
-          <para><guilabel>Payment Information - Currency</guilabel> - specifies the payment currency for this
-            vendor. It will default to the default currency set in <guilabel>Preferences</guilabel>
-          </para>
-
-          <note>
-            <para>All Bills and Credit Notes will be denominated in this currency and &app; will require an Accounts
-              Payable account in this currency.
+      <para><itemizedlist>
+          <listitem>
+            <para>Lieferanten und Verkäufer sind Unternehmen oder Personen, von denen Sie Produkte oder
+              Dienstleistungen erwerben.
             </para>
-          </note>
-        </listitem>
+          </listitem>
 
-        <listitem>
-          <para><guilabel>Payment Information - Terms</guilabel> - specifies the default payment terms for this
-            vendor. Payment terms must be preregistered using &mc.bus.bil-edit; .
-          </para>
-        </listitem>
+          <listitem>
+            <para>Mit einer <xref linkend="busnss-ap-billnew" /> erfassen Sie die Zahlungsaufforderung, die Sie von
+              einem Lieferanten erhalten. Eine Rechnung enthält eine Einzelaufstellung der von
+              Ihnen erworbenen Leistungen. Sie können in &app; die Rechnungen anlegen und
+              nachverfolgen.
+            </para>
 
-        <listitem>
-          <para><guilabel>Payment Information - Tax Included</guilabel> - specifies if tax is included in bills from
-            this vendor. You can choose <guilabel>Yes</guilabel>, <guilabel>No</guilabel>, or
-            <guilabel>Use Global</guilabel>.
-          </para>
+            <para>Eine Gutschrift ist ein Dokument, das Sie von einem Lieferanten erhalten, um Produkte oder
+              Dienstleistungen zu korrigieren, die Ihnen fälschlicherweise in Rechnung gestellt
+              wurden oder nachdem Sie die gelieferte Qualität oder Menge bemängelt haben. &app;
+              kann Gutschriften über die gleichen Menüeinträge wie Rechnungen verwalten.
+            </para>
+          </listitem>
 
-          <itemizedlist>
-            <listitem>
-              <para><guilabel>Yes</guilabel> means that tax is already included in amounts on bills.
-              </para>
-            </listitem>
+          <listitem>
+            <para>Bei Bedarf können Sie einen <xref linkend="busnss-ap-jobs" /> einrichten, mit dem Sie mehrere
+              Rechnungen eines bestimmten Lieferanten gruppieren können.
+            </para>
+          </listitem>
 
-            <listitem>
-              <para><guilabel>No</guilabel> means tax is not included.
-              </para>
-            </listitem>
+          <listitem>
+            <para>Mit <xref linkend="busnss-ap-payment" /> erfassen Sie Ihre Zahlungen an einen Lieferanten, die Sie
+              getätigt haben.
+            </para>
+          </listitem>
+        </itemizedlist>
+      </para>
+    </abstract>
 
-            <listitem>
-              <para><guilabel>Use Global</guilabel> means to use the setting made in the global preferences accessible
-                through &mc.ed.pref; ( &mc.macOS.gc.pref; on &mac;).
-              </para>
-            </listitem>
-          </itemizedlist>
-        </listitem>
+    <sect2 id="busnss-ap-vendornew">
+      <title>Neuer Lieferant</title>
 
-        <listitem>
-          <para><guilabel>Payment Information - Tax Table</guilabel> - specifies a default tax table to apply to
-            bills from this vendor. Tax tables must be registered using the &mc.bus.tax-tab; menu
-            item.
-          </para>
-        </listitem>
-      </itemizedlist>
+      <para>Um einen neuen Lieferanten anzulegen, wählen Sie den Menüpunkt &mc.bus.ven.new-ven;. Tragen Sie
+        allgemeine Informationen über den Lieferanten wie z.B. Firmenname, Adresse, Telefon, usw.
+        ein.
+      </para>
+
+      <figure pgwide="1">
+        <title>Datenfelder auf dem Reiter <guilabel>Lieferant</guilabel></title>
+
+        <screenshot>
+          <screeninfo>380x640</screeninfo>
+
+          <mediaobject>
+            <imageobject>
+              <imagedata fileref="figures/Busnss_Vendor_New_1.png"
+                                 srccredit="Christian Wehling" />
+            </imageobject>
+          </mediaobject>
+        </screenshot>
+      </figure>
+
+      <glosslist>
+        <glossentry>
+          <glossterm>Identifizierung - Lieferantennummer</glossterm>
+          <glossdef>
+            <para>Kann eine beliebige Nummer sein, mit der Sie auf diesen Lieferanten verweisen möchten. Sie können
+              das Feld auch leer lassen und es wird automatisch eine Nummer ausgewählt. Siehe
+              <xref linkend="counters-book-options" /> für weitere Informationen.
+            </para>
+          </glossdef>
+        </glossentry>
+
+        <glossentry>
+          <glossterm>Identifizierung - Firmenname</glossterm>
+          <glossdef>
+            <para>Der Firmenname des Geschäftspartners.
+            </para>
+          </glossdef>
+        </glossentry>
+
+        <glossentry>
+          <glossterm>Identifizierung - Aktiv</glossterm>
+          <glossdef>
+            <para>Unterscheidet zwischen aktiven und inaktiven Lieferanten. Dies ist nützlich, wenn Sie viele
+              ehemalige Lieferanten haben und nur die aktiven in Auswahlfeldern anzeigen möchten.
+            </para>
+          </glossdef>
+        </glossentry>
+
+        <glossentry>
+          <glossterm>Zahlungsadresse - Name</glossterm>
+          <glossdef>
+            <para>Ist der Inhaber, der die von Ihnen getätigten Zahlungen erhalten soll.
+            </para>
+          </glossdef>
+        </glossentry>
+
+        <glossentry>
+          <glossterm>Zahlungsadresse - Adresse</glossterm>
+          <glossdef>
+            <para>Die Adresse, die auf der Rechnung angegeben wurde.
+            </para>
+          </glossdef>
+        </glossentry>
+
+        <glossentry>
+          <glossterm>Zahlungsadresse - Telefon</glossterm>
+          <glossdef>
+            <para>Die Telefonnummer des Kunden.
+            </para>
+          </glossdef>
+        </glossentry>
+
+        <glossentry>
+          <glossterm>Zahlungsadresse - Fax</glossterm>
+          <glossdef>
+            <para>Die Faxnummer — so noch vorhanden.
+            </para>
+          </glossdef>
+        </glossentry>
+
+        <glossentry>
+          <glossterm>Zahlungsadresse - E-Mail</glossterm>
+          <glossdef>
+            <para>Eine Mailadresse des Kunden.
+            </para>
+          </glossdef>
+        </glossentry>
+
+        <glossentry>
+          <glossterm>Bemerkung</glossterm>
+          <glossdef>
+            <para>Zeichnet alle zusätzlichen Kommentare zum Lieferanten auf. Verwenden Sie es, um die Namen weiterer
+              Ansprechpartner im Unternehmen festzuhalten oder die Zuverlässigkeit des Anbieters zu
+              erfassen. Diese Information ist nur für interne Zwecke und wird nicht auf Rechnungen
+              verwendet.
+            </para>
+          </glossdef>
+        </glossentry>
+      </glosslist>
+
+      <figure pgwide="1">
+        <title>Datenfelder im Dialog auf dem Reiter <guilabel>Zahlungsinformation</guilabel></title>
+
+        <screenshot>
+          <screeninfo>380x640</screeninfo>
+
+          <mediaobject>
+            <imageobject>
+              <imagedata fileref="figures/Busnss_Vendor_New_2.png"
+                                 srccredit="Christian Wehling" />
+            </imageobject>
+          </mediaobject>
+        </screenshot>
+      </figure>
+
+      <glosslist>
+        <glossentry>
+          <glossterm>Zahlungsinformation - Währung</glossterm>
+          <glossdef>
+            <para>Legt die Währung für Zahlungen an diesen Lieferanten fest. Es wird die Standardwährung verwendet,
+              die in &mc.ed.pref; unter <xref linkend="prefs-accounts" /> eingestellt ist.
+              <note>
+                <para>Alle Rechnungen und Gutschriften lauten auf diese Währung und &app; erfordert ein Kreditorenkonto
+                  in dieser Währung.
+                </para>
+              </note>
+            </para>
+          </glossdef>
+        </glossentry>
+
+        <glossentry>
+          <glossterm>Zahlungsinformation - Zahlungsbedingungen</glossterm>
+          <glossdef>
+            <para>Legt die Standardzahlungsbedingungen für diesen Lieferanten fest. Die Zahlungsbedingungen müssen
+              zuvor mit &mc.bus.bil-edit; eingetragen worden sein. Siehe
+              <xref linkend="busnss-ar-setupterms" />.
+            </para>
+          </glossdef>
+        </glossentry>
+
+        <glossentry>
+          <glossterm>Zahlungsinformation - inkl. Steuern</glossterm>
+          <glossdef>
+            <para>Gibt an, ob die Steuer in Rechnungen von diesem Lieferanten enthalten ist.
+              <itemizedlist>
+                <listitem>
+                  <para><guilabel>Ja</guilabel> bedeutet, dass die Steuer bereits in den Beträgen auf den Rechnungen
+                    enthalten ist.
+                  </para>
+                </listitem>
+
+                <listitem>
+                  <para><guilabel>Nein</guilabel> bedeutet, dass die Steuer nicht enthalten ist.
+                  </para>
+                </listitem>
+
+                <listitem>
+                  <para><guilabel>Voreinstellung benutzen</guilabel> bedeutet, dass die in den globalen Einstellungen unter
+                    &mc.ed.pref; (&mc.macOS.gc.pref; auf &mac;) auf dem Reiter
+                    <xref linkend="prefs-biz" /> vorgenommene Einstellung verwendet wird.
+                  </para>
+                </listitem>
+              </itemizedlist>
+            </para>
+          </glossdef>
+        </glossentry>
+
+        <glossentry>
+          <glossterm>Zahlungsinformation - Steuertabelle</glossterm>
+          <glossdef>
+            <para>Legt eine Steuertabelle als Standardvorgabe fest, die auf Rechnungen von diesem Lieferanten
+              angewendet werden soll. Steuertabellen müssen vorab über den Menüpunkt
+              &mc.bus.tax-tab; angelegt werden. Siehe <xref linkend="busnss-ar-setuptaxtables" />.
+            </para>
+          </glossdef>
+        </glossentry>
+      </glosslist>
     </sect2>
 
     <sect2 id="busnss-ap-vendorfind">
-      <title>Find and Edit</title>
+      <title>Lieferanten suchen</title>
 
-      <para>To search for an existing vendor, use the &mc.bus.ven.find-ven; window. You select a vendor to
-        <guibutton>View/Edit</guibutton> from the results of the search. This window is also used to
-        look up a vendor when entering bills and processing payments.
+      <para>Möchten Sie den Datensatz eines Lieferanten suchen, verwenden Sie den Menüeintrag
+        &mc.bus.ven.find-ven;. Aus den Ergebnissen der Suche wählen Sie mit der Schaltfläche
+        <guibutton>Lieferant anzeigen/bearbeiten</guibutton> den passenden Eintrag zur weiteren
+        Verwendung. Dieser Dialog wird auch dazu genutzt, um die <guibutton>Aufträge des
+        Lieferanten</guibutton> oder <guibutton>Rechnungen des Lieferanten</guibutton> anzuzeigen
+        oder um eine <guibutton>Rechnung zu zahlen</guibutton>.
       </para>
 
-      <para>If many vendors match the search criteria you provide, the search can be refined by running an
-        additional search within the current results. The current result set is searched when the
-        <guilabel>Refine Current Search</guilabel> radio button is selected. In fact, &app; selects
-        this option for you after you run the initial search.
+      <para>Eine kurze Einleitung zur Verwendung der <guilabel>Suchen</guilabel>-Funktion wird in
+        <xref linkend="busnss-ar-custfind" /> gegeben. Die vielfältigen Möglichkeiten dieses
+        Dialogs werden unter <xref linkend="tool-find-bsnss" /> ausführlich beschrieben.
       </para>
-
-      <para>If the vendor you are searching for does not match the supplied search criteria, change the search
-        criteria, click the <guilabel>New Search</guilabel> radio button and then the
-        <guibutton>Find</guibutton> button. The relevant step is the <guilabel>New Search</guilabel>
-        selection. If the vendor is not in the result of the original search, and you only search
-        within this set, the vendor cannot be found, regardless of new search criteria.
-      </para>
-
-      <tip>
-        <para>To return a list of all registered active vendors, set the search criterion to <guilabel>matches
-          regex</guilabel>, and place a single dot <quote>.</quote> in the text field area. Make
-          sure <guilabel>Search only active data</guilabel> is checked, then click
-          <guibutton>Find</guibutton>. The regular expression <quote>.</quote> means to match
-          anything.
-        </para>
-      </tip>
     </sect2>
-  </sect1>
-
-  <sect1 id="busnss-ap-bills">
-    <title>Bills</title>
-
-    <para>A bill is a request for payment you receive from a vendor. &app; can track bills.
-    </para>
-
-    <para>A credit note is the document you receive from a vendor to correct products or services rendered
-      that you were incorrectly charged for on a bill. &app; can generate and track credit notes via
-      the same menu entries as bills.
-    </para>
-
-    <note>
-      <para>This section applies to both bills and credit notes. In order to avoid repeating everything twice
-        and to keep the text easier to read it will refer only to bills. You can apply it equally to
-        credit notes. Only where the behaviour of credit notes differs from bills this will be
-        explicitly mentioned.
-      </para>
-    </note>
 
     <sect2 id="busnss-ap-billnew">
       <title>Neue Lieferantenrechnung</title>
 
-      <para>When you receive a bill from a vendor and want to enter it into &app;, you must create a new bill.
-        To create a new bill use the &mc.bus.ven.new-bil; menu item, and fill in the resulting
-        window appropriately.
+      <para>Wenn Sie eine Rechnung von einem Lieferanten erhalten und diese in &app; erfassen möchten, müssen
+        Sie eine neue Rechnung erstellen. Hierfür verwenden Sie den Menüpunkt &mc.bus.ven.new-bil;
+        und füllen die Datenfelder in dem Dialog entsprechend aus.
       </para>
 
-      <itemizedlist>
-        <listitem>
-          <para><guilabel>Bill Information - Type</guilabel> - the type of vendor document to create - either a bill
-            or a credit note.
-          </para>
-        </listitem>
+      <note>
+        <para>Dieser Abschnitt gilt sowohl für Lieferantenrechnungen als auch für Gutschriften. Um die
+          Lesbarkeit des Textes zu verbessern, wird nur auf Rechnungen Bezug genommen. Sie können
+          ihn aber auch auf Gutschriften anwenden. Nur wenn sich das Verhalten von Gutschriften von
+          dem von Rechnungen unterscheidet, wird dies explizit erwähnt.
+        </para>
+      </note>
 
-        <listitem>
-          <para><guilabel>Bill Information - Bill ID</guilabel> (optional) - the identification number of the
-            invoice as emitted by the vendor (IE: the vendor&rsquo;s internal number for this
-            invoice).
-          </para>
-        </listitem>
+      <tip>
+        <para>Viele Eingabefelder in den Dialogen unterstützten die automatische Textvervollständigung. Das
+          bedeutet, wenn Sie mit der Texteingabe beginnen, versucht &app; den Text automatisch mit
+          einem vorhandenen, passenden Eintrag zu vervollständigen. Gibt es keine Textvorschläge,
+          drücken Sie die Schaltfläche <guibutton>Auswählen…</guibutton>, um den
+          <xref linkend="tool-find-bsnss" /> Dialog zu öffnen. Markieren Sie den gewünschten
+          Eintrag und mit <guibutton>Auswählen</guibutton> wird dieser übernommen.
+        </para>
+      </tip>
 
-        <listitem>
-          <para><guilabel>Bill Information - Date Opened</guilabel> - the date the Invoice was emitted by the
-            vendor.
-          </para>
-        </listitem>
+      <figure pgwide="1">
+        <title>Eine neue Lieferantenrechnung erfassen</title>
 
-        <listitem>
-          <para><guilabel>Billing Information - Vendor</guilabel> - the issuing vendor. If you remember the
-            <emphasis>company name</emphasis> you entered in the <guilabel>New Vendor</guilabel>
-            window for this vendor, start to type it in this field and &app; will try auto complete
-            it for you. Else, press the <guibutton>Select...</guibutton> button to access the
-            <guilabel>Find Vendor</guilabel> window described in
-            <xref linkend="busnss-ap-vendorfind" />. Highlight the vendor you are looking for with
-            a click in the search results, then press the <guibutton>Select</guibutton> button.
-          </para>
-        </listitem>
+        <screenshot>
+          <screeninfo>465x586</screeninfo>
 
-        <listitem>
-          <para><guilabel>Billing Information - Job</guilabel> (optional) - associates a vendor job (see
-            <xref linkend="busnss-ap-jobs" />) with this bill. If you remember the <emphasis>job
-            name</emphasis> you entered in the <guilabel>New Job</guilabel> window for this job,
-            start to type it in this field and &app; will try auto complete it for you. Else, press
-            the <guibutton>Select...</guibutton> button to access the <guilabel>Find Job</guilabel>
-            window. This window is very similar to the one described in
-            <xref linkend="busnss-ap-vendorfind" />. Highlight the job you are looking for with a
-            click in the search results, then press the <guibutton>Select</guibutton> button.
-          </para>
-        </listitem>
+          <mediaobject>
+            <imageobject>
+              <imagedata fileref="figures/Busnss_Bill_New.png"
+                                 srccredit="Christian Wehling" />
+            </imageobject>
+          </mediaobject>
+        </screenshot>
+      </figure>
 
-        <listitem>
-          <para><guilabel>Billing Information - Billing ID</guilabel> (optional) - the vendor&rsquo;s ID for the
-            bill (e.g.: their invoice #).
-          </para>
-        </listitem>
+      <glosslist>
+        <glossentry>
+          <glossterm>Lieferantenrechnungs-Informationen - Typ</glossterm>
+          <glossdef>
+            <para>Die Art des zu erfassenden Lieferantendokuments — entweder eine Rechnung oder eine Gutschrift.
+            </para>
+          </glossdef>
+        </glossentry>
 
-        <listitem>
-          <para><guilabel>Billing Information - Terms</guilabel> - the pay back terms agreement for this bill. A
-            list of registered terms is available within the pop up menu. If you specified a default
-            value for the selected vendor, this field is initialized with the default.
-          </para>
-        </listitem>
+        <glossentry>
+          <glossterm>Lieferantenrechnungs-Informationen - Rechnungsnummer</glossterm>
+          <glossdef>
+            <para>(optional) - Die &app;-interne Identifikationsnummer dieser Rechnung. Dies ist Ihre eigene Nummer
+              für diese Rechnung. Wenn Sie das Feld leer lassen, wird automatisch eine
+              Rechnungsnummer generiert. Siehe <xref linkend="counters-book-options" /> für weitere
+              Informationen.
+            </para>
+          </glossdef>
+        </glossentry>
 
-        <listitem>
-          <para><guilabel>Default Chargeback Project - Customer</guilabel> (optional) - the customer to associate
-            with this bill. This is used to charge your customer later.
-          </para>
-        </listitem>
+        <glossentry>
+          <glossterm>Lieferantenrechnungs-Informationen - Eröffnungsdatum</glossterm>
+          <glossdef>
+            <para>Das Datum, an dem die Rechnung vom Lieferanten ausgestellt wurde.
+            </para>
+          </glossdef>
+        </glossentry>
 
-        <listitem>
-          <para><guilabel>Default Chargeback Project - Job</guilabel> (optional) - the customer job to associate
-            with this bill.
-          </para>
-        </listitem>
-      </itemizedlist>
+        <glossentry>
+          <glossterm>Abrechnungsdaten - Lieferant</glossterm>
+          <glossdef>
+            <para>Der Lieferant, der Ihnen diese Rechnung ausgestellt hat.
+            </para>
+          </glossdef>
+        </glossentry>
 
-      <para>When you click the <guibutton>OK</guibutton> the <guilabel>Edit Bill</guilabel> window opens.
+        <glossentry>
+          <glossterm>Abrechnungsdaten - Auftrag</glossterm>
+          <glossdef>
+            <para>(optional) - verknüpft diese Rechnung mit einem Lieferantenauftrag (siehe
+              <xref linkend="busnss-ap-jobs" />).
+              <note>
+                <para>Sie können dieses Feld nur ausfüllen, wenn ein oder mehrere Aufträge in &app; registriert sind,
+                  die zu dem ausgewählten Lieferanten zugeordnet sind.
+                </para>
+              </note>
+            </para>
+          </glossdef>
+        </glossentry>
+
+        <glossentry>
+          <glossterm>Abrechnungsdaten - Abrechnungs-ID</glossterm>
+          <glossdef>
+            <para>(optional) - die Rechnungsnummer des Lieferanten die auf dem Zahlungsträger anzugeben ist, damit
+              der Lieferant die Zahlung zuordnen kann.
+            </para>
+          </glossdef>
+        </glossentry>
+
+        <glossentry>
+          <glossterm>Abrechnungsdaten - Zahlungsbedingungen</glossterm>
+          <glossdef>
+            <para>Die für die Rechnung geltenden Zahlungsbedingungen. &app; schlägt die beim Lieferanten hinterlegte
+              Zahlungsbedingung vor. Diese können aber im Bedarfsfall mit einem anderen Eintrag aus
+              der <xref linkend="busnss-ar-setupterms" /> überschrieben werden. Eine Liste der
+              registrierten Bedingungen ist im Auswahlfeld verfügbar.
+            </para>
+          </glossdef>
+        </glossentry>
+
+        <glossentry>
+          <glossterm>Kundenauftrag zur Weiterverrechnung - Kunde</glossterm>
+          <glossdef>
+            <para>(optional) - der Kunde, in dessen Auftrag Sie tätig sind und bei dem Lieferanten einkaufen waren.
+            </para>
+          </glossdef>
+        </glossentry>
+
+        <glossentry>
+          <glossterm>Kundenauftrag zur Weiterverrechnung - Auftrag</glossterm>
+          <glossdef>
+            <para>(optional) - der Kundenauftrag, der mit dieser Lieferantenrechnung verbunden ist. Dies wird
+              verwendet, um Ihren Kunden später mit Ihren Aufwändungen zu belasten.
+              <note>
+                <para>Sie können dieses Feld nur ausfüllen, wenn ein oder mehrere Aufträge in &app; registriert sind,
+                  die zu dem ausgewählten Kunden zugeordnet sind.
+                </para>
+              </note>
+            </para>
+          </glossdef>
+        </glossentry>
+
+        <glossentry>
+          <glossterm>Bemerkungen</glossterm>
+          <glossdef>
+            <para>Hier können Sie Notizen für eigene Zwecke eintragen. Diese Bemerkungen werden nicht auf der
+              Rechnung ausgegeben.
+            </para>
+          </glossdef>
+        </glossentry>
+      </glosslist>
+
+      <para>Wenn Sie auf die Schaltfläche <guibutton>OK</guibutton> klicken, wird in einem neuen Register die
+        Rechnung zur Bearbeitung der Rechnungspositionen geöffnet.
       </para>
     </sect2>
 
     <sect2 id="busnss-ap-billedit">
-      <title>Edit</title>
+      <title>Lieferantenrechnung bearbeiten</title>
 
-      <para>From the Edit Bill window you can enter an itemized list of goods and services you purchased, in a
-        manner similar to how the account register works. For credit notes you enter an itemized
-        list of goods and services the vendor refunded instead.
-        <note>
-          <para>Saved column layout works a bit differently in invoices from the account registers: Layouts are not
-            saved for each invoice; instead a layout can be saved as a default for invoices to
-            override the calculated widths using the &mc.vw.use-lay-ven; and the calculated widths
-            restored as the default with &mc.vw.res-lay-ven;.
-          </para>
-        </note>
+      <para>Im Fenster <guilabel>Lieferantenrechnung bearbeiten</guilabel> können Sie eine Einzelaufstellung
+        der von Ihnen erworbenen Waren und Dienstleistungen, ähnlich wie in einem Kontenblatt,
+        eingeben. Bei einer Gutschrift erfassen Sie stattdessen eine Auflistung der Waren und
+        Dienstleistungen, die der Lieferant Ihnen erstattet hat.
       </para>
 
-      <para>There are 12 columns in the Invoice Entries area:
+      <note>
+        <para>Im Nachfolgenden wird anstelle von Waren bzw. Dienstleistungen der allgemeine Begriff
+          <quote>Posten</quote> für die Grundeinheit und <quote>Position</quote> als Gesamtmenge,
+          also mit der Anzahl multiplizierte Posten, verwendet.
+        </para>
+      </note>
+
+      <tip>
+        <para>Das gespeicherte Spaltenlayout funktioniert im Rechnungsdialog etwas anders als in den
+          Kontenblättern: Layouts werden nicht für jede Rechnung gespeichert. Stattdessen
+          speichern Sie mit &mc.vw.use-lay-ven; ein Layout, welches als Voreinstellung für alle
+          Lieferantenrechnungen verwendet wird. Mit &mc.vw.res-lay-ven; wird die Standardeinstellung
+          mit den ursprünglichen Spaltenbreiten wiederhergestellt.
+        </para>
+      </tip>
+
+      <figure pgwide="1">
+        <title>Rechnung bearbeiten</title>
+
+        <screenshot>
+          <screeninfo>1220x370</screeninfo>
+
+          <mediaobject>
+            <imageobject role="html">
+              <imagedata fileref="figures/Busnss_Bill_Edit.png"
+                                 srccredit="Christian Wehling" width="&img-w;" />
+            </imageobject>
+
+            <imageobject role="fo">
+              <imagedata fileref="figures/Busnss_Bill_Edit.png"
+                                 srccredit="Christian Wehling" />
+            </imageobject>
+          </mediaobject>
+        </screenshot>
+      </figure>
+
+      <para>In 12 Spalten erfassen Sie die einzelnen Einträge der Lieferantenrechnung.
       </para>
 
-      <itemizedlist>
-        <listitem>
-          <para><guilabel>Date</guilabel> - The date this item was sold.
-          </para>
-        </listitem>
+      <glosslist>
+        <glossentry>
+          <glossterm>Datum</glossterm>
+          <glossdef>
+            <para>Der Tag, an dem die Position erworben wurde.
+            </para>
+          </glossdef>
+        </glossentry>
 
-        <listitem>
-          <para><guilabel>Invoiced?</guilabel> - <guilabel>X</guilabel> means the item is attached to this invoice,
-            an empty box means the item is not attached to this invoice. If the box is empty you can
-            attach the item to the invoice by first selecting the item row and then clicking in this
-            box.
-          </para>
-        </listitem>
+        <glossentry>
+          <glossterm>Erfasst?</glossterm>
+          <glossdef>
+            <para>Ist der Haken gesetzt — das Feld angeklickt — wird die Position mit dieser Rechnung abgerechnet,
+              ein leeres Kästchen bedeutet, dass die Position in dieser Rechnung nicht enthalten
+              und somit noch nicht in der Summe berücksichtigt ist. Wenn das Feld leer ist, können
+              Sie die Position abrechnen, indem Sie zuerst die Artikelzeile auswählen und dann in
+              dieses Feld klicken.
+            </para>
+          </glossdef>
+        </glossentry>
 
-        <listitem>
-          <para><guilabel>Description</guilabel> (optional) - is what the item or service is called.
-          </para>
-        </listitem>
+        <glossentry>
+          <glossterm>Beschreibung</glossterm>
+          <glossdef>
+            <para>(optional) - Ist eine Beschreibung der Position. Übernehmen Sie hier die Bezeichnung des
+              Lieferanten. Alternativ können Sie eine für Sie aussagekräftige Beschreibung
+              hinzufügen, aus der die Notwendigkeit für diese Position ersichtlich wird.
+            </para>
+          </glossdef>
+        </glossentry>
 
-        <listitem>
-          <para><guilabel>Action</guilabel> (optional) - is a user defined field. You can place Cost Center
-            information here, or use one of the 3 predefined actions, Hours, Material, or Project.
-          </para>
-        </listitem>
+        <glossentry>
+          <glossterm>Aktion</glossterm>
+          <glossdef>
+            <para>(optional) — Ist ein benutzerdefiniertes Feld. Sie können hier eine der 3 vordefinierten Aktionen
+              <quote>Stunden</quote>, <quote>Material</quote> oder <quote>Auftrag</quote> auswählen
+              oder eine für Ihre Anwendung spezifische Angabe, wie z.B. eine Kostenstelle,
+              eintragen.
+            </para>
+          </glossdef>
+        </glossentry>
 
-        <listitem>
-          <para><guilabel>Expense Account</guilabel> - selects the expense account to charge for this item.
-          </para>
-        </listitem>
+        <glossentry>
+          <glossterm>Aufwandskonten</glossterm>
+          <glossdef>
+            <para>Legt fest, welches Konto mit dieser Position belastet werden soll.
+            </para>
+          </glossdef>
+        </glossentry>
 
-        <listitem>
-          <para><guilabel>Quantity</guilabel> - tracks how many of the items you bought.
-          </para>
-        </listitem>
+        <glossentry>
+          <glossterm>Anzahl</glossterm>
+          <glossdef>
+            <para>Erfasst, wie viele der Einheiten Sie gekauft haben.
+            </para>
+          </glossdef>
+        </glossentry>
 
-        <listitem>
-          <para><guilabel>Unit Price</guilabel> - is the unit price of the item.
-          </para>
-        </listitem>
+        <glossentry>
+          <glossterm>Stückpreis</glossterm>
+          <glossdef>
+            <para>Der Preis pro Einheit des Postens.
+            </para>
+          </glossdef>
+        </glossentry>
 
-        <listitem>
-          <para><guilabel>Taxable?</guilabel> - is this item taxable? <guilabel>X</guilabel> means yes, a blank
-            field means no. You can click the field to toggle the setting.
-          </para>
-        </listitem>
+        <glossentry>
+          <glossterm>Besteuerbar?</glossterm>
+          <glossdef>
+            <para>Gibt an, ob diese Position vorsteuerabzugsfähig ist, wenn Sie Mehrwertsteuerpflichtig sind. Ist das
+              Feld angehakt wird die Position versteuert, ein leeres Feld bedeutet nein. Sie können
+              das Feld anklicken, um die Einstellung zu ändern.
+            </para>
+          </glossdef>
+        </glossentry>
 
-        <listitem>
-          <para><guilabel>Tax Included?</guilabel> - has the tax already been included in the unit price?
-            <guilabel>X</guilabel> means yes, a blank field means no.
-          </para>
-        </listitem>
+        <glossentry>
+          <glossterm>Inkl. USt.?</glossterm>
+          <glossdef>
+            <para>Ist die Vorsteuer bereits im Preis je Maßeinheit enthalten?
+              <variablelist>
+                <varlistentry>
+                  <term>X</term>
 
-        <listitem>
-          <para><guilabel>Tax Table</guilabel> (optional) - this is a pop up menu of all the available tax tables.
-            If the item is taxable and tax has not been included in the unit price, then this tax
-            table is used to compute the amount of tax.
-          </para>
-        </listitem>
+                  <listitem>
+                    <para>Gibt an, dass die Steuer im Stückpreis der Position inkludiert ist. Dies ist in der EU bei
+                      Rechnungen an Endverbraucher üblich.
+                    </para>
+                  </listitem>
+                </varlistentry>
 
-        <listitem>
-          <para><guilabel>Subtotal</guilabel> (uneditable) - computed subtotal for this item (less tax)
-          </para>
-        </listitem>
+                <varlistentry>
+                  <term><quote>leer</quote></term>
 
-        <listitem>
-          <para><guilabel>Billable</guilabel> - is this item billable to the chargeback customer/job?
-          </para>
-        </listitem>
-      </itemizedlist>
+                  <listitem>
+                    <para>Dies ist üblich bei Rechnungen an Geschäftskunden, da für diese die Steuer nur ein durchlaufender
+                      Posten ist.
+                    </para>
+                  </listitem>
+                </varlistentry>
+              </variablelist>
+              Klicken Sie in das Feld, um die Einstellung zu ändern.
+            </para>
+          </glossdef>
+        </glossentry>
 
-      <para>When you have finished entering all the items, <guilabel>Post</guilabel> the bill.
-      </para>
+        <glossentry>
+          <glossterm>Steuertabelle</glossterm>
+          <glossdef>
+            <para>(optional) — Der beim Lieferanten hinterlegte Steuersatz ist voreingestellt, kann aber durch
+              Auswahl eines Eintrags aus den <xref linkend="busnss-ar-setuptaxtables" />
+              überschrieben werden. Wenn die Position steuerpflichtig ist, wird diese Tabelle für
+              die Berechnung des Steuerbetrags verwendet. Die Steuertabelle bestimmt die
+              Steuerprozentsätze und die Konten, auf denen die Steuer gebucht wird.
+            </para>
+          </glossdef>
+        </glossentry>
+
+        <glossentry>
+          <glossterm>Zwischensumme</glossterm>
+          <glossdef>
+            <para>(nicht bearbeitbar) — Ist die berechnete Zwischensumme für diese Position (abzüglich der
+              Steuer).
+            </para>
+          </glossdef>
+        </glossentry>
+
+        <glossentry>
+          <glossterm>In Rechnung gestellt?</glossterm>
+          <glossdef>
+            <para>Kann dieser Artikel dem Kunden/Auftrag weiterverrechnet werden?
+            </para>
+          </glossdef>
+        </glossentry>
+      </glosslist>
+
+      <tip>
+        <para>Mit dem Menüpunkt &mc.ed.dup; können Sie die ausgewählte Rechnung duplizieren. Es öffnet sich
+          das Fenster <xref linkend="busnss-ap-billnew" />, in welchem Sie die vorhandenen
+          Rechnungsdaten anpassen können. Ein neue Rechnung wird als Duplikat der vorherigen
+          Rechnung inklusive aller erfassten Posten angelegt.
+        </para>
+      </tip>
     </sect2>
 
     <sect2 id="busnss-ap-billpost">
-      <title>Post</title>
+      <title>Lieferantenrechnung buchen</title>
 
-      <para>When you finish editing a bill, you should <guilabel>Post</guilabel> the bill. You do not have to
-        post the bill, you can close it and return to it later. You have to post the bill
-        eventually. Posting a bill places its transactions into an accounts payable account. The
-        Post Bill window appears and asks you to enter information:
+      <para>Haben Sie die Bearbeitung einer Rechnung abgeschlossen, können Sie diese mit &mc.ed.post; buchen,
+        wodurch die Buchungen auf Kreditorenkonten verbucht werden. Das Fenster <guilabel>Rechnung
+        buchen</guilabel> erscheint und fordert Sie zur Eingabe von Informationen auf. Alternativ
+        können Sie die Rechnung auch schließen und später erneut bearbeiten.
       </para>
 
-      <itemizedlist>
-        <listitem>
-          <para><guilabel>Post Date</guilabel> - specifies the date for the transactions entered into the accounts
-            payable account.
-          </para>
-        </listitem>
+      <figure pgwide="1">
+        <title>Rechnung buchen</title>
 
-        <listitem>
-          <para><guilabel>Due Date</guilabel> - is the date on which payment for the bill is expected.
-          </para>
+        <screenshot>
+          <screeninfo>540x282</screeninfo>
 
-          <itemizedlist>
-            <listitem>
-              <para>If you specified payment terms when you created the bill, the date is calculated according to
-                selected terms, and the entry field is insensitive.
-              </para>
-            </listitem>
+          <mediaobject>
+            <imageobject>
+              <imagedata fileref="figures/Busnss_Bill_Post.png"
+                                   srccredit="Christian Wehling" />
+            </imageobject>
+          </mediaobject>
+        </screenshot>
+      </figure>
 
-            <listitem>
-              <para>If you did not specify payment terms, enter the expected payment due date here.
-              </para>
-            </listitem>
-          </itemizedlist>
-        </listitem>
+      <glosslist>
+        <glossentry>
+          <glossterm>Buchungsdatum</glossterm>
+          <glossdef>
+            <para>Legt das Datum für die auf ein Kreditorenkonto gebuchten Buchungen fest. Dies wird mit dem
+              <guilabel>Eröffnungsdatum</guilabel> der Lieferantenrechnung vorbelegt. Siehe
+              <xref linkend="busnss-ap-billnew" />
+            </para>
+          </glossdef>
+        </glossentry>
 
-        <listitem>
-          <para><guilabel>Description</guilabel> - is an arbitrary description. When bill transactions are placed in
-            the accounts payable account, this description is entered in the memo field of those
-            transactions.
-          </para>
-        </listitem>
+        <glossentry>
+          <glossterm>Fälligkeitsdatum</glossterm>
+          <glossdef>
+            <para>Ist das Datum, bis zu dem Sie die Rechnung begleichen sollen.
+              <itemizedlist>
+                <listitem>
+                  <para>Wenn Sie bei der Erstellung der Rechnung Zahlungsbedingungen festgelegt haben, wird das Datum
+                    dementsprechend berechnet und das Eingabefeld ist deaktiviert.
+                  </para>
+                </listitem>
 
-        <listitem>
-          <para><guilabel>Post To Account</guilabel> - selects the accounts payable account in which bill
-            transactions are posted. You can select the account from a list of existing A/Payable
-            accounts.
-          </para>
-        </listitem>
+                <listitem>
+                  <para>Wenn Ihnen der Lieferant keine Zahlungsbedingungen vorgegeben hat, geben Sie hier das
+                    Fälligkeitsdatum ein.
+                  </para>
+                </listitem>
+              </itemizedlist>
+            </para>
+          </glossdef>
+        </glossentry>
 
-        <listitem>
-          <para><guilabel>Accumulate Splits</guilabel> - determines if bill items which transfer to the same account
-            are combined into a single split for that account or entered individually. For the
-            sample bill for Letterhead and Envelopes, the setting affects post results as follows:
-          </para>
+        <glossentry>
+          <glossterm>Beschreibung</glossterm>
+          <glossdef>
+            <para>Ist eine beliebige, für Sie sinnvolle, Beschreibung. Wenn Rechnungsbuchungen auf dem
+              Kreditorenkonto verbucht werden, wird diese Beschreibung in das jeweilige
+              Bemerkungsfeld übernommen.
+            </para>
+          </glossdef>
+        </glossentry>
 
-          <itemizedlist>
-            <listitem>
-              <para>Checked (splits are accumulated) - a single transfer of $100.00 to the <emphasis>Expenses:Office
-                Supplies</emphasis> account is recorded.
-              </para>
-            </listitem>
+        <glossentry>
+          <glossterm>Buchen nach Konto</glossterm>
+          <glossdef>
+            <para>Legt das Konto fest, auf dem die Rechnung gebucht wird. Sie können das Konto aus einer Liste
+              vorhandener Kreditorenkonten auswählen.
+              <tip>
+                <para>Betätigen Sie das kleine Zahnrad, können Sie die Konten, die als <emphasis>Platzhalter</emphasis>
+                  oder <emphasis>Versteckt</emphasis> gekennzeichnet sind, in der Auswahliste
+                  verbergen und die Liste übersichtlicher gestalten.
+                </para>
+              </tip>
+            </para>
+          </glossdef>
+        </glossentry>
 
-            <listitem>
-              <para>Not checked - the transaction created in the A/Payable account, shows two transfers to
-                <emphasis>Expenses:Office Supplies</emphasis> account $75.00 and $25.00. The memo
-                fields in the splits indicate the purchase of Letterhead and Envelopes (the item
-                descriptions entered on the bill) respectively.
-              </para>
-            </listitem>
-          </itemizedlist>
-        </listitem>
-      </itemizedlist>
+        <glossentry>
+          <glossterm>Buchungen kumulieren?</glossterm>
+          <glossdef>
+            <para>Legt fest, ob Rechnungsposten, die auf dasselbe Konto gebucht werden, zu einer einzigen Buchung für
+              dieses Konto zusammengefasst oder als einzelne Teilbuchungen eingetragen werden. Bei
+              einer Beispielrechnung für Äpfel und Birnen wirkt sich die Einstellung wie folgt auf
+              die Buchungsergebnisse aus:
+              <variablelist>
+                <varlistentry>
+                  <term>Aktiviert</term>
+
+                  <listitem>
+                    <para>Die Posten werden zusammengefasst und als eine einzige Buchung auf das Konto <emphasis>Aktiva:3400
+                      Wareneingang VSt. 19%</emphasis> verbucht.
+                      <warning>
+                        <para>Die einzelnen Rechnungspositionen werden nicht in ihre Bücher übernommen und existieren nur in der
+                          Rechnung. Somit kann nicht nach ihnen gesucht werden.
+                        </para>
+                      </warning>
+                    </para>
+                  </listitem>
+                </varlistentry>
+
+                <varlistentry>
+                  <term>nicht aktiviert</term>
+
+                  <listitem>
+                    <para>Die Buchung, die im Kreditorenkonto erstellt wird, enthält zwei Teilbuchungen auf das Konto
+                      <emphasis>Aktiva:3400 Wareneingang VSt. 19%</emphasis>. Das Beschreibungsfeld
+                      in den Teilbuchungen weist den Kauf von Äpfel und Birnen, entsprechend der
+                      auf der Rechnung angegebenen Artikelbezeichnungen, separat aus.
+                    </para>
+                  </listitem>
+                </varlistentry>
+              </variablelist>
+            </para>
+          </glossdef>
+        </glossentry>
+      </glosslist>
+
+      <tip>
+        <para>Möchten Sie eine bereits gebuchte Rechnung nachträglich bearbeiten, können Sie mit &mc.ed.unpost;
+          die Buchung der Rechnung löschen und somit zur Bearbeitung wieder freigeben.
+        </para>
+      </tip>
     </sect2>
 
     <sect2 id="busnss-ap-billfind">
-      <title>Find</title>
+      <title>Lieferantenrechnung suchen</title>
 
-      <para>To find an existing bill, use the &mc.bus.ven.find-bil; menu item. From the results of the search,
-        you can select a bill to edit, or view.
+      <para>Suchen Sie nach einer vorhandenen Rechnung, verwenden Sie den Menüpunkt &mc.bus.ven.find-bil;. Aus
+        den Ergebnissen der Suche können Sie eine Rechnung zur weiteren Verwendung auswählen.
       </para>
 
       <note>
-        <para>Before you can edit a posted bill, you will need to <guilabel>Unpost</guilabel> it.
-        </para>
-      </note>
-
-      <note>
-        <para>There are other ways to access an existing bill. These are similar to accessing invoices for your
-          customers. See <xref linkend="busnss-ar-invoicefind" /> for more information.
+        <para>&app; bietet Ihnen unterschiedliche Möglichkeiten auf eine bestehende Rechnung zuzugreifen, welche
+          unter <xref linkend="busnss-ar-invoicefind" /> beschrieben sind.
         </para>
       </note>
     </sect2>
-  </sect1>
 
-  <sect1 id="busnss-ap-jobs">
-    <title>Vendor Jobs</title>
+    <sect2 id="busnss-ap-jobs">
+      <title>Lieferantenauftrag</title>
 
-    <para>Vendor Jobs are used to group multiple bills and credit notes from a single vendor. Use of the
-      vendor jobs feature is optional. The feature is useful when you have multiple
-      <guilabel>jobs</guilabel> for the same vendor, and would like to view all the bills and credit
-      notes for a single job.
-    </para>
-
-    <para>To use vendor jobs, you must create them using the &mc.bus.ven.new-job; menu item. You will see the
-      <guilabel>New Job</guilabel> window. The editable fields are:
-    </para>
-
-    <itemizedlist>
-      <listitem>
-        <para><guilabel>Job Info - Job Number</guilabel> (optional) - enter the number for this job. If left
-          blank, a number will be chosen for you.
-        </para>
-      </listitem>
-
-      <listitem>
-        <para><guilabel>Job Info - Job Name</guilabel> - the name you want to assign to the new job.
-        </para>
-      </listitem>
-
-      <listitem>
-        <para><guilabel>Owner Info - Vendor</guilabel> - the vendor for whom the job is created.
-        </para>
-      </listitem>
-
-      <listitem>
-        <para><guilabel>Owner Info - Billing ID</guilabel> - the vendor&rsquo;s reference to this job (e.g. their
-          PO Number).
-        </para>
-      </listitem>
-
-      <listitem>
-        <para><guilabel>Job Active</guilabel> - toggles this job being active or not. This is useful when you have
-          many inactive jobs, since it is easier to search only among jobs that are marked active.
-        </para>
-      </listitem>
-    </itemizedlist>
-
-    <para>To edit an existing vendor job, use the &mc.bus.ven.find-job; menu item. Select the desired job in
-      the search results, and click the <guilabel>View/Edit Job</guilabel> button.
-    </para>
-
-    <para>To select from the bills and credit notes associated with a given job, use the &mc.bus.ven.find-job;
-      menu item. Select the desired job in the search results and click the <guilabel>View
-      Invoices</guilabel> button. A window listing bills and credit notes associated with this job
-      appears. Select a bill or credit note and click the <guilabel>View Invoice</guilabel> button
-      to open a bill editor in the main application window.
-    </para>
-  </sect1>
-
-  <sect1 id="busnss-ap-payment">
-    <title>Process Bill Payment</title>
-
-    <para>Eventually, you need to pay your bills. To do so, use the Process Payment application found in
-      &mc.bus.ven.pro-pay; .
-    </para>
-
-    <tip>
-      <para>There is an alternative way of assigning a payment to (one or more) bills where the payment
-        transaction already exists, say in the case where transactions are imported from a bank.
+      <para>Lieferantenaufträge werden verwendet, um Ihre interne <guilabel>Auftragsnummer</guilabel> mit der
+        Auftragsnummer des Lieferanten <guilabel>Abrechnungs-ID</guilabel> zu verbinden. Weiterhin
+        können Sie so Ihren komplexen Auftrag in kleinere Aufträge zu teilen. Die Verwendung der
+        Lieferantenaufträge ist optional.
       </para>
 
-      <para>This can best be done starting from the asset account register holding the imported payment
-        transaction (like your bank account). In that account, select the payment, right-click
-        (control-click for &mac;) and choose <guilabel>Assign as payment...</guilabel>. The payment
-        window will pop-up, partly filled in with the information from the transaction. Fill in the
-        missing information like the proper vendor and bill to complete the payment.
+      <para>Um Lieferantenaufträge zu nutzen, müssen Sie diese über den Menüpunkt &mc.bus.ven.new-job;
+        erstellen. Es öffnet sich das Fenster <guilabel>Neuer Auftrag</guilabel> das die folgenden
+        Datenfelder enthält:
       </para>
 
-      <para>One caveat: the logic behind <guilabel>Assign as payment...</guilabel>won't properly detect credit
-        note reimbursements and will wrongfully interpret such a transaction as a customer invoice.
-      </para>
-    </tip>
+      <figure pgwide="1">
+        <title>Einen neuen Lieferantenauftrag anlegen</title>
 
-    <para>The Process Payment application consists of:
-    </para>
+        <screenshot>
+          <screeninfo>425x384</screeninfo>
 
-    <itemizedlist>
-      <listitem>
-        <para><guilabel>Payment Information - Vendor</guilabel> - the vendor you wish to pay. If you remember the
-          <emphasis>company name</emphasis> you entered in the <guilabel>New Vendor</guilabel>
-          window for this vendor, start to type it in this field and &app; will try auto complete it
-          for you. Else, press the <guibutton>Select...</guibutton> button to access the
-          <guilabel>Find Vendor</guilabel> window described in
-          <xref linkend="busnss-ap-vendorfind" />. Highlight the vendor you are looking for with a
-          click in the search results, then press the <guibutton>Select</guibutton> button.
-        </para>
-      </listitem>
+          <mediaobject>
+            <imageobject>
+              <imagedata fileref="figures/Busnss_Vendor_Job.png"
+                                   srccredit="Christian Wehling" />
+            </imageobject>
+          </mediaobject>
+        </screenshot>
+      </figure>
 
-      <listitem>
-        <para><guilabel>Payment Information - Bill</guilabel> - the bill you wish to pay. If you remember the
-          <emphasis>bill ID</emphasis>, start to type it in this field and &app; will try auto
-          complete it for you. Else, press the <guibutton>Select...</guibutton> button to access the
-          <guilabel>Find Bill</guilabel> window described in <xref linkend="busnss-ap-billfind" />.
-          Highlight the bill you are looking for with a click in the search results, then press the
-          <guibutton>Select</guibutton> button in the search window.
-        </para>
-      </listitem>
+      <glosslist>
+        <glossentry>
+          <glossterm>Auftragsinformationen - Auftragsnummer</glossterm>
+          <glossdef>
+            <para>(optional) - Geben Sie die Nummer für diesen Auftrag ein. Wenn Sie nichts eingeben, wird eine
+              Nummer entsprechend der Festlegung in den Buchoptionen
+              (<xref linkend="counters-book-options" />) für Sie ausgewählt.
+            </para>
+          </glossdef>
+        </glossentry>
 
-      <listitem>
-        <para><guilabel>Payment Information - Date</guilabel> - the date you wish to make the payment, normally
-          the current date.
-        </para>
-      </listitem>
+        <glossentry>
+          <glossterm>Auftragsinformationen - Auftragsname</glossterm>
+          <glossdef>
+            <para>Der Name, den Sie dem neuen Auftrag zuweisen möchten.
+            </para>
+          </glossdef>
+        </glossentry>
 
-      <listitem>
-        <para><guilabel>Payment Information - Amount</guilabel> - the amount of money to transfer in this payment.
-        </para>
-      </listitem>
+        <glossentry>
+          <glossterm>Mandanteninformationen - Lieferant</glossterm>
+          <glossdef>
+            <para>Der Lieferant, für den der Auftrag erstellt wird.
+            </para>
+          </glossdef>
+        </glossentry>
 
-      <listitem>
-        <para><guilabel>Payment Information - Num</guilabel> - the check number.
-        </para>
-      </listitem>
+        <glossentry>
+          <glossterm>Mandanteninformationen - Kurs</glossterm>
+          <glossdef>
+            <para>Legen Sie hier einen Wert als Vorgabe für den <guilabel>Stückpreis</guilabel> für alle neuen
+              Positionen der Lieferantenrechnung fest, die zu diesem Auftrag zugeordnet sind.
+            </para>
+          </glossdef>
+        </glossentry>
 
-      <listitem>
-        <para><guilabel>Payment Information - Memo</guilabel> - any comments about this payment.
-        </para>
-      </listitem>
+        <glossentry>
+          <glossterm>Mandanteninformationen - Abrechnungs-ID</glossterm>
+          <glossdef>
+            <para>Die Referenz des Lieferanten für diesen Auftrag.
+            </para>
+          </glossdef>
+        </glossentry>
 
-      <listitem>
-        <para><guilabel>Post To</guilabel> - the A/Payable account to post this transaction.
-        </para>
-      </listitem>
+        <glossentry>
+          <glossterm>Auftrag aktiv</glossterm>
+          <glossdef>
+            <para>Schaltet diesen Auftrag aktiv oder inaktiv. Ist der Auftrag abgeschlossen, dann können Sie diesen
+              hiermit inaktiv stellen, um die Übersicht über die aktiven Aufträge zu erleichtern.
+              Inaktive Aufträge können Sie mit Hilfe der Suchfunktion wiederfinden.
+            </para>
+          </glossdef>
+        </glossentry>
+      </glosslist>
 
-      <listitem>
-        <para><guilabel>Transfer Account</guilabel> - the account from which money for the payments comes from,
-          such as a checking account.
-        </para>
-      </listitem>
-    </itemizedlist>
+      <procedure>
+        <title>Auftrag suchen und bearbeiten</title>
 
-    <sect2 id="busnss-ap-overpay">
-      <title>Over Payments or Pre-Payments</title>
+        <step>
+          <para>Möchten Sie einen vorhandenen Auftrag zu einem Lieferanten finden, verwenden Sie den Menüpunkt
+            &mc.bus.ven.find-job;. Es öffnet sich der Dialog für das
+            <xref linkend="tool-find-bsnss" />.
+          </para>
+        </step>
 
-      <para>If you wish to overpay an invoice or pay for goods or services before they have been invoiced,
-        Process Payment for the total amount payed. &app; will then keep track of the over-payment
-        (or pre-payment) in the A/P account and you can use the residual in the future.
-      </para>
+        <step>
+          <para>Führen Sie eine Suche mit den passenden Parametern aus.
+          </para>
+        </step>
+
+        <step>
+          <para>Markieren Sie den gewünschten Auftrag in den Suchergebnissen.
+          </para>
+        </step>
+
+        <step>
+          <para>Klicken Sie auf die Schaltfläche <guilabel>Auftrag anzeigen/bearbeiten</guilabel>.
+          </para>
+        </step>
+
+        <step performance="optional">
+          <para>Betätigen Sie die Schaltfläche <guilabel>Rechnungen anzeigen</guilabel>. Es öffnet sich weiteres
+            ein Fenster, in dem alle Lieferantenrechnungen und Gutschriften, die zu diesem Auftrag
+            gehören, aufgelistet werden.
+          </para>
+
+          <substeps>
+            <step>
+              <para>Wählen Sie einen Eintrag aus der Liste aus.
+              </para>
+            </step>
+
+            <step>
+              <para>Klicken Sie auf die Schaltfläche <guilabel>Rechnung anzeigen/bearbeiten</guilabel> und die
+                gewählte Rechnung wird im Rechnungseditor geöffnet.
+              </para>
+            </step>
+          </substeps>
+        </step>
+      </procedure>
     </sect2>
 
-    <sect2 id="busnss-ap-partpay">
-      <title>Partial Payments</title>
+    <sect2 id="busnss-ap-payment">
+      <title>Zahlung verarbeiten</title>
 
-      <para>You may wish to partially pay a bill. Select the bill to pay. &app; will automatically suggest that
-        bill's remaining balance as payment amount. Simply adjust that amount to what you want to
-        pay.
+      <para>Irgendwann müssen Sie die Rechnungen Ihrer Lieferanten bezahlen. Verwenden Sie dazu den Dialog
+        <guilabel>Zahlung verarbeiten</guilabel>, den Sie im Menü unter &mc.bus.ven.pro-pay;
+        aufrufen.
       </para>
+
+      <tip>
+        <para>Es gibt <emphasis>keine</emphasis> Möglichkeit, eine Zahlung während des Importvorgangs, z.B. wenn
+          die Buchungen von einer Bank importiert werden, einer Rechnung zuzuordnen. Die Zuordnung
+          muss nach dem Import der Buchungen separat erfolgen.
+        </para>
+
+        <procedure>
+          <title>Zahlung nach Import von Buchungen zuordnen</title>
+
+          <step>
+            <para>Wechseln Sie in das Register des Aktivkontos, das den importierten Zahlungsvorgang enthält (z.B.
+              das Bankkonto).
+            </para>
+          </step>
+
+          <step>
+            <para>Wählen Sie in diesem Konto die Zahlung aus.
+            </para>
+          </step>
+
+          <step>
+            <para>Klicken Sie mit der rechten Maustaste (&kc.ctrl;-Klick für &mac;).
+            </para>
+          </step>
+
+          <step>
+            <para>Wählen Sie &gmi.ed.pay-asng;.
+            </para>
+          </step>
+
+          <step>
+            <para>Das Fenster <guilabel>Zahlung verarbeiten</guilabel> wird geöffnet, das bereits teilweise mit den
+              Informationen aus der Buchung ausgefüllt ist.
+            </para>
+          </step>
+
+          <step>
+            <para>Ergänzen Sie die fehlenden Informationen wie z.B. den richtigen Lieferanten und die Rechnung, um
+              die Zahlung abzuschließen und der Rechnung zuzuordnen.
+            </para>
+          </step>
+        </procedure>
+
+        <para>Eine Einschränkung: Die Logik hinter &gmi.ed.pay-asng; erkennt die Erstattung einer Gutschrift
+          nicht richtig und interpretiert eine solche Buchung fälschlicherweise als eine
+          Kundenrechnung.
+        </para>
+      </tip>
+
+      <figure pgwide="1">
+        <title>Zahlung verarbeiten</title>
+
+        <screenshot>
+          <screeninfo>650x600</screeninfo>
+
+          <mediaobject>
+            <imageobject>
+              <imagedata fileref="figures/Busnss_Bill_Payment.png"
+                                   srccredit="Christian Wehling" />
+            </imageobject>
+          </mediaobject>
+        </screenshot>
+      </figure>
+
+      <para>Die Anwendung <guilabel>Zahlung verarbeiten</guilabel> umfasst die folgenden Bedienelemente:
+      </para>
+
+      <glosslist>
+        <glossentry>
+          <glossterm>Mandanteninformation - Lieferant</glossterm>
+          <glossdef>
+            <para>Der Lieferant, dessen Rechnung zu begleichen ist.
+            </para>
+          </glossdef>
+        </glossentry>
+
+        <glossentry>
+          <glossterm>Buchen nach (Soll)</glossterm>
+          <glossdef>
+            <para>Das Kreditoren-Konto, auf das diese Zahlung gebucht werden soll.
+            </para>
+          </glossdef>
+        </glossentry>
+
+        <glossentry>
+          <glossterm>Dokumente</glossterm>
+          <glossdef>
+            <para>Wählen Sie aus der <emphasis>Liste der Dokumente</emphasis> die Rechnung aus, die Sie begleichen
+              wollen.
+            </para>
+          </glossdef>
+        </glossentry>
+
+        <glossentry>
+          <glossterm>Buchungsdetails - Datum</glossterm>
+          <glossdef>
+            <para>Das Datum, an dem Sie die Zahlung erhalten haben.
+            </para>
+          </glossdef>
+        </glossentry>
+
+        <glossentry>
+          <glossterm>Buchungsdetails - Zahlung</glossterm>
+          <glossdef>
+            <para>Der zu zahlende Betrag für diese Rechnung.
+            </para>
+          </glossdef>
+        </glossentry>
+
+        <glossentry>
+          <glossterm>Buchungsdetails - Erstattung</glossterm>
+          <glossdef>
+            <para>Der Betrag der Erstattung bei Überzahlung einer Rechnung.
+            </para>
+          </glossdef>
+        </glossentry>
+
+        <glossentry>
+          <glossterm>Buchungsdetails - Nr</glossterm>
+          <glossdef>
+            <para>Die Nummer Ihres Zahlungsbelegs.
+            </para>
+          </glossdef>
+        </glossentry>
+
+        <glossentry>
+          <glossterm>Buchungsdetails - Buchungstext</glossterm>
+          <glossdef>
+            <para>Ein Kommentar zu dieser Zahlung.
+            </para>
+          </glossdef>
+        </glossentry>
+
+        <glossentry>
+          <glossterm>Buchungsdetails - Scheck drucken</glossterm>
+          <glossdef>
+            <para>Öffnet nach Betätigen von <guilabel>OK</guilabel> den Dialog <xref linkend="print-check" />.
+            </para>
+          </glossdef>
+        </glossentry>
+
+        <glossentry>
+          <glossterm>Herkunftskonto (Haben)</glossterm>
+          <glossdef>
+            <para>Das Konto, von dem das Geld für die Zahlungen stammt (z.B. ein Girokonto).
+            </para>
+          </glossdef>
+        </glossentry>
+      </glosslist>
+
+      <sect3 id="busnss-ap-overpay">
+        <title>Überzahlungen oder Vorauszahlungen</title>
+
+        <para>Wenn Sie eine Rechnung überzahlen oder für Waren oder Dienstleistungen bezahlen möchten bevor sie
+          in Rechnung gestellt werden, erfassen Sie eine Zahlung für den gesamten zu zahlenden
+          Betrag. &app; behält dann die Überzahlung (oder Vorauszahlung) im Kreditorenkonto und
+          verrechnet den Restbetrag mit einer späteren Rechnung.
+        </para>
+      </sect3>
+
+      <sect3 id="busnss-ap-partpay">
+        <title>Teilzahlungen</title>
+
+        <para>Sie können eine Rechnung auch nur teilweise bezahlen. Wählen Sie die zu zahlende Rechnung aus und
+          &app; schlägt automatisch den Restsaldo der Rechnung als Zahlungsbetrag vor. Passen Sie
+          diesen Betrag einfach an den Betrag an, den Sie bezahlen möchten.
+        </para>
+      </sect3>
     </sect2>
   </sect1>
 
