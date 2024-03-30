@@ -1,5 +1,21 @@
 Version History
 ---------------
+ 5.6   - 31 March 2024
+       o Bug 799237 - Dead Link
+       o C, de:Manual:Finance-Quote: Note about Expected Time Commitment
+       o C, de:Manual:Finance-Quote: Tip about 'gnc-fq-update: Command not
+         found'
+       o docbook: gnc-gui-de: Improve accelerator of menuitems
+       o Link https://wiki.gnucash.org/wiki/Documentation_Translation#The_Procedure
+         in recent gnc-gui-*.dtd files
+       o Replace *dquote entities by <quote> tags
+       o C:Manual:Tools:Unify main section titles and other minor improvements
+       o Unify filename extension
+       o C:Manual:CSV Import: show icons
+       o xmlformat: Apply changes at the element 'screeninfo'
+       o xmlformat.conf: new element 'screeninfo' with no entry- and no
+         exit-break
+
  5.5   - 17 December 2023
        o EBICS: for business customers (of the bank) rather than business users.
        o docbook: additional entities for business GUI-elements</li>

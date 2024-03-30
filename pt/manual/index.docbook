@@ -28,7 +28,7 @@
     </copyright>
 <!-- translators: uncomment this:   -->
     <copyright>
-      <year>2016-2023</year> <holder>Pedro Albuquerque (Portuguese (Portugal) translation)</holder>
+      <year>2016-2024</year> <holder>Pedro Albuquerque (Portuguese (Portugal) translation)</holder>
     </copyright>
 
     <publisher>
@@ -46,6 +46,18 @@
     </authorgroup>
 
     <revhistory>
+      <revision>
+        <revnumber>Manual de ajuda do &appname; 5.6</revnumber>
+        <date>31 de março de 2024</date>
+        <revdescription>
+          <para role="author">Múltiplos autores
+          </para>
+
+          <para role="publisher">Equipa de documentação do &appname;
+          </para>
+        </revdescription>
+      </revision>
+
       <revision>
         <revnumber>Manual de ajuda do &appname; 5.5</revnumber>
         <date>17 de dezembro 2023</date>

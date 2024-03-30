@@ -28,7 +28,7 @@
     <titleabbrev>&appname; Guide &manrevision;</titleabbrev>
 
     <copyright>
-      <year>2009-2023</year> <holder>&appname; Documentation Team</holder>
+      <year>2009-2024</year> <holder>&appname; Documentation Team</holder>
     </copyright>
 
     <copyright>
@@ -80,6 +80,18 @@
     </authorgroup>
 
     <revhistory>
+      <revision>
+        <revnumber>&appname; Tutorial and Concepts Guide 5.6</revnumber>
+        <date>31 March 2024</date>
+        <revdescription>
+          <para role="author">Multiple authors
+          </para>
+
+          <para role="publisher">&appname; Documentation Team
+          </para>
+        </revdescription>
+      </revision>
+
       <revision>
         <revnumber>&appname; Tutorial and Concepts Guide 5.5</revnumber>
         <date>17 December 2023</date>

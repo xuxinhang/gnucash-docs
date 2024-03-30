@@ -1,3 +1,67 @@
+2024-02-17 John Ralls 
+
+	* Bug 799237 - Dead Link (HEAD -> stable, origin/stable, origin/HEAD)
+
+2024-01-16 Frank H. Ellenberger 
+
+	* Fix a typo in last commit
+
+2024-01-16 Frank H. Ellenberger 
+
+	* C, de:Manual:Finance-Quote: Note about Expected Time Commitment
+
+2024-01-16 Frank H. Ellenberger 
+
+	* C, de:Manual:Finance-Quote: Tip about 'gnc-fq-update: Command not found'
+
+2023-07-29 Christian Wehling 
+
+	* docbook: gnc-gui-de: Improve accelerator of menuitems
+
+2024-01-14 Frank H. Ellenberger 
+
+	* Link https://wiki.gnucash.org/wiki/Documentation_Translation#The_Procedure in recent gnc-gui-*.dtd files
+
+2024-01-13 Frank H. Ellenberger 
+
+	* Replace *dquote entities by <quote> tags
+
+2024-01-13 Frank H. Ellenberger 
+
+	* C:Manual:Tools:Unify main section titles and other minor improvements
+
+2024-01-08 Frank H. Ellenberger 
+
+	* Unify filename extension
+
+2024-01-07 Frank H. Ellenberger 
+
+	* C:Manual:CSV Import: show icons
+
+2024-01-02 Christian Wehling 
+
+	* L10n:de: manual: Run adjust-dpi.sh
+
+2024-01-02 Christian Wehling 
+
+	* L10n:de: manual: Delete unnecessary blanks in the inline element <emphasis>.
+
+2023-04-16 Christian Wehling 
+
+	* L10n:de: manual: ch_Tools, section 'find business items'
+
+2024-01-01 Christian Wehling 
+
+	* L10n:de: manual: ch_Tools, section 'find transactions'
+
+2024-01-01 Christian Wehling 
+
+	* xmlformat: Apply changes at the element 'screeninfo'
+
+2023-07-30 Christian Wehling 
+
+	* xmlformat.conf: new element 'screeninfo' with no entry- and no exit-break
+
 2023-12-15 Frank H. Ellenberger 
 
 	* EBICS: for business customers (HEAD -> stable, origin/stable, origin/HEAD)
