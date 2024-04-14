@@ -53,7 +53,7 @@
           <term>违约</term>
 
           <listitem>
-            <para>借款人无法根据同贷款人达成的协议偿还贷款的时刻。
+            <para>借款人无法根据同放款人达成的协议偿还贷款的时刻。
             </para>
           </listitem>
         </varlistentry>
@@ -89,13 +89,13 @@
           <term>利息</term>
 
           <listitem>
-            <para>借款人因使用贷款资金而向贷款人缴纳的费用。一般以借入本金的年百分比表示，也就是常说的<emphasis>年利率</emphasis>。
+            <para>借款人因使用贷款资金而向放款人缴纳的费用。一般以借入本金的年百分比表示，也就是常说的<emphasis>年利率</emphasis>。
             </para>
           </listitem>
         </varlistentry>
 
         <varlistentry>
-          <term>贷款人</term>
+          <term>放款人</term>
 
           <listitem>
             <para>将钱借出给借款人的企业或个人。
@@ -125,7 +125,7 @@
           <term>借据<!-- ToDoZ: Promissory Note 怎样翻译 --></term>
 
           <listitem>
-            <para>借款人与贷款人就贷款事宜达成的法律协议。
+            <para>借款人与放款人就贷款事宜达成的法律协议。
             </para>
           </listitem>
         </varlistentry>
