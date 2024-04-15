@@ -11,7 +11,16 @@
   Originally designed by Carol Champagne.
   Translators:
     Xinhang Xu <xuxinhang4567@outlook.com>
+    (translators put your name and email here)
 -->
+
+<!--
+  翻译提示：
+  - 术语 borrower/lender 翻译为“借款人/放款人”，避免使用“贷款人”（有歧义）
+  - 汉语中贷款指“银行或其他信用机构向借款人所作的借款”，所以对银行的loan翻译为“贷款”，对个人的loan译为“借款”
+  - captial gain 作为固定词组翻译为资本利得，而不翻译成资本收益。但gain单独使用时可按语境译为收益。
+-->
+
 <chapter id="chapter_loans">
   <title>贷款</title>
 
@@ -122,10 +131,10 @@
         </varlistentry>
 
         <varlistentry>
-          <term>借据<!-- ToDoZ: Promissory Note 怎样翻译 --></term>
+          <term>借据</term>
 
           <listitem>
-            <para>借款人与放款人就贷款事宜达成的法律协议。
+            <para>借款人与放款人就贷款事宜达成的法律协定。
             </para>
           </listitem>
         </varlistentry>
@@ -399,10 +408,10 @@
 
     <para>举个例子，假定你在储蓄科目中有60,000元存款，你买了150,000元的房屋。按揭贷款收取6%的年利率和3%的管理费（如，过户费）。你决定先拿出50,000元的首付款，因此还需要借103,000元。<!-- ToDoC: 为什么“你会在支付过户费后收到100元” -->
 
-    As an example, assume you have $60,000 in you Saving account, and you buy a $150,000 house. The
+      <!-- As an example, assume you have $60,000 in you Saving account, and you buy a $150,000 house. The
       mortgage is charging 6% APR, and has administrative fees (closing costs, etc) of 3%. You
       decide to put $50,000 down, and thus will need to borrow $103,000, which will give you $100
-      after the closing costs are paid (3% of $100,000).
+      after the closing costs are paid (3% of $100,000). -->
     </para>
 
     <para>借钱之前的科目：
@@ -893,7 +902,7 @@
   -流动资产
     -储蓄存款
 -收入
-  -长期资本收益
+  -长期资本利得
     -房屋</screen>
       </para>
 
@@ -903,7 +912,7 @@
 
           </para>
 
-          <para>要记录这项交易，你需要将<emphasis>储蓄存款</emphasis>科目增加600,000元，并将某些其它科目减少600,000元。房屋科目只有300,000元，正好为当初的购买金额，所以你将这些钱转账至<emphasis>储蓄存款</emphasis>科目。这样下来你还有300,000元的缺口。这笔钱你要从<emphasis>收入:长期资本收益:房屋</emphasis>科目中转账过来。录入<emphasis>储蓄存款</emphasis>科目（<emphasis>资产:流动资产:储蓄存款</emphasis>）的分录交易应当如下所示。
+          <para>要记录这项交易，你需要将<emphasis>储蓄存款</emphasis>科目增加600,000元，并将某些其它科目减少600,000元。房屋科目只有300,000元，正好为当初的购买金额，所以你将这些钱转账至<emphasis>储蓄存款</emphasis>科目。这样下来你还有300,000元的缺口。这笔钱你要从<emphasis>收入:长期资本利得:房屋</emphasis>科目中转账过来。录入<emphasis>储蓄存款</emphasis>科目（<emphasis>资产:流动资产:储蓄存款</emphasis>）的分录交易应当如下所示。
           </para>
 
           <para><table>
@@ -951,7 +960,7 @@
 
                   <row>
                     <entry>
-                      收入:长期资本收益:房屋
+                      收入:长期资本利得:房屋
                     </entry>
 
                     <entry></entry>
@@ -970,7 +979,7 @@
           <para>你之前花300,000元购买了房屋，但由于附近新建了一座机场，现在只能以230,000元出售。你要怎样记录这项交易呢？
           </para>
 
-          <para>要记录这项交易，你需要将<emphasis>储蓄存款</emphasis>科目增加230,000元，同时将某些其它科目减少230,000元。房屋科目包含300,000元，多于出售金额。所以应将230,000元转至储蓄科目。其后，房屋科目中仍剩70,000元需要转出。你应将这些钱转至<emphasis>收入:长期资本收益:房屋</emphasis>科目，表示亏损。录入<emphasis>房屋</emphasis>科目（<emphasis>资产:固定资产:房屋</emphasis>）的分录交易如下所示。
+          <para>要记录这项交易，你需要将<emphasis>储蓄存款</emphasis>科目增加230,000元，同时将某些其它科目减少230,000元。房屋科目包含300,000元，多于出售金额。所以应将230,000元转至储蓄科目。其后，房屋科目中仍剩70,000元需要转出。你应将这些钱转至<emphasis>收入:长期资本利得:房屋</emphasis>科目，表示亏损。录入<emphasis>房屋</emphasis>科目（<emphasis>资产:固定资产:房屋</emphasis>）的分录交易如下所示。
           </para>
 
           <para><table>
@@ -1018,7 +1027,7 @@
 
                   <row>
                     <entry>
-                      收入:长期资本收益:房屋
+                      收入:长期资本利得:房屋
                     </entry>
 
                     <entry>
