@@ -302,7 +302,6 @@
       <para>下面是一个稍显复杂的示例，展示了怎样设置用于跟踪投资的&app;的科目结构。其优势在于将每种不同的投资对象分组在处理投资交易的经纪商之下。这样更便于比对经纪商给出的账单与&app;中已有的科目交易记录，并定位&app;与账单间的差异。
       </para>
         
-      <simpara>
 <screen>
  资产
     投资
@@ -351,7 +350,6 @@
        管理费用
           海通证券
           天天基金</screen>
-      </simpara>
 
       <tip>
         <para>确实没什么组织投资科目结构的标准做法。多尝试不同的组织结构，直到找到了某种在你看来将投资科目分组得既有逻辑又很明了的方式。
@@ -1526,7 +1524,7 @@
               </itemizedlist>
             </para>
 
-            <simpara><!-- Hack to get a figure inside of an example -->
+            <para><!-- Hack to get a figure inside of an example -->
               <table>
                 <title>卖出份额分录示例：合并卖出与获利、毛价格</title>
                 <tgroup cols="5">
@@ -1694,7 +1692,7 @@
                   </mediaobject>
                 </screenshot>
               </figure>
-            </simpara>
+            </para>
           </example>
         </sect4>
 
@@ -1856,7 +1854,7 @@
                 </listitem>
               </itemizedlist>
             </para>
-            <simpara><!-- Hack to get a figures and tables inside of an example -->
+            <para><!-- Hack to get a figures and tables inside of an example -->
               <table>
                 <title>卖出份额分录示例：合并卖出与获利、净价格</title>
                 <tgroup cols="5">
@@ -1985,7 +1983,7 @@
                   </mediaobject>
                 </screenshot>
               </figure>
-            </simpara>
+            </para>
           </example>
         </sect4>
       </sect3>
@@ -2206,7 +2204,7 @@
               </itemizedlist>
             </para>
 
-            <simpara>
+            <para>
               <table>
                 <title>卖出份额分录示例：卖出份额交易、毛价格</title>
                 <tgroup cols="5">
@@ -2390,7 +2388,7 @@
                   </mediaobject>
                 </screenshot>
               </figure>
-            </simpara>
+            </para>
           </example>
         </sect4>
 
@@ -2593,7 +2591,7 @@
               </itemizedlist>
             </para>
 
-            <simpara>
+            <para>
               <table>
                 <title>卖出份额分录示例：卖出份额交易、净价格</title>
                 <tgroup cols="5">
@@ -2761,7 +2759,7 @@
                   </mediaobject>
                 </screenshot>
               </figure>
-            </simpara>
+            </para>
           </example>
         </sect4>
       </sect3>
