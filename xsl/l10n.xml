@@ -148,4 +148,20 @@
   </l:context>
 </l:l10n>
  
+<!-- ************ Chinese (Simplified) **************** -->
+<l:l10n xmlns:l="http://docbook.sourceforge.net/xmlns/l10n/1.0" language="zh">
+  <l:gentext key="Title" text="&#x6807;&#x9898;"/>
+  <l:gentext key="Author" text="&#x4f5c;&#x8005;"/>
+  <l:gentext key="Authors" text="&#x4f5c;&#x8005;"/>
+  <l:gentext key="Affiliation" text="&#x673a;&#x6784;"/>
+  <l:gentext key="History" text="&#x5386;&#x53f2;"/>
+  <l:gentext key="Email" text="&#x7535;&#x5b50;&#x90ae;&#x4ef6;"/>
+  <l:gentext key="Publisher" text="&#x51fa;&#x7248;&#x65b9;"/>
+  <l:gentext key="Date" text="&#x65e5;&#x671f;"/>
+  <l:context name="title">
+    <l:template name="bookinfo" text="&#x5173;&#x4e8e;&#x672c;&#x6587;&#x6863;"/>
+    <l:template name="articleinfo" text="&#x5173;&#x4e8e;&#x672c;&#x6587;&#x6863;"/>
+  </l:context>
+</l:l10n>
+
 </i18n>
