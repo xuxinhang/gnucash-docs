@@ -639,6 +639,7 @@
 <!ENTITY mc.rep.bgt.bgt-p-r "<menuchoice>&gm.rep;&gsm.rep.bgt;&gmi.rep.bgt.bgt-p-r;</menuchoice>">
 <!ENTITY mc.rep.bgt.bgt-rep "<menuchoice>&gm.rep;&gsm.rep.bgt;&gmi.rep.bgt.bgt-rep;</menuchoice>">
 <!ENTITY mc-gsm.rep.bus "<menuchoice>&gsm.rep.bus;<guimenuitem /></menuchoice>">
+<!ENTITY mc.rep.bus "<menuchoice>&gm.rep; &gsm.rep.bus;</menuchoice>">
 <!ENTITY mc.rep.bus.aus-tax "<menuchoice>&gm.rep;&gsm.rep.bus;&gmi.rep.bus.aus-tax;</menuchoice>">
 <!ENTITY mc.rep.bus.cus-rep "<menuchoice>&gm.rep;&gsm.rep.bus;&gmi.rep.bus.cus-rep;</menuchoice>">
 <!ENTITY mc.rep.bus.cus-sum "<menuchoice>&gm.rep;&gsm.rep.bus;&gmi.rep.bus.cus-sum;</menuchoice>">
