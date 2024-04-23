@@ -23,18 +23,25 @@
     <para>Primärer Zweck der Funktionen im Menü &gm.bus; ist es, den Überblick bei seinen unbezahlten
       Rechnungen — von Lieferanten und an Kunden — zu behalten. Die Verwaltung der
       Lieferantenrechnungen kann auch für Privatanwender interessant sein.
+      <note>
+        <para>In diesem Kapitel geht es immer um <quote>Verkaufssteuern</quote>, es ist hier niemals die
+          <quote>Einkommensteuer</quote> gemeint! Weiterhin wurde die <quote>VAT (MWSt)</quote> der
+          EU in Deutschland als <emphasis>Umsatzsteuer mit Vorsteuerabzug</emphasis> umgesetzt und
+          daher sind MWSt und USt austauschbar.
+        </para>
+      </note>
     </para>
 
     <para>Dabei erleichtert die Verwaltung zugehöriger Basisdaten die Vorgänge. Dazu gehören folgende
       Tabellen:
       <itemizedlist>
         <listitem>
-          <para>Verkaufssteuern — MWSt. in der EU —, welche die Erfassung auf separaten Konten ermöglicht, und
+          <para>Zahlungsbedingungen zur Berechnung von Fristen und Skonti.
           </para>
         </listitem>
 
         <listitem>
-          <para>Zahlungsbedingungen zur Berechnung von Fristen und Skonti.
+          <para>Verkaufssteuern — MWSt in der EU —, welche die Erfassung auf separaten Konten ermöglicht.
           </para>
         </listitem>
       </itemizedlist>
@@ -56,7 +63,7 @@
         </listitem>
 
         <listitem>
-          <para>Für die Komplettierung Ihrer Gehaltsbuchhaltung sind im Untermenü &mc.bus.emp; die notwendigen
+          <para>Für die Komplettierung Ihrer Gehaltsbuchhaltung sind im Untermenü &mc.bus.emp; nützliche
             Funktionen enthalten, welche im Abschnitt <xref linkend="busnss-emply" /> beschrieben
             sind.
           </para>
@@ -73,8 +80,8 @@
     <title>Vorbereitungen</title>
 
     <abstract>
-      <para>In diesem Abschnitt werden die Einrichtung von <quote>Steuertabellen</quote> und
-        <quote>Zahlungsbedingungen</quote> beschrieben.
+      <para>In diesem Abschnitt werden die Einrichtung von <quote>Zahlungsbedingungen</quote> und
+        <quote>Steuertabellen</quote> beschrieben.
       </para>
 
       <para>Notwendige Anpassungen innerhalb der Kontenstruktur, um einer betrieblichen Buchführung gerecht zu
@@ -83,242 +90,27 @@
       </para>
     </abstract>
 
-    <sect2 id="busnss-ar-setuptaxtables">
-      <title>Steuertabellen</title>
-
-      <abstract>
-        <para>Steuertabellen werden zur Ermittlung der Steuer für Kundenrechnungen — oder Lieferantenrechnungen
-          — verwendet. Standard-Steuertabellen können, getrennt für Kunden und Lieferanten, in
-          den <guilabel>Buch Optionen</guilabel> auf dem <xref linkend="business-book-options"/>,
-          welchen Sie über &mc.fi.prop; erreichen, voreingestellt werden. Und auch jeder einzelne
-          Posten in einer Rechnung kann mit Hilfe der Steuertabellen unterschiedlich behandelt
-          werden.
-        </para>
-      </abstract>
-
-      <para>Mit Hilfe des Dialogs &mc.bus.tax-tab; können Sie die für Ihr Unternehmen notwendigen
-        Steuertabellen verwalten, anlegen und bearbeiten.
-      </para>
-
-      <figure pgwide="1">
-        <title>Steuertabellen verwalten</title>
-
-        <screenshot>
-          <screeninfo>820x240</screeninfo>
-
-          <mediaobject>
-            <imageobject>
-              <imagedata fileref="figures/Busnss_Tax_Organize.png" 
-                         srccredit="Christian Wehling" />
-            </imageobject>
-          </mediaobject>
-        </screenshot>
-      </figure>
-
-      <para>Der Dialog ist horizontal in zwei Bereiche unterteilt; unterhalb jedes Listenfeldes ermöglichen
-        Schaltflächen die Arbeit mit den darüber gewählten Listeneinträgen.
-      </para>
-
-      <glosslist>
-        <glossentry>
-          <glossterm>Steuertabellen</glossterm>
-          <glossdef>
-            <para>Die linke Liste enthält die unterschiedlichen Steuertabellen. Legen Sie hier die für Ihr
-              Unternehmen notwendigen Tabellen an.
-              <glosslist>
-                <glossentry>
-                  <glossterm>Umbenennen</glossterm>
-                  <glossdef>
-                    <para>Ermöglicht Ihnen die Vergabe eines neuen Names für die ausgewählte Steuertabelle.
-                    </para>
-                  </glossdef>
-                </glossentry>
-
-                <glossentry>
-                  <glossterm>Löschen</glossterm>
-                  <glossdef>
-                    <para>Löscht den markierten Eintrag aus der Liste.
-                      <warning>
-                        <para>Dieser Vorgang ist nicht reversibel! Erstellen Sie vorab eine Sicherungskopie Ihres &app;-Buchs.
-                        </para>
-                      </warning>
-                    </para>
-                  </glossdef>
-                </glossentry>
-
-                <glossentry>
-                  <glossterm>Neu</glossterm>
-                  <glossdef>
-                    <para>Öffnet den Dialog <guilabel>Steuertabelle</guilabel> damit Sie eine neue Steuertabelle erstellen
-                      können.
-                    </para>
-                  </glossdef>
-                </glossentry>
-              </glosslist>
-            </para>
-          </glossdef>
-        </glossentry>
-
-        <glossentry>
-          <glossterm>Einträge Steuertabelle</glossterm>
-          <glossdef>
-            <para>In der rechten Liste werden die Konten aufgeführt, die Sie der im linken Fenster markierten
-              Steuertabelle zugeordnet haben. Hier sind mehrere Einträge möglich, da z.B. in den
-              USA neben der Landessteuer noch lokale Steuern — Kreis, Gemeinde — möglich sind.
-              <note>
-                <para>Beachten Sie die Regeln der Prozentrechnung, wenn eine Steuer auf den Nettobetrag zuzüglich anderer
-                  Steuern erhoben wird.
-                </para>
-              </note>
-
-              <glosslist>
-                <glossentry>
-                  <glossterm>Bearbeiten</glossterm>
-                  <glossdef>
-                    <para>Öffnet den Dialog <guilabel>Einträge Steuertabelle</guilabel> um den markierten Eintrag zu
-                      bearbeiten.
-                    </para>
-                  </glossdef>
-                </glossentry>
-
-                <glossentry>
-                  <glossterm>Löschen</glossterm>
-                  <glossdef>
-                    <para>Löscht den markierten Eintrag aus der Liste. Dieser Vorgang ist nicht reversibel!
-                    </para>
-                  </glossdef>
-                </glossentry>
-
-                <glossentry>
-                  <glossterm>Neu</glossterm>
-                  <glossdef>
-                    <para>Öffnet den Dialog <guilabel>Einträge Steuertabelle</guilabel> mit dessen Hilfe Sie ein neues Konto
-                      auswählen können.
-                    </para>
-                  </glossdef>
-                </glossentry>
-              </glosslist>
-            </para>
-          </glossdef>
-        </glossentry>
-
-        <glossentry>
-          <glossterm>Schließen</glossterm>
-          <glossdef>
-            <para>Schließt den Dialog; Ihre Steuertabellen können sofort zur weiteren Verwendung genutzt werden.
-            </para>
-          </glossdef>
-        </glossentry>
-      </glosslist>
-
-      <para>Betätigen Sie die Schaltfläche <guilabel>Neu</guilabel> oder <guilabel>Bearbeiten</guilabel>, so
-        wird der nachfolgende Dialog geöffnet.
-      </para>
-
-      <figure pgwide="1">
-        <title>Steuertabellen bearbeiten</title>
-
-        <screenshot>
-          <screeninfo>331x472</screeninfo>
-
-          <mediaobject>
-            <imageobject>
-              <imagedata fileref="figures/Busnss_Tax_Edit.png" 
-                         srccredit="Christian Wehling" />
-            </imageobject>
-          </mediaobject>
-        </screenshot>
-      </figure>
-
-      <glosslist>
-        <glossentry>
-          <glossterm>Name</glossterm>
-          <glossdef>
-            <para>Die Bezeichnung der Steuertabelle.
-            </para>
-          </glossdef>
-        </glossentry>
-
-        <glossentry>
-          <glossterm>Typ</glossterm>
-          <glossdef>
-            <para>Auszeichnung der Steuer; entweder in <guilabel>Prozent %</guilabel> oder als fester <guilabel>Wert
-              €</guilabel>.
-            </para>
-          </glossdef>
-        </glossentry>
-
-        <glossentry>
-          <glossterm>Wert</glossterm>
-          <glossdef>
-            <para>Angabe des Wertes entsprechend der Festlegung in <guilabel>Typ</guilabel>.
-            </para>
-          </glossdef>
-        </glossentry>
-
-        <glossentry>
-          <glossterm>Konto</glossterm>
-          <glossdef>
-            <para>Sofern Sie einen der mitgelieferten geschäftlichen Kontenrahmen verwenden, sind die Gruppen dieser
-              Konten i.d.R. bereits vorhanden und zwar:
-              <itemizedlist>
-                <listitem>
-                  <para>Für das Finanzamt einbehaltene Verkaufssteuern unter den kurzfristigen Verbindlichkeiten,
-                  </para>
-                </listitem>
-
-                <listitem>
-                  <para>für gezahlte — und vom Finanzamt zu erstattende — Vorsteuern unter dem Umlaufvermögen.
-                  </para>
-                </listitem>
-              </itemizedlist>
-            </para>
-
-            <para>Mit der Abrechnung in der in Deutschland meist monatlichen Umsatzsteuer-Voranmeldung werden die
-              Konten gemäß den gesetzlichen Vorschriften saldiert und meist — wenn die
-              Verbindlichkeiten überwiegen — überwiesen, oder anderenfalls als Forderung gegen
-              das Finanzamt verbucht.
-            </para>
-
-            <para>Theoretisch sollen dabei der Steuerbericht und &mc.ed.tax-rep-opt; helfen, allerdings wurde die
-              deutsche Variante schon länger nicht mehr gewartet.
-            </para>
-
-            <para>Eine pragmatische Vereinfachung stellt die Möglichkeit dar, die Vorsteuern als Unterkonten der
-              entsprechenden Verkaufssteuer anzulegen. In Monaten mit geringeren Verkäufen als
-              Einkäufen — Geschäftseröffnung oder Urlaub — erhalten sie dann aber negative
-              Zahlen in der Übersicht. Bevor sie diese Vereinfachung anwenden, informieren sie
-              sich, ob sie damit nicht eine verbotene Bilanzverkürzung begehen.
-            </para>
-          </glossdef>
-        </glossentry>
-      </glosslist>
-
-      <warning>
-        <para>Wenn Sie bezüglich der steuergesetzlichen Anforderungen unsicher sind, holen Sie professionellen
-          Rat ein!
-        </para>
-      </warning>
-    </sect2>
-
     <sect2 id="busnss-ar-setupterms">
-      <title>Die Tabelle der Zahlungsbedingungen</title>
+      <title>Zahlungsbedingungen</title>
 
       <abstract>
-        <para>Als Anreiz zu einer vorzeitigen Zahlung kann ein als Skonto bezeichneter Preisnachlass dienen.
-          Dieser ist mit einem kurzfristigem Zahlungsziel von Kundenrechnungen — oder
-          Lieferantenrechnungen — verbunden und kann für jede Rechnung individuell zugewiesen
-          werden.
+        <para>Mit der Nennung einer Zahlungsfrist wird vorgegeben, zu welchem Zeitpunkt eine Rechnung zu
+          begleichen ist. Als Anreiz zu einer vorzeitigen Zahlung kann ein als Skonto bezeichneter
+          Preisnachlass dienen. Dieser ist mit einem kurzfristigem Zahlungsziel von Kundenrechnungen
+          — oder Lieferantenrechnungen — verbunden und kann für jede Rechnung individuell
+          zugewiesen werden.
           <caution>
             <para>Die Anwendung von Zahlungsbedingungen wird von &app; bisher nur teilweise unterstützt, wobei das
               Fälligkeitsdatum korrekt ermittelt wird, allerdings wird der gewährte Nachlaß nicht
-              berechnet.
+              berechnet. Sie müssen also die Zahlung nachträglich ergänzen und z.B. den von
+              Kunden ausgenutzten Skonto als <quote>Betriebliche Erträge:Erlösschmälerung</quote>
+              buchen.
             </para>
           </caution>
         </para>
       </abstract>
 
-      <para>Die Zahlungsbedingungen werden mit Hilfe des Editors organisiert, der über den Menüeintrag
+      <para>Die Zahlungsbedingungen werden mit Hilfe eines Editors organisiert, der über den Menüeintrag
         &mc.bus.bil-edit; aufgerufen wird. Hier haben Sie die Möglichkeit, Ihre individuellen
         Zahlungsbedingungen und die Ihrer Lieferanten zu verwalten.
       </para>
@@ -331,8 +123,7 @@
 
           <mediaobject>
             <imageobject>
-              <imagedata fileref="figures/Busnss_Terms_Organize.png" 
-                         srccredit="Christian Wehling" />
+              <imagedata fileref="figures/Busnss_Terms_Organize.png" srccredit="Christian Wehling" />
             </imageobject>
           </mediaobject>
         </screenshot>
@@ -416,8 +207,7 @@
 
           <mediaobject>
             <imageobject>
-              <imagedata fileref="figures/Busnss_Terms_Edit.png" 
-                         srccredit="Christian Wehling" />
+              <imagedata fileref="figures/Busnss_Terms_Edit.png" srccredit="Christian Wehling" />
             </imageobject>
           </mediaobject>
         </screenshot>
@@ -501,7 +291,7 @@
                         </glossentry>
 
                         <glossentry>
-                          <glossterm>Skonto in %</glossterm>
+                          <glossterm>Skonto in Prozent</glossterm>
                           <glossdef>
                             <para>Der prozentuale Nachlass bei vorzeitiger Zahlung.
                             </para>
@@ -525,6 +315,228 @@
           </glossdef>
         </glossentry>
       </glosslist>
+    </sect2>
+
+    <sect2 id="busnss-ar-setuptaxtables">
+      <title>Steuertabellen</title>
+
+      <abstract>
+        <para>Steuertabellen werden zur Ermittlung der Steuern für Kundenrechnungen — oder
+          Lieferantenrechnungen — von Steuerpflichtigen verwendet. Sind Sie Endverbraucher oder
+          unterliegen z.B. der
+          <ulink url="&url-wp-de;Kleinunternehmerregelung_(Deutschland)">Kleinunternehmerregelung</ulink>,
+          können sie diesen Abschnitt überspringen und buchen die Bruttobeträge empfangener
+          Lieferantenrechnungen als Aufwand. Standard-Steuertabellen können, getrennt für Kunden
+          und Lieferanten, in den <guilabel>Buch Optionen</guilabel> auf dem
+          <xref linkend="business-book-options"/>, welchen Sie über &mc.fi.prop; erreichen,
+          voreingestellt werden. Und auch jeder einzelne Posten in einer Rechnung kann mit Hilfe der
+          Steuertabellen unterschiedlich behandelt werden.
+        </para>
+      </abstract>
+
+      <para>Mit Hilfe des Dialogs &mc.bus.tax-tab; können Sie die für Ihr Unternehmen notwendigen
+        Steuertabellen verwalten, anlegen und bearbeiten.
+      </para>
+
+      <figure pgwide="1">
+        <title>Steuertabellen verwalten</title>
+
+        <screenshot>
+          <screeninfo>820x240</screeninfo>
+
+          <mediaobject>
+            <imageobject>
+              <imagedata fileref="figures/Busnss_Tax_Organize.png" 
+                         srccredit="Christian Wehling" />
+            </imageobject>
+          </mediaobject>
+        </screenshot>
+      </figure>
+
+      <para>Der Dialog ist horizontal in zwei Bereiche unterteilt; unterhalb jedes Listenfeldes ermöglichen
+        Schaltflächen die Arbeit mit den darüber gewählten Listeneinträgen.
+      </para>
+
+      <glosslist>
+        <glossentry>
+          <glossterm>Steuertabellen</glossterm>
+          <glossdef>
+            <para>Die linke Liste enthält die unterschiedlichen Steuertabellen. Legen Sie hier die für Ihr
+              Unternehmen notwendigen Tabellen an.
+              <glosslist>
+                <glossentry>
+                  <glossterm>Umbenennen</glossterm>
+                  <glossdef>
+                    <para>Ermöglicht Ihnen die Vergabe eines neuen Names für die ausgewählte Steuertabelle.
+                    </para>
+                  </glossdef>
+                </glossentry>
+
+                <glossentry>
+                  <glossterm>Löschen</glossterm>
+                  <glossdef>
+                    <para>Löscht den markierten Eintrag aus der Liste.
+                      <warning>
+                        <para>Dieser Vorgang ist nicht reversibel! Erstellen Sie vorab eine Sicherungskopie Ihres &app;-Buchs.
+                        </para>
+                      </warning>
+                    </para>
+                  </glossdef>
+                </glossentry>
+
+                <glossentry>
+                  <glossterm>Neu</glossterm>
+                  <glossdef>
+                    <para>Öffnet den Dialog <guilabel>Steuertabelle</guilabel> damit Sie eine neue Steuertabelle erstellen
+                      können.
+                    </para>
+                  </glossdef>
+                </glossentry>
+              </glosslist>
+            </para>
+          </glossdef>
+        </glossentry>
+
+        <glossentry>
+          <glossterm>Einträge Steuertabelle</glossterm>
+          <glossdef>
+            <para>In der rechten Liste werden die Konten aufgeführt, die Sie der im linken Fenster markierten
+              Steuertabelle zugeordnet haben. Hier sind mehrere Einträge möglich, da z.B. in den
+              USA neben der Landessteuer noch lokale Steuern — Kreis, Gemeinde — möglich sind.
+              <note>
+                <para>Beachten Sie die Regeln der Prozentrechnung, wenn eine Steuer auf den Nettobetrag zuzüglich anderer
+                  Steuern erhoben wird.
+                </para>
+              </note>
+
+              <glosslist>
+                <glossentry>
+                  <glossterm>Bearbeiten</glossterm>
+                  <glossdef>
+                    <para>Öffnet den Dialog <guilabel>Einträge Steuertabelle</guilabel>, um den markierten Eintrag zu
+                      bearbeiten.
+                    </para>
+                  </glossdef>
+                </glossentry>
+
+                <glossentry>
+                  <glossterm>Löschen</glossterm>
+                  <glossdef>
+                    <para>Löscht den markierten Eintrag aus der Liste. Dieser Vorgang ist nicht reversibel!
+                    </para>
+                  </glossdef>
+                </glossentry>
+
+                <glossentry>
+                  <glossterm>Neu</glossterm>
+                  <glossdef>
+                    <para>Öffnet den Dialog <guilabel>Einträge Steuertabelle</guilabel> mit dessen Hilfe Sie ein neues Konto
+                      auswählen können.
+                    </para>
+                  </glossdef>
+                </glossentry>
+              </glosslist>
+            </para>
+          </glossdef>
+        </glossentry>
+
+        <glossentry>
+          <glossterm>Schließen</glossterm>
+          <glossdef>
+            <para>Schließt den Dialog; Ihre Steuertabellen können sofort zur weiteren Verwendung genutzt werden.
+            </para>
+          </glossdef>
+        </glossentry>
+      </glosslist>
+
+      <para>Betätigen Sie die Schaltfläche <guilabel>Neu</guilabel> oder <guilabel>Bearbeiten</guilabel>, so
+        wird der nachfolgende Dialog geöffnet.
+      </para>
+
+      <figure pgwide="1">
+        <title>Steuertabellen bearbeiten</title>
+
+        <screenshot>
+          <screeninfo>331x472</screeninfo>
+
+          <mediaobject>
+            <imageobject>
+              <imagedata fileref="figures/Busnss_Tax_Edit.png" 
+                         srccredit="Christian Wehling" />
+            </imageobject>
+          </mediaobject>
+        </screenshot>
+      </figure>
+
+      <glosslist>
+        <glossentry>
+          <glossterm>Name</glossterm>
+          <glossdef>
+            <para>Die Bezeichnung der Steuertabelle.
+            </para>
+          </glossdef>
+        </glossentry>
+
+        <glossentry>
+          <glossterm>Typ</glossterm>
+          <glossdef>
+            <para>Auszeichnung der Steuer; entweder in <guilabel>Prozent (%)</guilabel> oder als fester <guilabel>Wert
+              €</guilabel>.
+            </para>
+          </glossdef>
+        </glossentry>
+
+        <glossentry>
+          <glossterm>Wert</glossterm>
+          <glossdef>
+            <para>Angabe des Wertes entsprechend der Festlegung in <guilabel>Typ</guilabel>.
+            </para>
+          </glossdef>
+        </glossentry>
+
+        <glossentry>
+          <glossterm>Konto</glossterm>
+          <glossdef>
+            <para>Sofern Sie einen der mitgelieferten geschäftlichen Kontenrahmen verwenden, sind die Gruppen dieser
+              Konten i.d.R. bereits vorhanden und zwar:
+              <itemizedlist>
+                <listitem>
+                  <para>Für das Finanzamt einbehaltene Verkaufssteuern unter den kurzfristigen Verbindlichkeiten,
+                  </para>
+                </listitem>
+
+                <listitem>
+                  <para>für gezahlte — und vom Finanzamt zu erstattende — Vorsteuern unter dem Umlaufvermögen.
+                  </para>
+                </listitem>
+              </itemizedlist>
+            </para>
+
+            <para>Mit der Abrechnung in der in Deutschland meist monatlichen Umsatzsteuer-Voranmeldung werden die
+              Konten gemäß den gesetzlichen Vorschriften saldiert und meist — wenn die
+              Verbindlichkeiten überwiegen — überwiesen, oder anderenfalls als Forderung gegen
+              das Finanzamt verbucht.
+            </para>
+
+            <para>Theoretisch sollen dabei der Steuerbericht und &mc.ed.tax-rep-opt; helfen, allerdings wurde die
+              deutsche Variante schon länger nicht mehr gewartet.
+            </para>
+
+            <para>Eine pragmatische Vereinfachung stellt die Möglichkeit dar, die Vorsteuern als Unterkonten der
+              entsprechenden Verkaufssteuer anzulegen. In Monaten mit geringeren Verkäufen als
+              Einkäufen — Geschäftseröffnung oder Urlaub — erhalten sie dann aber negative
+              Zahlen in der Übersicht. Bevor sie diese Vereinfachung anwenden, informieren sie
+              sich, ob sie damit nicht eine verbotene Bilanzverkürzung begehen.
+            </para>
+          </glossdef>
+        </glossentry>
+      </glosslist>
+
+      <warning>
+        <para>Wenn Sie bezüglich der steuergesetzlichen Anforderungen unsicher sind, holen Sie professionellen
+          Rat ein!
+        </para>
+      </warning>
     </sect2>
   </sect1>
 
@@ -2850,8 +2862,8 @@
     <sect2 id="busnss-emply-vchrfind">
       <title>Find Expense Voucher/Credit Note</title>
 
-      <para>To search for an existing Expense Voucher, use the &mc.bus.emp.find-vchr; menu item. You select
-        an Expense Voucher to <guibutton>View/Edit</guibutton> from the results of the search. This
+      <para>To search for an existing Expense Voucher, use the &mc.bus.emp.find-vchr; menu item. You select an
+        Expense Voucher to <guibutton>View/Edit</guibutton> from the results of the search. This
         window is also used to look up an expense voucher when entering vouchers and processing
         payments.
       </para>
