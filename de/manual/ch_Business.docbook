@@ -387,7 +387,7 @@
                 <glossentry>
                   <glossterm>Neu</glossterm>
                   <glossdef>
-                    <para>Öffnet den Dialog <guilabel>Steuertabelle</guilabel> damit Sie eine neue Steuertabelle erstellen
+                    <para>Öffnet den Dialog <guilabel>Steuertabelle</guilabel>, damit Sie eine neue Steuertabelle erstellen
                       können.
                     </para>
                   </glossdef>
@@ -544,15 +544,17 @@
     <title>Kunden</title>
 
     <abstract>
-      <para>Um das integrierte Debitorenbuchhaltungssystem von &app; zu nutzen, müssen Sie zunächst für jede
-        Währung ein <emphasis>Debitorenkonto</emphasis> des Typs <emphasis>Offene
-        Forderungen</emphasis> einrichten, um die Ihnen geschuldeten Einnahmen in der richtigen
-        Währung zu verbuchen. Innerhalb dieser Konten werden die Buchungen erfasst, wobei es
-        belastet wird wenn Sie Rechnungen oder Gutschriften buchen, und gutgeschrieben wenn Sie
-        Zahlungen erhalten.
+      <para>Um das Debitorenbuchhaltungssystem von &app; zu nutzen, müssen Sie zunächst für jede Währung, in
+        der Sie Rechnungen zu schreiben beabsichtigen, ein <emphasis>Debitorenkonto</emphasis> des
+        Typs <emphasis>Offene Forderungen</emphasis> einrichten, um die Ihnen geschuldeten Einnahmen
+        in der richtigen Währung zu verbuchen. Innerhalb dieser Konten werden die Buchungen
+        erfasst, wobei es belastet wird, wenn Sie Rechnungen oder Gutschriften buchen, und
+        gutgeschrieben, wenn Sie Zahlungen erhalten.
         <tip>
-          <para>Im Allgemeinen arbeiten Sie nicht direkt mit diesen Konten, sondern nutzen in &app; die integrierten
-            Funktionen, die für die Debitorenbuchhaltung im Menü &mc.bus.cus; verfügbar sind.
+          <para>Da Buchungen in diesen Konten ein zusätzliches Feld <quote>Typ</quote> (Invoice, Payment)
+            enthalten, das in der Programmoberfläche nicht gesetzt werden kann, arbeiten Sie im
+            Allgemeinen nicht direkt mit diesen Konten, sondern nutzen in &app; die Funktionen, die
+            für die Debitorenbuchhaltung im Menü &mc.bus.cus; verfügbar sind.
           </para>
         </tip>
       </para>
@@ -560,30 +562,34 @@
       <para><itemizedlist>
           <listitem>
             <para>In der Debitorenbuchhaltung werden Menschen oder Unternehmen als Ihre Kunden angesehen, denen Sie
-              Waren oder Dienstleistungen verkaufen.
+              Waren oder Dienstleistungen, nachfolgend <emphasis>erbrachte Leistungen</emphasis>
+              genannt, verkaufen.
             </para>
           </listitem>
 
           <listitem>
-            <para>Erstellen Sie eine Rechnung, die Sie an einen Kunden senden, um ihn zur Zahlung aufzufordern. Diese
-              Rechnung enthält eine Aufstellung der von Ihnen verkauften Waren oder erbrachten
-              Dienstleistungen. &app; kann Rechnungen erstellen und ihren Status nachverfolgen.
+            <para>Erstellen Sie eine <xref linkend="busnss-ar-invoicenew" /> , die Sie an einen Kunden senden, um ihn
+              zur Zahlung aufzufordern. Diese Rechnung enthält eine Aufstellung der von Ihnen
+              verkauften Waren oder erbrachten Dienstleistungen. &app; kann Rechnungen erstellen und
+              ihren Status nachverfolgen.
             </para>
 
-            <para>Eine Gutschrift ist der Vorgang, den Sie an einen Kunden senden, um Produkte oder Dienstleistungen
-              zu korrigieren, die fälschlicherweise oder zu hoch in Rechnung gestellt wurden. &app;
+            <para>Eine Gutschrift ist der Vorgang, den Sie an einen Kunden senden, um erbrachte Leistungen zu
+              korrigieren, die fälschlicherweise oder zu hoch in Rechnung gestellt wurden. &app;
               kann Gutschriften über die gleichen Menüeinträge wie Rechnungen verwalten.
             </para>
           </listitem>
 
           <listitem>
-            <para>Mit <link linkend="busnss-ar-jobs">Kundenaufträgen</link> haben Sie die Möglichkeit, mehrere
-              Rechnungen an einen bestimmten Kunden zu gruppieren.
+            <para>Mit dem <xref linkend="busnss-ar-jobs" /> können Sie die Begleichung von Teilabrechnung
+              nachverfolgen und erleichtern Sie dem Kunden die Zuordnung Ihrer Rechnung zu seinem
+              Vorhaben.
             </para>
           </listitem>
 
           <listitem>
-            <para>Verbuchen Sie die Zahlungen, die Sie von einem Kunden erhalten haben.
+            <para><xref linkend="busnss-ar-payment" /> bucht für Sie die Zahlungen in die Konten, die Sie von einem
+              Kunden erhalten haben.
             </para>
           </listitem>
         </itemizedlist>
@@ -640,9 +646,10 @@
         <glossentry>
           <glossterm>Identifizierung - Aktiv</glossterm>
           <glossdef>
-            <para>Mit dem Kontrollkästchen können Sie zwischen aktiven und inaktiven Kunden unterscheiden. Dies ist
-              nützlich, wenn Sie viele ehemalige Kunden haben und nur diejenigen anzeigen möchten,
-              mit denen Sie aktive Geschäftsbeziehungen haben.
+            <para>Das Kontrollkästchen ist für neue Kunden automatisch gesetzt. Ist die Geschäftsbeziehung beendet,
+              dann können Sie diesen Eintrag deaktivieren. Dies ist nützlich, wenn Sie viele
+              ehemalige Kunden haben und in Auswahlfeldern nur diejenigen anzeigen möchten, mit
+              denen Sie noch aktive Geschäftsbeziehungen haben.
             </para>
           </glossdef>
         </glossentry>
@@ -650,7 +657,7 @@
         <glossentry>
           <glossterm>Rechnungsadresse - Name</glossterm>
           <glossdef>
-            <para>Ist der Name des Ansprechpartners, an den die Rechnungen adressiert ist.
+            <para>Ist der Name des Ansprechpartners, an den die Rechnung adressiert ist.
             </para>
           </glossdef>
         </glossentry>
@@ -690,7 +697,8 @@
         <glossentry>
           <glossterm>Bemerkung</glossterm>
           <glossdef>
-            <para>Erfasst zusätzliche Kommentare zum Kunden.
+            <para>Erfasst zusätzliche Kommentare zum Kunden. Diese Information ist nur für interne Zwecke und wird
+              nicht auf Rechnungen verwendet.
             </para>
           </glossdef>
         </glossentry>
@@ -717,7 +725,9 @@
           <glossdef>
             <para>Die Währung, in der Rechnungen für diesen Kunden ausgestellt werden. Überlicherweise wird die
               Standardwährung verwendet, die in den &mc.ed.pref; auf dem Reiter
-              <xref linkend="prefs-accounts" /> eingestellt ist.
+              <xref linkend="prefs-accounts" /> eingestellt ist. So können Sie festhalten, welche
+              Seite das Währungsrisiko trägt, wenn der Kunde in einem Land mit anderer Währung
+              lebt als Sie!
               <note>
                 <para>Alle Rechnungen werden in der hier eingestellten Währung ausgestellt und &app; benötigt ein
                   Debitoren-Konto in dieser Währung.
@@ -742,7 +752,8 @@
           <glossdef>
             <para>Gewährt dem Kunden einen prozentualen <emphasis>Standard</emphasis>- Rabatt zum Zeitpunkt der
               Rechnungserstellung. Geben Sie einen Wert zwischen 0 und 100 ein. Sie können den
-              Rabatt bei der Erstellung einer Rechnung überschreiben.
+              Rabatt bei der Erstellung einer Rechnung überschreiben. Beispiel: Ihre Preisliste
+              zielt auf Endverbraucher und Zwischenhändlern gewähren sie einen Rabatt.
             </para>
           </glossdef>
         </glossentry>
@@ -782,6 +793,12 @@
                   </para>
                 </listitem>
               </itemizedlist>
+
+              <note>
+                <para>Empfehlung wegen möglicher Rundungsfehler: Bei Endverbrauchern wählen Sie <guilabel>Ja</guilabel>
+                  und bei Geschäftskunden wählen Sie <guilabel>Nein</guilabel>.
+                </para>
+              </note>
             </para>
           </glossdef>
         </glossentry>
@@ -817,7 +834,9 @@
           <glossterm>Lieferadresse</glossterm>
           <glossdef>
             <para>Hier können Sie die Lieferadresse des Kunden eintragen, wenn sie von der Rechnungsadresse abweicht.
-              Die Lieferadresse dient nur als Hinweis für Sie. &app; verwendet den Wert nicht.
+              Dies kann hilfreich sein, wenn Sie Waren an einen anderen Standort als die
+              Postanschrift zustellen wollen. Die Lieferadresse dient nur als Hinweis für Sie.
+              &app; verwendet den Wert nicht.
             </para>
           </glossdef>
         </glossentry>
@@ -833,6 +852,12 @@
         wird auch genutzt, um die <guilabel>Aufträge des Kunden</guilabel> oder
         <guilabel>Rechnungen des Kunden</guilabel> anzuzeigen oder um eine <guilabel>Zahlung
         verarbeiten</guilabel>.
+      </para>
+
+      <para>Wenn viele Kunden den von Ihnen angegebenen Suchkriterien entsprechen, können Sie die Trefferliste
+        durch eine zusätzlichen Suche innerhalb der aktuellen Ergebnissmenge weiter eingrenzen. Die
+        angezeigt Liste wird durchsucht, wenn die Option <guibutton>Verfeinern der aktuellen
+        Suche</guibutton> ausgewählt ist.
       </para>
 
       <figure pgwide="1">
@@ -885,6 +910,16 @@
         </para>
       </note>
 
+      <tip>
+        <para>Viele Eingabefelder in den Dialogen unterstützten die automatische Textvervollständigung. Das
+          bedeutet, wenn Sie mit der Texteingabe beginnen, versucht &app; den Text automatisch mit
+          einem vorhandenen, passenden Eintrag zu vervollständigen. Gibt es keine Textvorschläge,
+          drücken Sie die Schaltfläche <guibutton>Auswählen…</guibutton>, um den
+          <xref linkend="tool-find-bsnss" /> Dialog zu öffnen. Markieren Sie den gewünschten
+          Eintrag und mit <guibutton>Auswählen</guibutton> wird dieser übernommen.
+        </para>
+      </tip>
+
       <figure pgwide="1">
         <title>Eine neue Rechnung erstellen</title>
 
@@ -912,9 +947,10 @@
         <glossentry>
           <glossterm>Rechnungs-Informationen - Rechnungsnummer</glossterm>
           <glossdef>
-            <para>(optional) Die Identifikationsnummer dieser Rechnung. Dies ist Ihre interne Nummer für diese
-              Rechnung. Wenn Sie das Feld leer lassen, wird automatisch eine Rechnungsnummer
-              generiert. Siehe <xref linkend="counters-book-options" /> für weitere Informationen.
+            <para>(optional) Die Identifikationsnummer dieser Rechnung. Das ist die offizielle, von Ihnen vergebene
+              Nummer für diese Rechnung. Wenn Sie das Feld leer lassen, wird automatisch eine
+              Rechnungsnummer generiert. Siehe <xref linkend="counters-book-options" /> für weitere
+              Informationen.
             </para>
           </glossdef>
         </glossentry>
@@ -930,13 +966,7 @@
         <glossentry>
           <glossterm>Abrechnungsdaten - Kunde</glossterm>
           <glossdef>
-            <para>Der Kunde, der diese Rechnung erhalten soll. Wenn Sie sich an den <emphasis>Firmennamen</emphasis>
-              erinnern, den Sie im Dialog <guilabel>Neuer Kunde</guilabel> eingegeben haben, tragen
-              Sie ihn in dieses Feld ein und &app; wird versuchen, ihn automatisch für Sie zu
-              vervollständigen. Andernfalls drücken Sie die <guibutton>Auswählen…</guibutton>
-              Taste, um den <xref linkend="busnss-ar-custfind" /> Dialog zu öffnen. Markieren Sie
-              den Eintrag für den gesuchten Kunden und drücken Sie dann die Schaltfläche
-              <guibutton>Auswählen</guibutton>.
+            <para>Der Kunde, der diese Rechnung erhalten soll.
             </para>
           </glossdef>
         </glossentry>
@@ -944,15 +974,12 @@
         <glossentry>
           <glossterm>Abrechnungsdaten - Auftrag</glossterm>
           <glossdef>
-            <para>(optional) Verknüpft die neue Rechnung mit einem <xref linkend="busnss-ar-jobs" />. Wenn Sie sich
-              an den <emphasis>Auftragnamen</emphasis> erinnern, den Sie im Dialog <guilabel>Neuer
-              Auftrag</guilabel> eingegeben haben, geben Sie ihn in dieses Feld ein und &app; wird
-              versuchen, ihn für Sie zu vervollständigen. Andernfalls drücken Sie die
-              Schaltfläche <guibutton>Auswählen…</guibutton>, um das Fenster <guilabel>Auftrag
-              suchen</guilabel> aufzurufen. Dieser Dialog ist derselbe wie in
-              <xref linkend="busnss-ar-custfind" /> beschrieben. Klicken Sie in den Suchergebnissen
-              auf die gewünschte Stelle und drücken Sie dann auf die Schaltfläche
-              <guibutton>Auswählen</guibutton>.
+            <para>(optional) Verknüpft die neue Rechnung mit einem <xref linkend="busnss-ar-jobs" />.
+              <note>
+                <para>Sie können dieses Feld nur ausfüllen, wenn ein oder mehrere Aufträge in &app; registriert sind,
+                  die dem ausgewählten Kunden zugeordnet sind.
+                </para>
+              </note>
             </para>
           </glossdef>
         </glossentry>
@@ -994,32 +1021,34 @@
     <sect2 id="busnss-ar-invoiceedit">
       <title>Rechnung bearbeiten</title>
 
-      <para>Im Fenster <guilabel>Rechnung bearbeiten</guilabel> können Sie eine detaillierte Liste der Waren
-        und Dienstleistungen, ähnlich wie im Kontoregister, eingeben, die Sie auf dieser Rechnung
-        verkauft haben. Für Gutschriften geben Sie stattdessen eine Auflistung der Waren und
-        Dienstleistungen ein, die Sie erstattet haben.
+      <para>Im Fenster <guilabel>Rechnung bearbeiten</guilabel> können Sie eine detaillierte Liste der
+        erbrachten Leistungen, ähnlich wie im Kontenblatt, eingeben, die Sie in Rechnung stellen
+        möchten. Für Gutschriften geben Sie stattdessen eine Auflistung der erbrachten Leistungen
+        ein, die Sie erstatten möchten.
       </para>
 
       <note>
-        <para>Im Nachfolgenden wird anstelle von Waren bzw. Dienstleistungen der allgemeine Begriff
-          <quote>Posten</quote> verwendet.
+        <para>Im Nachfolgenden wird in der Rechnung für die erbrachten Leistungen der allgemeine Begriff
+          <quote>Posten</quote> für die Grundeinheit und <quote>Position</quote> als Gesamtmenge,
+          also mit der Anzahl multiplizierte Posten, welches als Voreinstellung für alle
+          Kunden-Rechnungen verwendet wird.
         </para>
       </note>
 
       <tip>
-        <para>Das gespeicherte Spaltenlayout funktioniert in Rechnungen etwas anders als in den Kontenregistern:
+        <para>Das gespeicherte Spaltenlayout funktioniert in Rechnungen etwas anders als in den Kontenblättern:
           Layouts werden nicht für jede Rechnung gespeichert. Stattdessen speichern Sie mit
-          &mc.vw.use-lay-cus; ein Layout, welches als Voreinstellung für alle Rechnungen verwendet
-          wird. Mit &mc.vw.res-lay-cus; wird die Standardeinstellung mit den ursprünglichen
-          Spaltenbreiten wiederhergestellt.
+          &mc.vw.use-lay-cus; ein Layout, welches als Voreinstellung für alle Kundenrechnungen
+          verwendet wird. Mit &mc.vw.res-lay-cus; wird die Standardeinstellung mit den
+          ursprünglichen Spaltenbreiten wiederhergestellt.
         </para>
       </tip>
 
-      <figure>
+      <figure pgwide="1">
         <title>Die Rechnung bearbeiten</title>
 
         <screenshot>
-          <screeninfo>1220x320</screeninfo>
+          <screeninfo>1220x330</screeninfo>
 
           <mediaobject>
             <imageobject role="html">
@@ -1042,25 +1071,26 @@
       </para>
 
       <para>Im Bereich <guilabel>Rechnungseinträge</guilabel> gibt es 15 Spalten in denen Sie die einzelnen
-        Posten dieser Rechnung erfassen und kaufmännisch behandeln können:
+        Positionen dieser Rechnung erfassen können:
       </para>
 
       <glosslist>
         <glossentry>
           <glossterm>Datum</glossterm>
           <glossdef>
-            <para>Das Datum, an dem der Posten verkauft wurde.
+            <para>Das Datum, an dem diese Leistung erbracht wurde.
             </para>
           </glossdef>
         </glossentry>
 
         <glossentry>
-          <glossterm>Abgerechnet?</glossterm>
+          <glossterm>Erfasst?</glossterm>
           <glossdef>
-            <para>Ist der Haken gesetzt — das Feld angeklickt — wird der Posten dieser Rechnung hinzugefügt, ein
-              leeres Kästchen bedeutet, dass der Posten noch nicht dieser Rechnung hinzugefügt und
-              somit noch nicht in der Summe berücksichtigt ist. Der Posten wird der Rechnung
-              hinzugefügt, sobald Sie mit dem nächsten Eintrag fortfahren.
+            <para>Ist der Haken gesetzt — das Feld angeklickt — wird die Position dieser Rechnung hinzugefügt,
+              ein leeres Kästchen bedeutet, dass die Position noch nicht dieser Rechnung
+              hinzugefügt und somit noch nicht in der Summe berücksichtigt ist. Die Position wird
+              der Rechnung automatisch hinzugefügt, sobald Sie mit dem nächsten Eintrag
+              fortfahren.
             </para>
           </glossdef>
         </glossentry>
@@ -1068,8 +1098,8 @@
         <glossentry>
           <glossterm>Beschreibung</glossterm>
           <glossdef>
-            <para>(optional) — Ist die Bezeichnung des Postens. Sie sollten trotzdem eine Beschreibung hinzufügen,
-              damit dem Kunden die Notwendigkeit dieser Position ersichtlich wird.
+            <para>(optional) — Ist die Bezeichnung der erbrachten Leistung. Sie sollten eine Beschreibung
+              hinzufügen, damit dem Kunden die Notwendigkeit dieser Position ersichtlich wird.
             </para>
           </glossdef>
         </glossentry>
@@ -1095,7 +1125,7 @@
         <glossentry>
           <glossterm>Anzahl</glossterm>
           <glossdef>
-            <para>Gibt an, wie viel Stück Sie von diesem Posten verkauft haben.
+            <para>Gibt an, wie viel Stück von diesem Posten berechnet werden.
             </para>
           </glossdef>
         </glossentry>
@@ -1187,7 +1217,7 @@
             <para>(optional) — ist der Gesamtrabatt, als Geldwert oder in Prozent, abhängig vom
               <guilabel>Rabatttyp</guilabel>. Lassen Sie es leer, wenn Sie keinen Rabatt gewähren
               wollen. Haben Sie eine Standardrabatt für den Kunden angegeben, wird dieser
-              automatisch für jeden neuen Posten vorgeschlagen.
+              automatisch für jede neue Position vorgeschlagen.
             </para>
           </glossdef>
         </glossentry>
@@ -1195,8 +1225,8 @@
         <glossentry>
           <glossterm>Besteuerbar?</glossterm>
           <glossdef>
-            <para>Gibt an, ob dieser Posten steuerpflichtig ist. Ist das Feld angehakt wird der Posten versteuert, ein
-              leeres Feld bedeutet nein. Sie können das Feld anklicken, um die Einstellung zu
+            <para>Gibt an, ob diese Position steuerpflichtig ist. Ist das Feld angehakt wird die Position versteuert,
+              ein leeres Feld bedeutet nein. Sie können das Feld anklicken, um die Einstellung zu
               ändern.
             </para>
           </glossdef>
@@ -1234,10 +1264,12 @@
         <glossentry>
           <glossterm>Steuertabelle</glossterm>
           <glossdef>
-            <para>(optional) — Dies ist ein Pop-up-Menü mit allen verfügbaren Steuertabellen. Wenn der Posten
-              steuerpflichtig ist, wird diese Tabelle für die Berechnung des Steuerbetrags
-              verwendet. Die Steuertabelle bestimmt die Steuerprozentsätze und die Konten, auf
-              denen die Steuer gebucht wird.
+            <para>(optional) — Der beim Kunden hinterlegte Steuersatz ist voreingestellt, kann aber durch Auswahl
+              eines Eintrags aus den <xref linkend="busnss-ar-setuptaxtables" /> überschrieben
+              werden. Dies ist ein Auswahlmenü mit allen verfügbaren Steuertabellen. Wenn die
+              Position steuerpflichtig ist, wird diese Tabelle für die Berechnung des Steuerbetrags
+              verwendet. Die Steuertabelle bestimmt die Steuersätze und die Konten, auf denen die
+              Steuer gebucht wird.
             </para>
           </glossdef>
         </glossentry>
@@ -1245,7 +1277,7 @@
         <glossentry>
           <glossterm>Zwischensumme</glossterm>
           <glossdef>
-            <para>(nicht bearbeitbar) — Ist die berechnete Zwischensumme für diesen Posten (abzüglich der Steuer).
+            <para>(nicht bearbeitbar) — Ist die berechnete Zwischensumme für diese Postion (abzüglich der Steuer).
             </para>
           </glossdef>
         </glossentry>
@@ -1253,7 +1285,7 @@
         <glossentry>
           <glossterm>Steuer</glossterm>
           <glossdef>
-            <para>(nicht bearbeitbar) — Ist die berechnete Steuer für diesen Posten.
+            <para>(nicht bearbeitbar) — Ist die berechnete Steuer für diese Position.
             </para>
           </glossdef>
         </glossentry>
@@ -1340,8 +1372,9 @@
         <glossentry>
           <glossterm>Buchen nach Konto</glossterm>
           <glossdef>
-            <para>Wählt das Debitorenkonto aus, auf dem die Rechnungsbuchung gebucht werden. Sie können das Konto
-              aus einer Liste von bestehenden Debitorenkonten in der Rechnungswährung auswählen.
+            <para>Legt das Debitorenkonto fest, auf dem die Rechnungspositionen — als Mehrteilige Buchung —
+              verbucht werden. Sie können das Konto aus einer Liste von bestehenden Debitorenkonten
+              in der Rechnungswährung auswählen.
               <tip>
                 <para>Betätigen Sie das kleine Zahnrad, können Sie die Konten, die als <emphasis>Platzhalter</emphasis>
                   oder <emphasis>Versteckt</emphasis> gekennzeichnet sind, in der Auswahliste
@@ -1355,19 +1388,20 @@
         <glossentry>
           <glossterm>Buchungen kumulieren?</glossterm>
           <glossdef>
-            <para>Bestimmt, ob Rechnungspositionen, die auf dasselbe Konto übertragen werden, zu einer einzigen
-              Buchung für dieses Konto zusammengefasst oder einzeln eingetragen werden. In einer
-              Beispielrechnung, bei der Nägel und ein Hammer verkauft wurden, wirkt sich die
-              Einstellung wie folgt auf die Buchungsergebnisse aus:
+            <para>Bestimmt, ob Rechnungspositionen, die auf <emphasis>dasselbe</emphasis> Konto übertragen —
+              kumuliert — werden, zu einer einzigen Buchung für dieses Konto zusammengefasst oder
+              als einzelne Buchungsteile eingetragen werden. In einer Beispielrechnung, bei der
+              Äpfel und Birnen verkauft wurden, wirkt sich die Einstellung wie folgt auf die
+              Buchungsergebnisse aus:
               <variablelist>
                 <varlistentry>
                   <term>Aktiviert</term>
 
                   <listitem>
-                    <para>Die Buchung werden zusammengefasst und eine einzige Überweisung von 575,00 € vom
-                      <emphasis>Ertrag:Umsatz</emphasis> Konto wird erfasst. Verwenden Sie diese
-                      Einstellung nur, wenn sie sicher sind, dass sie nie fragen werden:
-                      <quote>Welchen Umsatz haben wir mit welcher Warengruppe erziehlt?</quote>
+                    <para>Die Rechnungspositionen werden zusammengefasst und ein einziger Buchungteil von 24,85 € vom
+                      <emphasis>Ertrag:8300 Erlöse Ust. 7</emphasis> Konto wird erfasst. Verwenden
+                      Sie diese Einstellung nur, wenn sie sicher sind, dass sie nie fragen werden:
+                      <quote>Welchen Umsatz haben wir mit welcher Warengruppe erzielt?</quote>
                     </para>
                   </listitem>
                 </varlistentry>
@@ -1376,10 +1410,10 @@
                   <term>nicht aktiviert</term>
 
                   <listitem>
-                    <para>Die Buchung, die im Debitorenkonto erstellt wird, zeigt zwei Überweisungen von Konto
-                      <emphasis>Ertrag:Umsatz</emphasis> 100,00 € und 475,00 €. Die Memo-Felder
-                      in den Teilbuchungen geben den Verkauf von Nägeln bzw. Hammer an
-                      (entsprechend den Rechnungspositionen auf der Rechnung).
+                    <para>Die Rechnungspositionen, die im Debitorenkonto erstellt wird, zeigt zwei Buchungsteile von Konto
+                      <emphasis>Ertrag:8300 Erlöse Ust. 7</emphasis> 9,95 € und 14,90 €. Die
+                      Memo-Felder in den Teilbuchungen geben den Verkauf von Äpfel bzw. Birnen an
+                      — entsprechend den Rechnungspositionen auf der Rechnung.
                     </para>
                   </listitem>
                 </varlistentry>
@@ -1435,83 +1469,152 @@
       <title>Rechnung drucken</title>
 
       <para>Nachdem Sie eine Rechnung gebucht haben, können Sie diese ausdrucken und an Ihre Kunden senden.
-        Verwenden Sie hierzu den Menüpunkt &mc.fi.prin-inv;.
+        Hierzu gibt es 2 unterschiedliche Vorgehensweisen.
       </para>
 
-      <tip>
-        <para>Sie können das Aussehen der Rechnung ändern, wie z.B. ein Firmenlogo hinzufügen usw. Siehe dazu
-          den Abschnitt <xref linkend="busnss-ar-invoicechange" />.
-        </para>
-      </tip>
-
       <procedure>
-        <title>Rechnung als Bericht</title>
-
-        <para>Rechnungen können auch vom Hauptfenster gedruckt werden. Im Menü &mc.rep.bus; stehen mehrere
-          Vordrucke zur Auswahl:
-          <itemizedlist>
-            <listitem>
-              <para>&gmi.rep.bus.pnt-rep;
-              </para>
-            </listitem>
-
-            <listitem>
-              <para>&gmi.rep.bus.easy-inv;
-              </para>
-            </listitem>
-
-            <listitem>
-              <para>&gmi.rep.bus.fcy-inv;
-              </para>
-            </listitem>
-
-            <listitem>
-              <para>&gmi.rep.bus.tax-inv;
-              </para>
-            </listitem>
-          </itemizedlist>
-          Im Berichtsfenster wird angezeigt, dass keine gültige Rechnung ausgewählt wurde. So
-          wählen Sie die zu druckende Rechnung aus:
-        </para>
+        <title>Rechnung ausdrucken</title>
 
         <step>
-          <para>Betätigen Sie
+          <para>In der geöffneten Rechnung verwenden Sie hierzu den Menüpunkt &mc.fi.prin-inv;, woraufhin sich ein
+            neuer Reiter die Rechnung in einem Drucklayout öffnet.
+          </para>
+
+          <substeps>
+            <step>
+              <para>Wollen Sie das Erscheinungsbild der Rechnung ändern, betätigen Sie
+                <itemizedlist>
+                  <listitem>
+                    <para>in der <emphasis>Werkzeugleiste</emphasis> die Schaltfläche <guibutton>Optionen</guibutton>
+                    </para>
+                  </listitem>
+
+                  <listitem>
+                    <para>oder &mc.ed.rep-opt; aus der Menüleiste.
+                    </para>
+                  </listitem>
+                </itemizedlist>
+              </para>
+            </step>
+
+            <step>
+              <para>Aktivieren Sie den Reiter <guilabel>Allgemein</guilabel> in dem Dialog der Berichtsoptionen.
+              </para>
+            </step>
+
+            <step>
+              <para>Wählen Sie eine <guilabel>Stilvorlage</guilabel> aus, indem Sie die Schaltfläche
+                <guibutton>Auswählen</guibutton> betätigen. Hier können Sie auf diese
+                vordefinierten Stilvorlagen zurückgreifen.:
+                <itemizedlist>
+                  <listitem>
+                    <para><guilabel>CSS-basierte Stilvorlage (experimentell)</guilabel>
+                    </para>
+                  </listitem>
+
+                  <listitem>
+                    <para><guilabel>Voreinstellung</guilabel>
+                    </para>
+                  </listitem>
+
+                  <listitem>
+                    <para><guilabel>Einfach</guilabel>
+                    </para>
+                  </listitem>
+
+                  <listitem>
+                    <para><guilabel>Fußzeile</guilabel>
+                    </para>
+                  </listitem>
+
+                  <listitem>
+                    <para><guilabel>Vor-oder Nachspan</guilabel>
+                    </para>
+                  </listitem>
+
+                  <listitem>
+                    <para><guilabel>Bunt</guilabel>
+                    </para>
+                  </listitem>
+                </itemizedlist>
+                Haben Sie sich zuvor, wie in <xref linkend="style-choose" /> beschrieben, eine
+                eigene Stilvorlage gestaltet, dann steht diese in dem Auswahlmenü ebenfalls zur
+                Verfügung.
+              </para>
+            </step>
+          </substeps>
+        </step>
+
+        <step>
+          <para>Rechnungen können auch vom Hauptfenster gedruckt werden. Im Menü &mc.rep.bus; stehen mehrere
+            Vordrucke zur Auswahl:
             <itemizedlist>
               <listitem>
-                <para>in der <emphasis>Werkzeugleiste</emphasis> die Schaltfläche <guibutton>Optionen</guibutton>
+                <para>&gmi.rep.bus.pnt-rep;
                 </para>
               </listitem>
 
               <listitem>
-                <para>oder &mc.ed.rep-opt; aus der Menüleiste.
+                <para>&gmi.rep.bus.easy-inv;
+                </para>
+              </listitem>
+
+              <listitem>
+                <para>&gmi.rep.bus.fcy-inv;
+                </para>
+              </listitem>
+
+              <listitem>
+                <para>&gmi.rep.bus.tax-inv;
                 </para>
               </listitem>
             </itemizedlist>
+            Im Berichtsfenster wird angezeigt, dass <guilabel>keine gültige Rechnung
+            gewählt</guilabel> wurde. So wählen Sie die zu druckende Rechnung aus:
           </para>
-        </step>
 
-        <step>
-          <para>Aktivieren Sie den Reiter <guilabel>Allgemein</guilabel> in dem Dialog der Berichtsoptionen.
-          </para>
-        </step>
+          <substeps>
+            <step>
+              <para>Betätigen Sie
+                <itemizedlist>
+                  <listitem>
+                    <para>in der <emphasis>Werkzeugleiste</emphasis> die Schaltfläche <guibutton>Optionen</guibutton>
+                    </para>
+                  </listitem>
 
-        <step>
-          <para>Betätigen Sie die Schaltfläche <guibutton>Auswählen</guibutton> neben dem Feld
-            <guilabel>Rechnungsnummer</guilabel>.
-          </para>
-        </step>
+                  <listitem>
+                    <para>oder &mc.ed.rep-opt; aus der Menüleiste.
+                    </para>
+                  </listitem>
+                </itemizedlist>
+              </para>
+            </step>
 
-        <step>
-          <para>Wenn notwendig verwenden Sie die Suchfunktion um die gewünschte Rechnung auszuwählen.
-          </para>
+            <step>
+              <para>Aktivieren Sie den Reiter <guilabel>Allgemein</guilabel> in dem Dialog der Berichtsoptionen.
+              </para>
+            </step>
+
+            <step>
+              <para>Betätigen Sie die Schaltfläche <guibutton>Auswählen</guibutton> neben dem Feld
+                <guilabel>Rechnungsnummer</guilabel>.
+              </para>
+            </step>
+
+            <step>
+              <para>Wenn notwendig verwenden Sie die Suchfunktion, um die gewünschte Rechnung auszuwählen.
+              </para>
+            </step>
+          </substeps>
         </step>
       </procedure>
-<!-- Ist der folgende Absatz noch zutreffend? -->
-<!--
-       <para>Sie können Rechnungen auch aus dem Dialogfeld <guilabel>Zahlung verarbeiten</guilabel>
-        heraus drucken. Unter <xref linkend="busnss-ar-payment" /> finden Sie eine Anleitung dazu.
-      </para>
--->
+
+      <tip>
+        <para>Für den Druck stehen mehrere Druckvorlagen zur Verfügung, die sie nach Ihren Anforderungen
+          anpassen können, wie z.B. ein Firmenlogo hinzufügen usw. Lesen Sie dazu den Abschnitt
+          <xref linkend="busnss-ar-invoicechange" />.
+        </para>
+      </tip>
     </sect2>
 
     <sect2 id="busnss-ar-invoicestarting">
@@ -1533,7 +1636,7 @@
     </sect2>
 
     <sect2 id="busnss-ar-invoicechange">
-      <title>Erscheinungsbild ändern</title>
+      <title>Rechnungslayout anpassen</title>
 
       <para>Das Aussehen der Standard-Rechnung ist, wenn sie die in <xref linkend="busnss-ar-invoiceprint" />
         beschriebenen Rechnungsvorlagen nutzen, recht schlicht. Das Standard-Layout lässt den
@@ -1544,13 +1647,40 @@
 
       <para>Verwenden Sie &mc.fi.prop;, um Ihre Unternehmensinformationen auf dem
         <xref linkend ="business-book-options" /> zu erfassen. Diese Informationen werden auf der
-        rechten Seite der Rechnungen gedruckt.
+        rechten Seite des Rechnungskopfes gedruckt.
       </para>
 
       <para>Wollen Sie den Rechnungen einen individuellen Hintergrund, ein Bild in der Kopfleiste oder ein Logo
-        hinzuzufügen, müssen Sie die Rechnungsvorlagen ändern. Gehen Sie dafür zu &mc.ed.css;
-        und legen Sie im sich öffnendem Fenster <xref linkend="style-choose" /> eine neue Vorlage
-        an, die Sie nach Ihren Vorstellungen gestalten können.
+        hinzuzufügen, müssen Sie die Rechnungsvorlagen ändern. Verwenden Sie dafür den
+        Menüeintrag &mc.ed.css; woraufhin sich das Fenster <xref linkend="style-choose" /> öffnet.
+        <itemizedlist>
+          <listitem>
+            <para>Öffnen sie eine existierende Vorlage und passen sie an oder
+            </para>
+          </listitem>
+
+          <listitem>
+            <para>legen Sie eine neue Vorlage an, die Sie nach Ihren Vorstellungen gestalten können.
+            </para>
+          </listitem>
+        </itemizedlist>
+
+        <tip>
+          <para>Es kann sinnvoll sein 2 Vorlagen zum Druck
+            <itemizedlist>
+              <listitem>
+                <para>auf vorhandenen Formularen oder
+                </para>
+              </listitem>
+
+              <listitem>
+                <para>auf Blanko-Papier mit dem Nachbau ihres Formulars
+                </para>
+              </listitem>
+            </itemizedlist>
+            zu gestalten.
+          </para>
+        </tip>
       </para>
 
       <para>Wenn die Stilvorlage nach Ihren Vorstellungen konfiguriert ist, stellen Sie diese in den
@@ -1562,27 +1692,14 @@
     <sect2 id="busnss-ar-jobs">
       <title>Kundenauftrag</title>
 
-      <para>Sofern mit dem Kunden vereinbart, können Sie größeren Auträgen mehrere Rechnungen zuweisen, z.B.
-        <itemizedlist>
-          <listitem>
-            <para>monatliche Abrechnug eines Abos oder
-            </para>
-          </listitem>
-
-          <listitem>
-            <para>geschoßweise Abrechnung beim Bau eines mehrstöckigen Gebäudes.
-            </para>
-          </listitem>
-        </itemizedlist>
+      <para>Verbindet zunächst die Auftragsnummer des Kunden als <guilabel>Abrechnungs-ID</guilabel> mit Ihrer
+        internen, i.d.R. fortlaufenden, <guilabel>Auftragsnummer</guilabel>. Daneben bietet sich die
+        Möglichkeit, komplexere Kundenaufträge in kleinere abrechenbare Teilaufträge zu zerlegen.
+        Da z.B. bei einem unbefristeten Abonnement kein Ziel definiert ist, ist die Verwendung des
+        Kundenauftrag eine optionale Anwendung.
       </para>
 
-      <para>Die Verwendung dieser Funktion ist optional, jedoch nützlich, wenn Sie mehrere Rechnungen für
-        denselben Kunden haben und diese alle zu einem einzigen <guilabel>Auftrag</guilabel>
-        zusammenfassen möchten.
-      </para>
-
-      <para>Um Kundenaufträge zu verwenden, müssen Sie diese mit dem Menüpunkt &mc.bus.cus.new-job;
-        erstellen.
+      <para>Um Kundenaufträge zu nutzen, müssen Sie diese mit dem Menüpunkt &mc.bus.cus.new-job; erstellen.
       </para>
 
       <figure pgwide="1">
@@ -1622,15 +1739,7 @@
         <glossentry>
           <glossterm>Mandanteninformation - Kunde</glossterm>
           <glossdef>
-            <para>Der Kunde, für den der Auftrag erstellt wird. Wenn Sie Sie sich an den
-              <emphasis>Firmennamen</emphasis> erinnern, den Sie im Fenster
-              <xref linkend="busnss-ar-custnew" /> für diesen Kunden eingegeben haben, geben Sie
-              ihn in dieses Feld ein und &app; wird versuchen, ihn automatisch für Sie zu
-              vervollständigen. Andernfalls drücken Sie die <guibutton>Auswählen...</guibutton>
-              Schaltfläche, um das Fenster <xref linkend="busnss-ar-custfind" /> zu öffnen und
-              führen dort eine Kundensuche aus. Markieren Sie den Suchergebnissen den gesuchten
-              Kunden und mit betätigen der Schaltfläche <guibutton>Auswählen</guibutton> wird der
-              Eintrag übernommen.
+            <para>Der Kunde, für den der Auftrag erstellt wird.
             </para>
           </glossdef>
         </glossentry>
@@ -1638,13 +1747,14 @@
         <glossentry>
           <glossterm>Mandanteninformation - Kurs</glossterm>
           <glossdef>
-            <para>???
+            <para>Legen Sie hier einen Wert als Vorgabe für den <guilabel>Stückpreis</guilabel> für alle neuen
+              Positionen der Kundenrechnung fest, die zu diesem Auftrag zugeordnet sind.
             </para>
           </glossdef>
         </glossentry>
 
         <glossentry>
-          <glossterm>Auftragsinformation - Abrechnungs-ID</glossterm>
+          <glossterm>Mandanteninformation - Abrechnungs-ID</glossterm>
           <glossdef>
             <para>Die Referenz des Kunden zu diesem Auftrag, wie z.B. eine Bestellnummer. Dies ist die
               Abrechnungsidentifikation, die Sie benötigen, um Ihre Rechnung mit dem Kundenauftrag
@@ -1685,7 +1795,7 @@
           </para>
         </step>
 
-        <step performance="optional">
+        <step>
           <para>Klicken Sie auf die Schaltfläche <guilabel>Auftrag anzeigen/bearbeiten</guilabel>.
           </para>
         </step>
@@ -1715,10 +1825,10 @@
     <sect2 id="busnss-ar-payment">
       <title>Zahlung verarbeiten</title>
 
-      <para>Schließlich werden Sie von Ihren Kunden Zahlungen für ausstehende Rechnungen erhalten. Zum
-        Verbuchen dieser Zahlungen, verwenden Sie den Dialog <guilabel>Zahlung
-        verarbeiten</guilabel>, welchen Sie unter &mc.bus.cus.pro-pay; finden. Diese Funktion
-        können Sie in &app; an beliebiger Stelle aufrufen.
+      <para>Schließlich werden Sie von Ihren Kunden Zahlungen für offene Rechnungen erhalten. Zum Verbuchen
+        dieser Zahlungen, verwenden Sie den Dialog <guilabel>Zahlung verarbeiten</guilabel>, welchen
+        Sie unter &mc.bus.cus.pro-pay; finden. Diese Funktion können Sie in &app; an beliebiger
+        Stelle aufrufen.
       </para>
 
       <tip>
@@ -1774,7 +1884,7 @@
         <title>Zahlung verarbeiten</title>
 
         <screenshot>
-          <screeninfo>647x544</screeninfo>
+          <screeninfo>650x600</screeninfo>
 
           <mediaobject>
             <imageobject>
@@ -1792,16 +1902,7 @@
         <glossentry>
           <glossterm>Mandanteninformation - Kunde</glossterm>
           <glossdef>
-<!-- ToDo: perhaps <glosssee> coudt it work? -->
-            <para>Der Kunde, dessen Zahlung erfasst werden soll. Wenn Sie Sie sich an den
-              <emphasis>Firmennamen</emphasis> erinnern, den Sie im Fenster
-              <xref linkend="busnss-ar-custnew" /> für diesen Kunden eingegeben haben, geben Sie
-              ihn in dieses Feld ein und &app; wird versuchen, ihn automatisch für Sie zu
-              vervollständigen. Andernfalls drücken Sie die <guibutton>Auswählen...</guibutton>
-              Schaltfläche, um das Fenster <xref linkend="busnss-ar-custfind" /> zu öffnen und
-              führen dort eine Kundensuche aus. Markieren Sie im Suchergebniss den gesuchten
-              Kunden, und mit Betätigen der Schaltfläche <guibutton>Auswählen</guibutton> wird
-              der Eintrag übernommen.
+            <para>Der Kunde, dessen Zahlung erfasst werden soll.
             </para>
           </glossdef>
         </glossentry>
@@ -1815,9 +1916,10 @@
         </glossentry>
 
         <glossentry>
-          <glossterm>Buchungen</glossterm>
+          <glossterm>Dokumente</glossterm>
           <glossdef>
-            <para>Liste mit offenen Buchungen.
+            <para>Wählen Sie aus der <emphasis>Liste der Dokumente</emphasis> die Rechnung aus, die Sie begleichen
+              wollen.
             </para>
           </glossdef>
         </glossentry>
@@ -1882,8 +1984,8 @@
       <sect3 id="busnss-ar-overpay">
         <title>Zuviel gezahlte Beträge oder Vorauszahlungen</title>
 
-        <para>Wenn ein Kunde eine Rechnung zu hoch bezahlt oder für Waren oder Dienstleistungen bezahlt, bevor
-          sie in Rechnung gestellt wurden, erfolgt die Zahlungsverarbeitung für den erhaltenen
+        <para>Wenn ein Kunde eine Rechnung zu hoch bezahlt oder für erbrachte Leistungen bezahlt, bevor sie in
+          Rechnung gestellt wurden, erfolgt die Zahlungsverarbeitung für den erhaltenen
           Gesamtbetrag. &app; verfolgt dann die Überzahlung (oder Vorauszahlung) auf dem
           Ausgangskonto, und Sie können den Restbetrag bei der Bezahlung der nächsten Rechnung
           verwenden.
