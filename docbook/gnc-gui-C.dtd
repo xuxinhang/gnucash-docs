@@ -448,9 +448,9 @@
 
 <!ENTITY % untranslated 'Dear Reader, we are really sorry, but nobody offered a translation
   for the following parts. If you would like to help us, follow the instructions at <ulink
-    url="https://wiki.gnucash.org/wiki/Translation#Translating_the_GnuCash_Guide_and_Help">
-  <citetitle>Gnucash wiki: How to translate the GnuCash guide and/or help files</citetitle></ulink>.
-  Questions can be discussed at the gnucash-XX@gnucash.org mailing list.'>
+    url="&url-wiki-L10N-docs;">
+    <citetitle>&lbl-wiki; &lbl-wiki-L10N-docs;</citetitle></ulink>.
+  Questions can be discussed at the <<email>gnucash-XX@gnucash.org</email> mailing list.'>
 
 <!ENTITY untranslated "%untranslated;">
 

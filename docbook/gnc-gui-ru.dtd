@@ -8,10 +8,9 @@
 
 <!-- untranslated message -->
 <!ENTITY % untranslated 'Дорогой пользователь, нам очень жаль, но никто не перевел до сих пор
-  следующие части документации. Если вы хотите помочь нам, следуйте инструкциям на
-  <ulink url="https://wiki.gnucash.org/wiki/Translation#Translating_the_GnuCash_Guide_and_Help">
-  <citetitle>Gnucash wiki: How to translate the GnuCash guide and/or help files</citetitle></ulink>.
-  Свои вопросы вы можете задать в списке рассылки gnucash-user@gnucash.org.'>
+  следующие ч"&url-wiki-L10N-docs;">
+    <citetitle>&lbl-wiki; &lbl-wiki-L10N-docs;</citetitle></ulink>.
+  Свои вопросы вы можете задать в списке рассылки <email>gnucash-user@gnucash.org</email>.'>
 
 <!ENTITY untranslated-ru "%untranslated;"> <!-- For backward compatibility. Remove if unnecessary. -->
 

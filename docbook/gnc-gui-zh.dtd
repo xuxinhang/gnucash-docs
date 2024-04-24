@@ -445,8 +445,8 @@
 -->
 
 <!ENTITY % untranslated '很抱歉，下文尚未提供翻译。如果您愿意，可以按照<ulink
-    url="https://wiki.gnucash.org/wiki/Translation#Translating_the_GnuCash_Guide_and_Help">
-  <citetitle>Gnucash wiki: How to translate the GnuCash guide and/or help files</citetitle></ulink>的指引帮助我们完善翻译。更多问题可在gnucash-zh@gnucash.org邮件列表进行讨论。'>
+    url="&url-wiki-L10N-docs;">
+    <citetitle>&lbl-wiki; &lbl-wiki-L10N-docs;</citetitle></ulink>的指引帮助我们完善翻译。更多问题可在gnucash-zh@gnucash.org邮件列表进行讨论。'>
 <!ENTITY untranslated "%untranslated;">
 
 

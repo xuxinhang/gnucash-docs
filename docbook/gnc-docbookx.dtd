@@ -135,6 +135,7 @@ https://www.w3.org/2003/entities/2007/w3centities-f.ent
 <!ENTITY url-src "https://github.com/Gnucash/gnucash/">
 <!ENTITY url-src-stable "https://github.com/Gnucash/gnucash/tree/stable/"> <!-- Append the desired topic -->
 
+<!ENTITY lbl-wiki "&appname; wiki:">  <!-- Start of the link label. -->
 <!ENTITY url-wiki "https://wiki.gnucash.org/wiki/">  <!-- You could append the desired topic, but better create a separate entity. -->
 <!ENTITY url-wiki-de "https://wiki.gnucash.org/wiki/De/">  <!-- German root -->
 <!ENTITY url-wiki-api-custom "https://wiki.gnucash.org/wiki/Custom_Reports#The_GnuCash_API">
@@ -145,6 +146,8 @@ https://www.w3.org/2003/entities/2007/w3centities-f.ent
 <!ENTITY url-wiki-faq-quot "https://wiki.gnucash.org/wiki/FAQ#Q:_How_do_I_fix_a_.22system_error.22_or_.22unknown_error.22_when_getting_stock_quotes.3F">
 <!ENTITY url-wiki-irc "https://wiki.gnucash.org/wiki/IRC">
 <!ENTITY url-wiki-L12N "https://wiki.gnucash.org/wiki/Translation">
+<!ENTITY lbl-wiki-L10N-docs "Documentation_Translation">
+<!ENTITY url-wiki-L10N-docs "&url-wiki;&lbl-wiki-L10N-docs;">
 <!ENTITY url-wiki-L12N-tax "https://wiki.gnucash.org/wiki/Translation#How_to_create_localized_Income_Tax_Tables">
 <!ENTITY url-wiki-locale "https://wiki.gnucash.org/wiki/Locale_Settings">
 <!ENTITY url-wiki-ml "https://wiki.gnucash.org/wiki/Mailing_Lists">
