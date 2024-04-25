@@ -11,8 +11,6 @@
     <citetitle>&lbl-wiki; &lbl-wiki-L10N-docs;</citetitle></ulink>.
   Questões podem ser discutidas na lista gnucash-user@gnucash.org o <email>gnucash-br@gnucash.org</email>.'>
 
-<!ENTITY untranslated-pt "%untranslated;"> <!-- For backward compatibility. Remove if unnecessary. -->
-
 <!-- Include "gnc-gui-C.dtd" -->
 <!ENTITY % gnc-gui-C SYSTEM "gnc-gui-C.dtd">
 %gnc-gui-C;
