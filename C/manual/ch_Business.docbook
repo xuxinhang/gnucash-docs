@@ -2090,7 +2090,7 @@
 
     <para>&app; can help your company by tracking employees. You can register a
       <xref linkend="busnss-emplynew" />, <xref linkend="busnss-emplyfind" /> existing employees,
-      create <xref linkend="busnss-emply-newvchr" /> and <xref linkend="busnss-emply-vchrfind" />.
+      create <xref linkend="busnss-emply-vchrnew" /> and <xref linkend="busnss-emply-vchrfind" />.
     </para>
 
     <para>Expense vouchers are used to reimburse employees for authorized expenses (f.e. travel, parking, food
@@ -2251,7 +2251,7 @@
       </tip>
     </sect2>
 
-    <sect2 id="busnss-emply-newvchr">
+    <sect2 id="busnss-emply-vchrnew">
       <title>New Expense Voucher/Credit Note</title>
 
       <para>To register a new expense voucher/ Credit Note, select the

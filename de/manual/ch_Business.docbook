@@ -2605,7 +2605,7 @@
 
     <para>&app; can help your company by tracking employees. You can register a
       <xref linkend="busnss-emplynew" />, <xref linkend="busnss-emplyfind" /> existing employees,
-      create <xref linkend="busnss-emply-newvchr" /> and <xref linkend="busnss-emply-editvchr" />.
+      create <xref linkend="busnss-emply-vchrnew" /> and <xref linkend="busnss-emply-vchredit" />.
     </para>
 
     <para>Expense vouchers are used to reimburse employees for authorized expenses (f.e. travel, parking, food
@@ -2753,10 +2753,10 @@
       </tip>
     </sect2>
 
-    <sect2 id="busnss-emply-newvchr">
+    <sect2 id="busnss-emply-vchrnew">
       <title>Neue Auslagenerstattung/ Gutschrift</title>
 
-      <para>To register a new expense voucher/ Credit Note, select the &mc.bus.emp.new-exp-vou; menu item. The
+      <para>To register a new expense voucher/ Credit Note, select the &mc.bus.emp.new-vchr; menu item. The
         <guilabel>New Expense Voucher</guilabel> window will open. You can enter the following data:
       </para>
 
@@ -2850,7 +2850,7 @@
     <sect2 id="busnss-emply-vchrfind">
       <title>Find Expense Voucher/Credit Note</title>
 
-      <para>To search for an existing Expense Voucher, use the &mc.bus.emp.find-exp-vou; menu item. You select
+      <para>To search for an existing Expense Voucher, use the &mc.bus.emp.find-vchr; menu item. You select
         an Expense Voucher to <guibutton>View/Edit</guibutton> from the results of the search. This
         window is also used to look up an expense voucher when entering vouchers and processing
         payments.
