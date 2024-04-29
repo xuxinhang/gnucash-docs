@@ -1737,7 +1737,7 @@
    <sect1 id="busnss-emply">
     <title>Employees</title>
     <para>&app; can help your company by tracking employees. You can register a
-    <xref linkend="busnss-emplynew" />, <xref linkend="busnss-emplyedit" /> existing employees, create
+    <xref linkend="busnss-emplynew" />, <xref linkend="busnss-emplyfind" /> existing employees, create
     <xref linkend="busnss-emply-newvchr" /> and <xref linkend="busnss-emply-editvchr" />.</para>
 
     <para>Expense vouchers are used to reimburse employees for authorized expenses (f.e. travel, parking, food etc...).
@@ -1827,7 +1827,7 @@
 
   </sect2>
 
-    <sect2 id="busnss-emplyedit">
+    <sect2 id="busnss-emplyfind">
     <title>Find and Edit</title>
 
       <para>To search for an existing employee, use the <menuchoice><guimenu>Business</guimenu>
@@ -1889,7 +1889,7 @@
         <tip>
           <para>The field supports auto-completion so if you start typing &app;
           will try to complete the text automatically using existing employees name. You can also press the button
-          <guibutton>Select...</guibutton> to open the <link linkend="busnss-emplyedit">Find Employee</link>
+          <guibutton>Select...</guibutton> to open the <link linkend="busnss-emplyfind">Find Employee</link>
           window.</para>
         </tip>
       </listitem>
