@@ -31,6 +31,7 @@ https://www.w3.org/2003/entities/2007/w3centities-f.ent
 <!--
   Some global declarations which are used in the files. For easier
   maintenance they are collected here.
+  Note that this entities are not available in gnc-gui-*.dtd files!
   
   1. a) Publication - should only be changed by the release manager!
 -->
