@@ -45,12 +45,12 @@
         <listitem>
           <para>Die Debitorenbuchhaltung, deren Funktionen Ihnen im Menu &mc.bus.cus; zur Verfügung stehen, bietet
             die Möglichkeit, die Geschäftsvorfälle in Bezug auf Ihre
-            <xref linkend="busnss-ar-customers1" /> anzuwenden.
+            <xref linkend="busnss-ar-customers" /> anzuwenden.
           </para>
         </listitem>
 
         <listitem>
-          <para>In dem Abschnitt <xref linkend="busnss-ap-vendors1" /> werden die einzelnen Komponenten der
+          <para>In dem Abschnitt <xref linkend="busnss-ap-vendors" /> werden die einzelnen Komponenten der
             Kreditorenbuchhaltung vorgestellt, welche im Untermenü von &mc.bus.ven; enthalten sind.
           </para>
         </listitem>
@@ -69,7 +69,7 @@
     </para>
   </abstract>
 
-  <sect1 id="busnss-ar-setup1">
+  <sect1 id="busnss-ar-setup">
     <title>Vorbereitungen</title>
 
     <abstract>
@@ -528,7 +528,7 @@
     </sect2>
   </sect1>
 
-  <sect1 id="busnss-ar-customers1">
+  <sect1 id="busnss-ar-customers">
     <title>Kunden</title>
 
     <abstract>
@@ -565,7 +565,7 @@
           </listitem>
 
           <listitem>
-            <para>Mit <link linkend="busnss-ar-jobs1">Kundenaufträgen</link> haben Sie die Möglichkeit, mehrere
+            <para>Mit <link linkend="busnss-ar-jobs">Kundenaufträgen</link> haben Sie die Möglichkeit, mehrere
               Rechnungen an einen bestimmten Kunden zu gruppieren.
             </para>
           </listitem>
@@ -582,7 +582,7 @@
       vorgestellt.
     </para>
 
-    <sect2 id="busnss-ar-custnew2">
+    <sect2 id="busnss-ar-custnew">
       <title>Neuer Kunde</title>
 
       <para>Um einen Datensatz für einen neuen Kunden anzulegen, öffnen Sie den Dialog &mc.bus.cus.new-cus;.
@@ -812,7 +812,7 @@
       </glosslist>
     </sect2>
 
-    <sect2 id="busnss-ar-custfind2">
+    <sect2 id="busnss-ar-custfind">
       <title>Kunden suchen</title>
 
       <para>Möchten Sie den Datensatz eines Kunden suchen, nutzen Sie den Menüeintrag &mc.bus.cus.find-cus;.
@@ -857,7 +857,7 @@
       </para>
     </sect2>
 
-    <sect2 id="busnss-ar-invoicenew2">
+    <sect2 id="busnss-ar-invoicenew">
       <title>Neue Rechnung</title>
 
       <para>Um eine Rechnung an einen Kunden zu senden, müssen Sie zunächst eine neue Rechnung erstellen.
@@ -922,7 +922,7 @@
               erinnern, den Sie im Dialog <guilabel>Neuer Kunde</guilabel> eingegeben haben, tragen
               Sie ihn in dieses Feld ein und &app; wird versuchen, ihn automatisch für Sie zu
               vervollständigen. Andernfalls drücken Sie die <guibutton>Auswählen…</guibutton>
-              Taste, um den <xref linkend="busnss-ar-custfind2" /> Dialog zu öffnen. Markieren Sie
+              Taste, um den <xref linkend="busnss-ar-custfind" /> Dialog zu öffnen. Markieren Sie
               den Eintrag für den gesuchten Kunden und drücken Sie dann die Schaltfläche
               <guibutton>Auswählen</guibutton>.
             </para>
@@ -932,13 +932,13 @@
         <glossentry>
           <glossterm>Abrechnungsdaten - Auftrag</glossterm>
           <glossdef>
-            <para>(optional) Verknüpft die neue Rechnung mit einem <xref linkend="busnss-ar-jobs1" />. Wenn Sie sich
+            <para>(optional) Verknüpft die neue Rechnung mit einem <xref linkend="busnss-ar-jobs" />. Wenn Sie sich
               an den <emphasis>Auftragnamen</emphasis> erinnern, den Sie im Dialog <guilabel>Neuer
               Auftrag</guilabel> eingegeben haben, geben Sie ihn in dieses Feld ein und &app; wird
               versuchen, ihn für Sie zu vervollständigen. Andernfalls drücken Sie die
               Schaltfläche <guibutton>Auswählen…</guibutton>, um das Fenster <guilabel>Auftrag
               suchen</guilabel> aufzurufen. Dieser Dialog ist derselbe wie in
-              <xref linkend="busnss-ar-custfind2" /> beschrieben. Klicken Sie in den Suchergebnissen
+              <xref linkend="busnss-ar-custfind" /> beschrieben. Klicken Sie in den Suchergebnissen
               auf die gewünschte Stelle und drücken Sie dann auf die Schaltfläche
               <guibutton>Auswählen</guibutton>.
             </para>
@@ -979,7 +979,7 @@
       </para>
     </sect2>
 
-    <sect2 id="busnss-ar-invoiceedit2">
+    <sect2 id="busnss-ar-invoiceedit">
       <title>Rechnung bearbeiten</title>
 
       <para>Im Fenster <guilabel>Rechnung bearbeiten</guilabel> können Sie eine detaillierte Liste der Waren
@@ -1025,7 +1025,7 @@
 
       <para>Der obere Bereich der Anzeige beinhaltet die Rechnungsinformationen, die Sie mit dem Menüpunkt
         &mc.ed.edit; nachträglich ändern können. Es öffnet sich das Fenster
-        <xref linkend="busnss-ar-invoicenew2" /> in dem Sie Angaben entsprechend modifizieren
+        <xref linkend="busnss-ar-invoicenew" /> in dem Sie Angaben entsprechend modifizieren
         können.
       </para>
 
@@ -1249,14 +1249,14 @@
 
       <tip>
         <para>Mit dem Menüpunkt &mc.ed.dup; können Sie die ausgewählte Rechnung duplizieren. Es öffnet sich
-          das Fenster <xref linkend="busnss-ar-invoicenew2" />, in welchem Sie die vorhandenen
+          das Fenster <xref linkend="busnss-ar-invoicenew" />, in welchem Sie die vorhandenen
           Rechnungsdaten anpassen können. Eine neue Rechnung wird als Duplikat der vorherigen
           Rechnung inklusive aller erfassten Posten angelegt.
         </para>
       </tip>
     </sect2>
 
-    <sect2 id="busnss-ar-invoicepost2">
+    <sect2 id="busnss-ar-invoicepost">
       <title>Rechnung buchen</title>
 
       <para>Haben Sie die Erstelung einer Rechnung abgeschlossen und ist diese zum Drucken bereit, können Sie
@@ -1291,7 +1291,7 @@
           <glossdef>
             <para>Gibt das Datum für die auf dem Debitorenkonto verbuchten Posten an. Standardmäßig ist dies das
               <guilabel>Eröffnungsdatum</guilabel> der Rechnung. (siehe
-              <xref linkend="busnss-ar-invoicenew2"/>).
+              <xref linkend="busnss-ar-invoicenew"/>).
             </para>
           </glossdef>
         </glossentry>
@@ -1385,7 +1385,7 @@
       </tip>
     </sect2>
 
-    <sect2 id="busnss-ar-invoicefind2">
+    <sect2 id="busnss-ar-invoicefind">
       <title>Rechnung suchen</title>
 
       <para>Um eine bestehende Rechnung zu finden, verwenden Sie den Menüpunkt &mc.bus.cus.find-inv;. Aus den
@@ -1419,7 +1419,7 @@
       </itemizedlist>
     </sect2>
 
-    <sect2 id="busnss-ar-invoiceprint2">
+    <sect2 id="busnss-ar-invoiceprint">
       <title>Rechnung drucken</title>
 
       <para>Nachdem Sie eine Rechnung gebucht haben, können Sie diese ausdrucken und an Ihre Kunden senden.
@@ -1497,12 +1497,12 @@
 <!-- Ist der folgende Absatz noch zutreffend? -->
 <!--
        <para>Sie können Rechnungen auch aus dem Dialogfeld <guilabel>Zahlung verarbeiten</guilabel>
-        heraus drucken. Unter <xref linkend="busnss-ar-payment1" /> finden Sie eine Anleitung dazu.
+        heraus drucken. Unter <xref linkend="busnss-ar-payment" /> finden Sie eine Anleitung dazu.
       </para>
 -->
     </sect2>
 
-    <sect2 id="busnss-ar-invoicestarting2">
+    <sect2 id="busnss-ar-invoicestarting">
       <title>Rechnungsnummer anpassen</title>
 
       <para>Standardmäßig beginnt &app; mit der Rechnungsnummer 1 und erhöht diese, wie z.B. in der EU vom
@@ -1523,7 +1523,7 @@
     <sect2 id="busnss-ar-invoicechange">
       <title>Erscheinungsbild ändern</title>
 
-      <para>Das Aussehen der Standard-Rechnung ist, wenn sie die in <xref linkend="busnss-ar-invoiceprint2" />
+      <para>Das Aussehen der Standard-Rechnung ist, wenn sie die in <xref linkend="busnss-ar-invoiceprint" />
         beschriebenen Rechnungsvorlagen nutzen, recht schlicht. Das Standard-Layout lässt den
         oberen Teil des Formulars leer, so dass Sie das Briefpapier ihrer Firma als Vordruck
         verwenden können. Es gibt einige Möglichkeiten, das Erscheinungsbild der Rechnung
@@ -1547,7 +1547,7 @@
       </para>
     </sect2>
 
-    <sect2 id="busnss-ar-jobs1">
+    <sect2 id="busnss-ar-jobs">
       <title>Kundenauftrag</title>
 
       <para>Sofern mit dem Kunden vereinbart, können Sie größeren Auträgen mehrere Rechnungen zuweisen, z.B.
@@ -1612,10 +1612,10 @@
           <glossdef>
             <para>Der Kunde, für den der Auftrag erstellt wird. Wenn Sie Sie sich an den
               <emphasis>Firmennamen</emphasis> erinnern, den Sie im Fenster
-              <xref linkend="busnss-ar-custnew2" /> für diesen Kunden eingegeben haben, geben Sie
+              <xref linkend="busnss-ar-custnew" /> für diesen Kunden eingegeben haben, geben Sie
               ihn in dieses Feld ein und &app; wird versuchen, ihn automatisch für Sie zu
               vervollständigen. Andernfalls drücken Sie die <guibutton>Auswählen...</guibutton>
-              Schaltfläche, um das Fenster <xref linkend="busnss-ar-custfind2" /> zu öffnen und
+              Schaltfläche, um das Fenster <xref linkend="busnss-ar-custfind" /> zu öffnen und
               führen dort eine Kundensuche aus. Markieren Sie den Suchergebnissen den gesuchten
               Kunden und mit betätigen der Schaltfläche <guibutton>Auswählen</guibutton> wird der
               Eintrag übernommen.
@@ -1700,7 +1700,7 @@
       </procedure>
     </sect2>
 
-    <sect2 id="busnss-ar-payment1">
+    <sect2 id="busnss-ar-payment">
       <title>Zahlung verarbeiten</title>
 
       <para>Schließlich werden Sie von Ihren Kunden Zahlungen für ausstehende Rechnungen erhalten. Zum
@@ -1783,10 +1783,10 @@
 <!-- ToDo: perhaps <glosssee> coudt it work? -->
             <para>Der Kunde, dessen Zahlung erfasst werden soll. Wenn Sie Sie sich an den
               <emphasis>Firmennamen</emphasis> erinnern, den Sie im Fenster
-              <xref linkend="busnss-ar-custnew2" /> für diesen Kunden eingegeben haben, geben Sie
+              <xref linkend="busnss-ar-custnew" /> für diesen Kunden eingegeben haben, geben Sie
               ihn in dieses Feld ein und &app; wird versuchen, ihn automatisch für Sie zu
               vervollständigen. Andernfalls drücken Sie die <guibutton>Auswählen...</guibutton>
-              Schaltfläche, um das Fenster <xref linkend="busnss-ar-custfind2" /> zu öffnen und
+              Schaltfläche, um das Fenster <xref linkend="busnss-ar-custfind" /> zu öffnen und
               führen dort eine Kundensuche aus. Markieren Sie im Suchergebniss den gesuchten
               Kunden, und mit Betätigen der Schaltfläche <guibutton>Auswählen</guibutton> wird
               der Eintrag übernommen.
@@ -1867,7 +1867,7 @@
         </glossentry>
       </glosslist>
 
-      <sect3 id="busnss-ar-overpay2">
+      <sect3 id="busnss-ar-overpay">
         <title>Zuviel gezahlte Beträge oder Vorauszahlungen</title>
 
         <para>Wenn ein Kunde eine Rechnung zu hoch bezahlt oder für Waren oder Dienstleistungen bezahlt, bevor
@@ -1878,7 +1878,7 @@
         </para>
       </sect3>
 
-      <sect3 id="busnss-ar-partpay2">
+      <sect3 id="busnss-ar-partpay">
         <title>Teilzahlungen</title>
 
         <para>Auch Teilzahlungen sind möglich. Wählen Sie die zu zahlende Rechnung aus und &app; schlägt
@@ -1988,7 +1988,7 @@
     </sect2>
   </sect1>
 <!-- start of A/P -->
-  <sect1 id="busnss-ap-components1">
+  <sect1 id="busnss-ap-components">
     <title>Accounts Payable</title>
 
     <para>&app; has an integrated accounts payable system. As with <emphasis>Accounts Receivable</emphasis>
@@ -2033,14 +2033,14 @@
     </para>
   </sect1>
 
-  <sect1 id="busnss-ap-vendors1">
+  <sect1 id="busnss-ap-vendors">
     <title>Vendors</title>
 
     <para>A vendor is a company or person from whom you purchase goods or services. Vendors must be registered
       within the A/P system.
     </para>
 
-    <sect2 id="busnss-ap-vendornew2">
+    <sect2 id="busnss-ap-vendornew">
       <title>New</title>
 
       <para>To register a new vendor, select the &mc.bus.ven.new-ven; menu item. Fill in general information
@@ -2127,7 +2127,7 @@
       </itemizedlist>
     </sect2>
 
-    <sect2 id="busnss-ap-vendorfind2">
+    <sect2 id="busnss-ap-vendorfind">
       <title>Find and Edit</title>
 
       <para>To search for an existing vendor, use the &mc.bus.ven.find-ven; window. You select a vendor to
@@ -2159,7 +2159,7 @@
     </sect2>
   </sect1>
 
-  <sect1 id="busnss-ap-bills1">
+  <sect1 id="busnss-ap-bills">
     <title>Bills</title>
 
     <para>A bill is a request for payment you receive from a vendor. &app; can track bills.
@@ -2178,7 +2178,7 @@
       </para>
     </note>
 
-    <sect2 id="busnss-ap-billnew2">
+    <sect2 id="busnss-ap-billnew">
       <title>Neue Lieferantenrechnung</title>
 
       <para>When you receive a bill from a vendor and want to enter it into &app;, you must create a new bill.
@@ -2212,19 +2212,19 @@
             window for this vendor, start to type it in this field and &app; will try auto complete
             it for you. Else, press the <guibutton>Select...</guibutton> button to access the
             <guilabel>Find Vendor</guilabel> window described in
-            <xref linkend="busnss-ap-vendorfind2" />. Highlight the vendor you are looking for with
+            <xref linkend="busnss-ap-vendorfind" />. Highlight the vendor you are looking for with
             a click in the search results, then press the <guibutton>Select</guibutton> button.
           </para>
         </listitem>
 
         <listitem>
           <para><guilabel>Billing Information - Job</guilabel> (optional) - associates a vendor job (see
-            <xref linkend="busnss-ap-jobs1" />) with this bill. If you remember the <emphasis>job
+            <xref linkend="busnss-ap-jobs" />) with this bill. If you remember the <emphasis>job
             name</emphasis> you entered in the <guilabel>New Job</guilabel> window for this job,
             start to type it in this field and &app; will try auto complete it for you. Else, press
             the <guibutton>Select...</guibutton> button to access the <guilabel>Find Job</guilabel>
             window. This window is very similar to the one described in
-            <xref linkend="busnss-ap-vendorfind2" />. Highlight the job you are looking for with a
+            <xref linkend="busnss-ap-vendorfind" />. Highlight the job you are looking for with a
             click in the search results, then press the <guibutton>Select</guibutton> button.
           </para>
         </listitem>
@@ -2259,7 +2259,7 @@
       </para>
     </sect2>
 
-    <sect2 id="busnss-ap-billedit2">
+    <sect2 id="busnss-ap-billedit">
       <title>Edit</title>
 
       <para>From the Edit Bill window you can enter an itemized list of goods and services you purchased, in a
@@ -2351,7 +2351,7 @@
       </para>
     </sect2>
 
-    <sect2 id="busnss-ap-billpost2">
+    <sect2 id="busnss-ap-billpost">
       <title>Post</title>
 
       <para>When you finish editing a bill, you should <guilabel>Post</guilabel> the bill. You do not have to
@@ -2424,7 +2424,7 @@
       </itemizedlist>
     </sect2>
 
-    <sect2 id="busnss-ap-billfind2">
+    <sect2 id="busnss-ap-billfind">
       <title>Find</title>
 
       <para>To find an existing bill, use the &mc.bus.ven.find-bil; menu item. From the results of the search,
@@ -2438,13 +2438,13 @@
 
       <note>
         <para>There are other ways to access an existing bill. These are similar to accessing invoices for your
-          customers. See <xref linkend="busnss-ar-invoicefind2" /> for more information.
+          customers. See <xref linkend="busnss-ar-invoicefind" /> for more information.
         </para>
       </note>
     </sect2>
   </sect1>
 
-  <sect1 id="busnss-ap-jobs1">
+  <sect1 id="busnss-ap-jobs">
     <title>Vendor Jobs</title>
 
     <para>Vendor Jobs are used to group multiple bills and credit notes from a single vendor. Use of the
@@ -2499,7 +2499,7 @@
     </para>
   </sect1>
 
-  <sect1 id="busnss-ap-payment1">
+  <sect1 id="busnss-ap-payment">
     <title>Process Bill Payment</title>
 
     <para>Eventually, you need to pay your bills. To do so, use the Process Payment application found in
@@ -2533,7 +2533,7 @@
           window for this vendor, start to type it in this field and &app; will try auto complete it
           for you. Else, press the <guibutton>Select...</guibutton> button to access the
           <guilabel>Find Vendor</guilabel> window described in
-          <xref linkend="busnss-ap-vendorfind2" />. Highlight the vendor you are looking for with a
+          <xref linkend="busnss-ap-vendorfind" />. Highlight the vendor you are looking for with a
           click in the search results, then press the <guibutton>Select</guibutton> button.
         </para>
       </listitem>
@@ -2542,7 +2542,7 @@
         <para><guilabel>Payment Information - Bill</guilabel> - the bill you wish to pay. If you remember the
           <emphasis>bill ID</emphasis>, start to type it in this field and &app; will try auto
           complete it for you. Else, press the <guibutton>Select...</guibutton> button to access the
-          <guilabel>Find Bill</guilabel> window described in <xref linkend="busnss-ap-billfind2" />.
+          <guilabel>Find Bill</guilabel> window described in <xref linkend="busnss-ap-billfind" />.
           Highlight the bill you are looking for with a click in the search results, then press the
           <guibutton>Select</guibutton> button in the search window.
         </para>
@@ -2581,7 +2581,7 @@
       </listitem>
     </itemizedlist>
 
-    <sect2 id="busnss-ap-overpay2">
+    <sect2 id="busnss-ap-overpay">
       <title>Over Payments or Pre-Payments</title>
 
       <para>If you wish to overpay an invoice or pay for goods or services before they have been invoiced,
@@ -2590,7 +2590,7 @@
       </para>
     </sect2>
 
-    <sect2 id="busnss-ap-partpay2">
+    <sect2 id="busnss-ap-partpay">
       <title>Partial Payments</title>
 
       <para>You may wish to partially pay a bill. Select the bill to pay. &app; will automatically suggest that
@@ -2604,8 +2604,8 @@
     <title>Employees</title>
 
     <para>&app; can help your company by tracking employees. You can register a
-      <xref linkend="busnss-emplynew" />, <xref linkend="busnss-emplyedit" /> existing employees,
-      create <xref linkend="busnss-emply-newvchr" /> and <xref linkend="busnss-emply-editvchr" />.
+      <xref linkend="busnss-emplynew" />, <xref linkend="busnss-emplyfind" /> existing employees,
+      create <xref linkend="busnss-emply-vchrnew" /> and <xref linkend="busnss-emply-vchredit" />.
     </para>
 
     <para>Expense vouchers are used to reimburse employees for authorized expenses (f.e. travel, parking, food
@@ -2719,7 +2719,7 @@
       </itemizedlist>
     </sect2>
 
-    <sect2 id="busnss-emplyedit">
+    <sect2 id="busnss-emplyfind">
       <title>Find and Edit</title>
 
       <para>To search for an existing employee, use the &mc.bus.emp.find-emp; menu. You select an employee to
@@ -2753,10 +2753,10 @@
       </tip>
     </sect2>
 
-    <sect2 id="busnss-emply-newvchr">
+    <sect2 id="busnss-emply-vchrnew">
       <title>Neue Auslagenerstattung/ Gutschrift</title>
 
-      <para>To register a new expense voucher/ Credit Note, select the &mc.bus.emp.new-exp-vou; menu item. The
+      <para>To register a new expense voucher/ Credit Note, select the &mc.bus.emp.new-vchr; menu item. The
         <guilabel>New Expense Voucher</guilabel> window will open. You can enter the following data:
       </para>
 
@@ -2788,7 +2788,7 @@
           <tip>
             <para>The field supports auto-completion so if you start typing &app; will try to complete the text
               automatically using existing employees name. You can also press the button
-              <guibutton>Select...</guibutton> to open the <link linkend="busnss-emplyedit">Find
+              <guibutton>Select...</guibutton> to open the <link linkend="busnss-emplyfind">Find
               Employee</link> window.
             </para>
           </tip>
@@ -2814,7 +2814,7 @@
           <tip>
             <para>The field supports auto-completion so if you start typing &app; will try to complete the text
               automatically using an existing Customer name. You can also press the button
-              <guibutton>Select...</guibutton> to open the <link linkend="busnss-ar-custfind2">Find
+              <guibutton>Select...</guibutton> to open the <link linkend="busnss-ar-custfind">Find
               Customer</link> window.
             </para>
           </tip>
@@ -2834,7 +2834,7 @@
           <tip>
             <para>The field supports auto-completion so if you start typing &app; will try to complete the text
               automatically using an existing Customer name. You can also press the button
-              <guibutton>Select...</guibutton> to open the <link linkend="busnss-ar-custfind2">Find
+              <guibutton>Select...</guibutton> to open the <link linkend="busnss-ar-custfind">Find
               Customer</link> window.
             </para>
           </tip>
@@ -2847,10 +2847,10 @@
       </itemizedlist>
     </sect2>
 
-    <sect2 id="busnss-emply-editvchr">
+    <sect2 id="busnss-emply-vchrfind">
       <title>Find Expense Voucher/Credit Note</title>
 
-      <para>To search for an existing Expense Voucher, use the &mc.bus.emp.find-exp-vou; menu item. You select
+      <para>To search for an existing Expense Voucher, use the &mc.bus.emp.find-vchr; menu item. You select
         an Expense Voucher to <guibutton>View/Edit</guibutton> from the results of the search. This
         window is also used to look up an expense voucher when entering vouchers and processing
         payments.
@@ -2882,7 +2882,7 @@
       </tip>
     </sect2>
 
-    <sect2 id="busnss-emply-editvchr2">
+    <sect2 id="busnss-emply-vchredit">
       <title>Edit</title>
 
       <para>From the Edit Expense Voucher window you can enter an itemized list of goods and services the

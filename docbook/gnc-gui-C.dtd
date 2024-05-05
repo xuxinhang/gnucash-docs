@@ -178,8 +178,8 @@
 <!ENTITY % gmi.bus.emp.o-view "<guimenuitem><accel></accel>Employess Overview</guimenuitem>">
 <!ENTITY % gmi.bus.emp.new-emp "<guimenuitem><accel>N</accel>ew Employee…</guimenuitem>">
 <!ENTITY % gmi.bus.emp.find-emp "<guimenuitem><accel>F</accel>ind Employee…</guimenuitem>">
-<!ENTITY % gmi.bus.emp.new-exp-vou "<guimenuitem>New <accel>E</accel>xpense Voucher…</guimenuitem>">
-<!ENTITY % gmi.bus.emp.find-exp-vou "<guimenuitem>Find Expense <accel>V</accel>oucher…</guimenuitem>">
+<!ENTITY % gmi.bus.emp.new-vchr "<guimenuitem>New <accel>E</accel>xpense Voucher…</guimenuitem>">
+<!ENTITY % gmi.bus.emp.find-vchr "<guimenuitem>Find Expense <accel>V</accel>oucher…</guimenuitem>">
 <!ENTITY % gmi.bus.emp.pro-pay "<guimenuitem><accel>P</accel>rocess Payment…</guimenuitem>">
 <!ENTITY % gmi.bus.link-doc "<guimenuitem><accel></accel>Business Linked Documents</guimenuitem>">
 <!ENTITY % gmi.bus.tax-tab "<guimenuitem>Sales <accel>T</accel>ax Table</guimenuitem>">
