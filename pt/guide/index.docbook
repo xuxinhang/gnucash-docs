@@ -91,6 +91,18 @@
       </revision>
 
       <revision>
+        <revnumber>&appname; Tutorial e guia de conceitos 5.7</revnumber>
+        <date>30 de junho de 2024</date>
+        <revdescription>
+          <para role="author">Multiple authors
+          </para>
+
+          <para role="publisher">&appname; Documentation Team
+          </para>
+        </revdescription>
+      </revision>
+
+      <revision>
         <revnumber>&appname; Tutorial e guia de conceitos 5.5</revnumber>
         <date>17 de dezembro 2023</date>
         <revdescription>
