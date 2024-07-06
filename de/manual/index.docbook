@@ -62,8 +62,19 @@
 
     <revhistory>
       <revision>
+        <revnumber>&appname; Handbuch 5.8</revnumber>
+        <date>7 July 2024</date>
+        <revdescription>
+          <para role="author">Mehrere Autoren
+          </para>
+          <para role="publisher">&appname; Documentation Team
+          </para>
+        </revdescription>
+      </revision>
+
+      <revision>
         <revnumber>&appname; Handbuch 5.7</revnumber>
-        <date>30 une J2024</date>
+        <date>30 June 2024</date>
         <revdescription>
           <para role="author">Mehrere Autoren
           </para>
