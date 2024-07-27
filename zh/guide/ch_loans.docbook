@@ -77,7 +77,7 @@
         </varlistentry>
 
         <varlistentry>
-          <term>逾期 <!-- ToDoZ: 怎样翻译delinquent --></term>
+          <term>拖欠</term>
 
           <listitem>
             <para>未能如期还款。
@@ -162,7 +162,7 @@
     -流动资产
         -储蓄存款
     -固定资产
-        -购入的资产<!-- ToDoZ: Asset Purchased 怎样翻译 -->
+        -已购入资产
 -负债
    -贷款
        -房屋按揭贷款
@@ -172,7 +172,7 @@
    -房屋按揭贷款管理费</screen>
     <para>&app;内置多种预定义的贷款科目层次结构，包括汽车贷款和住宅按揭贷款。要使用这些预定义的科目结构，点击
       <menuchoice>
-        <guimenu>功能</guimenu><guimenuitem>新建科目层次结构...</guimenuitem>
+        <guimenu>功能</guimenu><guimenuitem>建立科目结构</guimenuitem>
       </menuchoice>并选择你想使用的贷款类型。
     </para>
   </sect1>
@@ -262,7 +262,7 @@
         <term>还款</term>
 
         <listitem>
-          <para>在下拉框中选择从每年到每天不等的还款频率。也可以选择是在期初还是期末时还款。如果选择期初还款，还款额会同当前欠款金额一起计算利息。
+          <para>通过下拉框选择还款频率，每年到每天不等。也可以选择在期初还是在期末时还款。如果选择期初还款，还款额会同当前欠款金额一起计算利息。
           </para><!-- ToDoC: 这个表达很令人费解 -->
         </listitem>
       </varlistentry>
@@ -297,7 +297,7 @@
     <sect2 id="loans_calcsdetails2">
       <title>进阶：计算详细过程</title>
 
-      <!-- ToDoZ: 缩进 -->
+      <!-- ToDoS: 缩进 -->
       <para>在讨论<guilabel>贷款还款计算器</guilabel>所使用的数学公式之前，先定义一些变量。<screen>
  n   == 还款期数
  %i  == 收取的名义利率
@@ -323,7 +323,7 @@
 
       <sect3 id="loans_calcsdetails_i2">
         <title>名义利率与有效利率间的转换</title>
-        <!-- ToDoZ: 翻译为名义利率还是有效利率 -->
+        <!-- 翻译提示: 有效利率 wiki.mbalib.com/wiki/ -->
 
         <para>要求解 n、PV、PMT或FV，先要将名义利率(i)转换为还款期时长的有效利率(ieff)。这一利率(ieff)随后用于计算需要求解的变量。需要求解i时，计算结果是有效利率(ieff)。因此，需要将i转换为ieff，也要将ieff转换为i。
         </para>
@@ -751,7 +751,7 @@
         </listitem>
 
         <listitem>
-          <para>——利息： 5% ÷ 12 × ￥2,000 = ￥8.33  <!-- ToDoC: 英文也可以使用好看的乘号 -->
+          <para>——利息： 5% ÷ 12 × ￥2,000 = ￥8.33  <!-- ToDoC: 好看的乘号 -->
           </para>
         </listitem>
 
@@ -1178,7 +1178,7 @@
 
               <row>
                 <entry>
-                  资产:固定资产:房屋:未实现损益<!-- ToDoC: 这是不是搞错了 -->
+                  资产:固定资产:房屋:已实现损益<!-- ToDoC: 原文为“未实现损益”是否有错 -->
                 </entry>
 
                 <entry></entry>
