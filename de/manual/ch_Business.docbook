@@ -3147,365 +3147,526 @@
   </sect1>
 
   <sect1 id="busnss-emply">
-    <title>Employees</title>
+    <title>Mitarbeitende</title>
 
-    <para>&app; can help your company by tracking employees. You can register a
-      <xref linkend="busnss-emplynew" />, <xref linkend="busnss-emplyfind" /> existing employees,
-      create <xref linkend="busnss-emply-vchrnew" /> and <xref linkend="busnss-emply-vchredit" />.
-    </para>
-
-    <para>Expense vouchers are used to reimburse employees for authorized expenses (f.e. travel, parking, food
-      etc...). Employee credit notes are the opposite of expense vouchers.
-    </para>
-
-    <sect2 id="busnss-emplynew">
-      <title>New Employee</title>
-
-      <para>To register a new employee, select the &mc.bus.emp.new-emp; menu item. The <guilabel>New
-        Employee</guilabel> window will open with two tabs:
+    <abstract>
+      <para>Zur Erstellung von Abrechnungsunterlagen für Ihre Mitarbeitenden kann &app; die notwendigen
+        Stammdaten speichern. Zu den Abrechnungen zählen neben den Gehaltsabrechnungen auch die
+        Erstattungen von Auslagen.
       </para>
 
-      <itemizedlist>
-        <listitem>
-          <para><xref linkend="mply-tab1" />
-          </para>
-        </listitem>
-
-        <listitem>
-          <para><xref linkend="mply-tab2" />
-          </para>
-        </listitem>
-      </itemizedlist>
-
-      <itemizedlist id="mply-tab1">
-        <title>Employee tab</title>
-
-        <listitem>
-          <para><guilabel>Identification - Employee Number</guilabel> - can be any number by which you would like to
-            refer to this employee. You may leave it blank and a number will be chosen
-            automatically. See <xref linkend="counters-book-options" /> for more info.
-          </para>
-        </listitem>
-
-        <listitem>
-          <para><guilabel>Identification - Username</guilabel> (Mandatory) - a unique username to identify the
-            employee.
-          </para>
-        </listitem>
-
-        <listitem>
-          <para><guilabel>Identification - Active</guilabel> (Optional) - differentiates active employees from
-            inactive ones. This is useful when you have many past employees, and you want to see
-            only those marked <guilabel>Active</guilabel>.
-          </para>
-        </listitem>
-
-        <listitem>
-          <para><guilabel>Payment Address - Name</guilabel> (Mandatory) - the full name of the employee.
-          </para>
-        </listitem>
-
-        <listitem>
-          <para><guilabel>Payment Address - Address</guilabel> (Mandatory) - the address of the employee.
-          </para>
-        </listitem>
-
-        <listitem>
-          <para><guilabel>Payment Address - Phone, Fax, Email</guilabel> (Optional)- other optional contact
-            information for the employee.
-          </para>
-        </listitem>
-
-        <listitem>
-          <para><guilabel>Interface - Language</guilabel> (Optional) -
-          </para>
-        </listitem>
-
-        <listitem>
-          <para><guilabel>Payment Information - Terms</guilabel> (Optional) - specifies the default payment terms
-            for this employee. Payment terms must be preregistered using &mc.bus.bil-edit; .
-          </para>
-        </listitem>
-
-        <listitem>
-          <para><guilabel>Billing - Default Hours per Day</guilabel> (Optional) -
-          </para>
-        </listitem>
-
-        <listitem>
-          <para><guilabel>Billing - Default Rate</guilabel> (Optional) -
-          </para>
-        </listitem>
-
-        <listitem>
-          <para><guilabel>Billing - Currency</guilabel> - specifies the billing currency for this employee. It will
-            default to the default currency set in <guilabel>Preferences</guilabel>
-          </para>
-
-          <note>
-            <para>All expense vouchers and credit notes for this employee will be denominated in this currency and
-              &app; will require an Accounts Payable account in this currency.
-            </para>
-          </note>
-        </listitem>
-
-        <listitem>
-          <para><guilabel>Billing - Credit Account</guilabel> (Optional) -
-          </para>
-        </listitem>
-      </itemizedlist>
-
-      <itemizedlist id="mply-tab2">
-        <title>Access Control tab</title>
-
-        <listitem>
-          <para>Access Control List
-          </para>
-        </listitem>
-      </itemizedlist>
-    </sect2>
-
-    <sect2 id="busnss-emplyfind">
-      <title>Find and Edit</title>
-
-      <para>To search for an existing employee, use the &mc.bus.emp.find-emp; menu. You select an employee to
-        <guibutton>View/Edit</guibutton> from the results of the search. This window is also used to
-        look up an employee when entering voucher and processing payments.
-      </para>
-
-      <para>If many employees match the search criteria you provide, the search can be refined by running an
-        additional search within the current results. The current result set is searched when the
-        <guilabel>Refine Current Search</guilabel> radio button is selected. In fact, &app; selects
-        this option for you after you run the initial search.
-      </para>
-
-      <note>
-        <para>If the employee you are searching for does not match the supplied search criteria, change the search
-          criteria, click the <guilabel>New Search</guilabel> radio button and then the
-          <guibutton>Find</guibutton> button. The relevant step is the <guilabel>New
-          Search</guilabel> selection. If the employee is not in the result of the original search,
-          and you only search within this set, the employee cannot be found, regardless of new
-          search criteria.
-        </para>
-      </note>
-
-      <tip>
-        <para>To return a list of all registered active employees, set the search criterion to <guilabel>matches
-          regex</guilabel>, and place a single dot <quote>.</quote> in the text field area. Make
-          sure <guilabel>Search only active data</guilabel> is checked, then click
-          <guibutton>Find</guibutton>. The regular expression <quote>.</quote> means to match
-          anything.
-        </para>
-      </tip>
-    </sect2>
-
-    <sect2 id="busnss-emply-vchrnew">
-      <title>Neue Auslagenerstattung/ Gutschrift</title>
-
-      <para>To register a new expense voucher/ Credit Note, select the &mc.bus.emp.new-vchr; menu item. The
-        <guilabel>New Expense Voucher</guilabel> window will open. You can enter the following data:
-      </para>
-
-      <itemizedlist>
-        <listitem>
-          <para><guilabel>Voucher information - Type</guilabel> (Optional) - select if you are entering a Voucher or
-            a credit note.
-          </para>
-        </listitem>
-
-        <listitem>
-          <para><guilabel>Voucher information - Voucher ID</guilabel> (Optional) - can be any number by which you
-            would like to refer to this voucher. You may leave it blank and a number will be chosen
-            automatically. See <xref linkend="counters-book-options" /> for more info.
-          </para>
-        </listitem>
-
-        <listitem>
-          <para><guilabel>Voucher information - Date opened</guilabel> - the date of the voucher. Click on the
-            button on the right of the date to open a calendar.
-          </para>
-        </listitem>
-
-        <listitem>
-          <para><guilabel>Billing information - Employee</guilabel> (Mandatory) - the employee to which the voucher
-            refers.
-          </para>
-
-          <tip>
-            <para>The field supports auto-completion so if you start typing &app; will try to complete the text
-              automatically using existing employees name. You can also press the button
-              <guibutton>Select...</guibutton> to open the <link linkend="busnss-emplyfind">Find
-              Employee</link> window.
-            </para>
-          </tip>
-        </listitem>
-
-        <listitem>
-          <para><guilabel>Billing information - Billing ID</guilabel> (Optional) - the identification number of the
-            document (f.e. the bill number for a dinner).
-          </para>
-        </listitem>
-
-        <listitem>
-          <para><guilabel>Billing information - Terms</guilabel> (Optional) - the pay back terms agreement for this
-            bill. A list of registered terms is available within the pop up menu.
-          </para>
-        </listitem>
-
-        <listitem>
-          <para><guilabel>Default chargeback project - Customer</guilabel> (Optional) - the Customer to which the
-            voucher refers.
-          </para>
-
-          <tip>
-            <para>The field supports auto-completion so if you start typing &app; will try to complete the text
-              automatically using an existing Customer name. You can also press the button
-              <guibutton>Select...</guibutton> to open the <link linkend="busnss-ar-custfind">Find
-              Customer</link> window.
-            </para>
-          </tip>
-        </listitem>
-
-        <listitem>
-          <para><guilabel>Default chargeback project - Job</guilabel> (Optional) - the Customer Job to which the
-            voucher refers.
-          </para>
-
-          <note>
-            <para>you can type in this field only if there are one or more jobs registered in &app; belonging to the
-              selected Customer.
-            </para>
-          </note>
-
-          <tip>
-            <para>The field supports auto-completion so if you start typing &app; will try to complete the text
-              automatically using an existing Customer name. You can also press the button
-              <guibutton>Select...</guibutton> to open the <link linkend="busnss-ar-custfind">Find
-              Customer</link> window.
-            </para>
-          </tip>
-        </listitem>
-
-        <listitem>
-          <para><guilabel>Notes</guilabel> - records any additional comments about the voucher/credit note.
-          </para>
-        </listitem>
-      </itemizedlist>
-    </sect2>
-
-    <sect2 id="busnss-emply-vchrfind">
-      <title>Find Expense Voucher/Credit Note</title>
-
-      <para>To search for an existing Expense Voucher, use the &mc.bus.emp.find-vchr; menu item. You select an
-        Expense Voucher to <guibutton>View/Edit</guibutton> from the results of the search. This
-        window is also used to look up an expense voucher when entering vouchers and processing
-        payments.
-      </para>
-
-      <para>If many expense vouchers match the search criteria you provide, the search can be refined by running
-        an additional search within the current results. The current result set is searched when the
-        <guilabel>Refine Current Search</guilabel> radio button is selected. In fact, &app; selects
-        this option for you after you run the initial search.
-      </para>
-
-      <note>
-        <para>If the expense voucher you are searching for does not match the supplied search criteria, change the
-          search criteria, click the <guilabel>New Search</guilabel> radio button and then the
-          <guibutton>Find</guibutton> button. The relevant step is the <guilabel>New
-          Search</guilabel> selection. If the expense voucher is not in the result of the original
-          search, and you only search within this set, the voucher cannot be found, regardless of
-          new search criteria.
-        </para>
-      </note>
-
-      <tip>
-        <para>To return a list of all expense vouchers, set the search criterion to <guilabel>matches
-          regex</guilabel>, and place a single dot <quote>.</quote> in the text field area. Make
-          sure <guilabel>Search only active data</guilabel> is checked, then click
-          <guibutton>Find</guibutton>. The regular expression <quote>.</quote> means to match
-          anything.
-        </para>
-      </tip>
-    </sect2>
-
-    <sect2 id="busnss-emply-vchredit">
-      <title>Edit</title>
-
-      <para>From the Edit Expense Voucher window you can enter an itemized list of goods and services the
-        employee bought or performed for the job, in a manner similar to how the account register
-        works. For credit notes you enter an itemized list of goods and services charged back to the
-        employee instead.
+      <para>Auslagenerstattungen, auch Spesenbelege genannt, werden verwendet, um Mitarbeitenden genehmigte
+        Ausgaben, wie z.B. für Reisen, Parken, Essen, etc…, zu erstatten.
         <note>
-          <para>Saved column layout works a bit differently in invoices from the account registers: Layouts are not
-            saved for each invoice; instead a layout can be saved as a default for invoices to
-            override the calculated widths using the &mc.vw.use-lay-emp; and the calculated widths
-            restored as the default with &mc.vw.res-lay-emp;.
+          <para>Um die Umsatzsteuer für die Auslagen in Ihren Konten korrekt zu erfassen, könnten Sie diese als
+            eine <xref linkend="busnss-ap-billnew" /> anlegen und die Gutschrift für Ihre
+            Mitarbeitende als <xref linkend="busnss-ap-payment" />.
           </para>
         </note>
       </para>
+    </abstract>
 
-      <para>There are 10 columns in the Entries area:
+    <sect2 id="busnss-emplynew">
+      <title>Neue Mitarbeitende</title>
+
+      <para>Mit dem Dialog <guilabel>Neuer Mitarbeiter</guilabel>, welchen Sie mit dem Menüeintrag
+        &mc.bus.emp.new-emp; öffnen, erfassen Sie die Stammdaten Ihrer Angestellten.
       </para>
 
-      <itemizedlist>
-        <listitem>
-          <para><guilabel>Date</guilabel> - The date this item was sold.
-          </para>
-        </listitem>
+      <figure pgwide="1">
+        <title>Datenfelder im Dialog auf dem Reiter <guilabel>Mitarbeiter</guilabel></title>
 
-        <listitem>
-          <para><guilabel>Invoiced?</guilabel> - <guilabel>X</guilabel> means the item is attached to this invoice,
-            an empty box means the item is not attached to this invoice. If the box is empty you can
-            attach the item to the invoice by first selecting the item row and then clicking in this
-            box.
-          </para>
-        </listitem>
+        <screenshot>
+          <screeninfo>445x625</screeninfo>
 
-        <listitem>
-          <para><guilabel>Description</guilabel> (optional) - is what the item or service is called.
-          </para>
-        </listitem>
+          <mediaobject>
+            <imageobject>
+              <imagedata fileref="figures/Busnss_Employee_New_1.png"
+                                 srccredit="Christian Wehling" />
+            </imageobject>
+          </mediaobject>
+        </screenshot>
+      </figure>
 
-        <listitem>
-          <para><guilabel>Action</guilabel> (optional) - is a user defined field. You can place Cost Center
-            information here, or use one of the 3 predefined actions, Hours, Material, or Project.
-          </para>
-        </listitem>
+      <glosslist>
+        <glossentry>
+          <glossterm>Identifizierung - Mitarbeiternummer</glossterm>
+          <glossdef>
+            <para>Kann eine beliebige, sollte jedoch eine eindeutige, Nummer sein, die diesem Mitarbeiter zugeordnet
+              ist. Sie können das Feld auch leer lassen und es wird automatisch die nächste freie
+              Nummer ausgewählt. Weitere Informationen finden Sie unter
+              <xref linkend="counters-book-options" />.
+              <warning>
+                <para>&app; hindert Sie nicht dabei, Mitarbeiternummern mehrfach zu vergeben!
+                </para>
+              </warning>
+            </para>
+          </glossdef>
+        </glossentry>
 
-        <listitem>
-          <para><guilabel>Expense Account</guilabel> - selects the expense account to charge for this item.
-          </para>
-        </listitem>
+        <glossentry>
+          <glossterm>Identifizierung - Benutzername</glossterm>
+          <glossdef>
+            <para>(Obligatorisch) - Ein eindeutiger Benutzername zur Identifizierung des Mitarbeitenden.
+            </para>
+          </glossdef>
+        </glossentry>
 
-        <listitem>
-          <para><guilabel>Quantity</guilabel> - tracks how many of the items you bought.
-          </para>
-        </listitem>
+        <glossentry>
+          <glossterm>Identifizierung - Aktiv</glossterm>
+          <glossdef>
+            <para>(Optional) - Unterscheidet zwischen aktiven und inaktiven Mitarbeitenden. Dies ist nützlich, wenn
+              Sie in den Auswahllisten und Berichten nur die mit <guilabel>Aktiv</guilabel>
+              gekennzeichneten Mitarbeitende angezeigt bekommen wollen und die Ehemaligen ausblenden
+              wollen.
+            </para>
+          </glossdef>
+        </glossentry>
 
-        <listitem>
-          <para><guilabel>Unit Price</guilabel> - is the unit price of the item.
-          </para>
-        </listitem>
+        <glossentry>
+          <glossterm>Zahlungsadresse - Name</glossterm>
+          <glossdef>
+            <para>(Obligatorisch) - Der vollständige Name des Mitarbeitenden.
+            </para>
+          </glossdef>
+        </glossentry>
 
-        <listitem>
-          <para><guilabel>Subtotal</guilabel> (uneditable) - computed subtotal for this item (less tax)
-          </para>
-        </listitem>
+        <glossentry>
+          <glossterm>Zahlungsadresse - Adresse</glossterm>
+          <glossdef>
+            <para>(Obligatorisch) - Die Anschrift des Mitarbeitenden.
+            </para>
+          </glossdef>
+        </glossentry>
 
-        <listitem>
-          <para><guilabel>Billable</guilabel> - is this item billable to the chargeback customer/job?
-          </para>
-        </listitem>
+        <glossentry>
+          <glossterm>Zahlungsadresse - Telefon, Fax, E-Mail</glossterm>
+          <glossdef>
+            <para>(Optional)- Weitere Kontaktinformationen für den Mitarbeitenden.
+            </para>
+          </glossdef>
+        </glossentry>
 
-        <listitem>
-          <para><guilabel>Payment</guilabel> - How the employee was reimbursed. You might enter a check or petty
-            cash voucher number here.
-          </para>
-        </listitem>
-      </itemizedlist>
+        <glossentry>
+          <glossterm>Interface - Sprache</glossterm>
+          <glossdef>
+            <para>(Optional)
+            </para>
+          </glossdef>
+        </glossentry>
+      </glosslist>
 
-      <para>When you have finished entering all the items, <guilabel>Post</guilabel> the voucher.
+      <figure pgwide="1">
+        <title>Datenfelder im Dialog auf dem Reiter <guilabel>Abrechnungsdaten</guilabel></title>
+
+        <screenshot>
+          <screeninfo>445x625</screeninfo>
+
+          <mediaobject>
+            <imageobject>
+              <imagedata fileref="figures/Busnss_Employee_New_2.png"
+                                 srccredit="Christian Wehling" />
+            </imageobject>
+          </mediaobject>
+        </screenshot>
+      </figure>
+
+      <para>Hier können sie die Eckdaten des Arbeitsvertrags speichern, um sie später manuell bei der
+        Berechnug des vereinbarten Gehalts zu verwenden.
       </para>
+
+      <glosslist>
+        <glossentry>
+          <glossterm>Abrechnungsdaten - Voreinstellung Stunden pro Tag</glossterm>
+          <glossdef>
+            <para>(Optional) - Die Anzahl der täglichen Arbeitsstunden.
+            </para>
+          </glossdef>
+        </glossentry>
+
+        <glossentry>
+          <glossterm>Abrechnungsdaten - Stundenlohn</glossterm>
+          <glossdef>
+            <para>(Optional) - Der Stundenlohn
+            </para>
+          </glossdef>
+        </glossentry>
+
+        <glossentry>
+          <glossterm>Abrechnungsdaten - Währung</glossterm>
+          <glossdef>
+            <para>Die Währung, in der Abrechnungen für diesen Mitarbeiter ausgestellt werden. Überlicherweise wird
+              die Standardwährung verwendet, die in den &mc.ed.pref; auf dem Reiter
+              <xref linkend="prefs-accounts" /> eingestellt ist.
+              <note>
+                <para>Alle Auslagenerstattungen und Gutschriften werden in der hier eingestellten Währung ausgestellt und
+                  &app; benötigt ein Kreditoren-Konto in dieser Währung.
+                </para>
+              </note>
+            </para>
+          </glossdef>
+        </glossentry>
+
+        <glossentry>
+          <glossterm>Abrechnungsdaten - Habenkonto</glossterm>
+          <glossdef>
+            <para>(Optional)
+            </para>
+          </glossdef>
+        </glossentry>
+      </glosslist>
+
+      <figure pgwide="1">
+        <title>Datenfelder im Dialog auf dem Reiter <guilabel>Zugriffskontrolle</guilabel></title>
+
+        <screenshot>
+          <screeninfo>445x625</screeninfo>
+
+          <mediaobject>
+            <imageobject>
+              <imagedata fileref="figures/Busnss_Employee_New_3.png"
+                                 srccredit="Christian Wehling" />
+            </imageobject>
+          </mediaobject>
+        </screenshot>
+      </figure>
+
+      <glosslist>
+        <glossentry>
+          <glossterm>Zugriffskontrollliste</glossterm>
+          <glossdef>
+            <para>(Optional)
+            </para>
+          </glossdef>
+        </glossentry>
+      </glosslist>
+    </sect2>
+
+    <sect2 id="busnss-emplyfind">
+      <title>Mitarbeitende suchen</title>
+
+      <para>Um den Datensatz eines Mitarbeitenden zu finden, verwenden Sie den Menüeintrag
+        &mc.bus.emp.find-emp;. Aus den Ergebnissen der Suche wählen Sie mit der Schaltfläche
+        <guibutton>Mitarbeiter anzeigen/bearbeiten</guibutton> den passenden Eintrag zur weiteren
+        Verwendung. Dieser Dialog wird auch dazu genutzt, um die
+        <guibutton>Auslagenerstattungen</guibutton> anzuzeigen oder um eine <guibutton>Zahlung zu
+        verarbeiten</guibutton>.
+      </para>
+
+      <para>Eine kurze Einleitung zur Verwendung der <guilabel>Suchen</guilabel>-Funktion wird in
+        <xref linkend="busnss-ar-custfind" /> gegeben. Die vielfältigen Möglichkeiten dieses
+        Dialogs werden unter <xref linkend="tool-find-bsnss" /> ausführlich beschrieben.
+      </para>
+    </sect2>
+
+    <sect2 id="busnss-emply-vchrnew">
+      <title>Neue Auslagenerstattung</title>
+
+      <para>Um Auslagen eines Mitarbeitenden zu erfassen, wählen Sie den Menüpunkt &mc.bus.emp.new-vchr;. Im
+        Fenster <guilabel>Neue Auslagenerstattung</guilabel> werden die Informationen für den
+        <quote>Beleg</quote> erfasst.
+      </para>
+
+      <note>
+        <para>Dieser Abschnitt gilt sowohl für Auslagenerstattungen als auch für Gutschriften. Um die Lesbarkeit
+          des Textes zu verbessern, wird nur auf die Auslagenerstattung Bezug genommen. Sie können
+          ihn aber auch auf Gutschriften anwenden. Nur wenn sich das Verhalten von Gutschriften von
+          dem von Auslagenerstattungen unterscheidet, wird dies explizit erwähnt.
+        </para>
+      </note>
+
+      <tip>
+        <para>Viele Eingabefelder in den Dialogen unterstützten die automatische Textvervollständigung. Das
+          bedeutet, wenn Sie mit der Texteingabe beginnen, versucht &app; den Text automatisch mit
+          einem vorhandenen, passenden Eintrag zu vervollständigen. Gibt es keine Textvorschläge,
+          drücken Sie die Schaltfläche <guibutton>Auswählen…</guibutton>, um den
+          <xref linkend="tool-find-bsnss" /> Dialog zu öffnen. Markieren Sie den gewünschten
+          Eintrag und mit <guibutton>Auswählen</guibutton> wird dieser übernommen.
+        </para>
+      </tip>
+
+      <figure pgwide="1">
+        <title>Eine neue Auslagenerstattung erstellen</title>
+
+        <screenshot>
+          <screeninfo>480x545</screeninfo>
+
+          <mediaobject>
+            <imageobject>
+              <imagedata fileref="figures/Busnss_Voucher_New.png"
+                                 srccredit="Christian Wehling" />
+            </imageobject>
+          </mediaobject>
+        </screenshot>
+      </figure>
+
+      <glosslist>
+        <glossentry>
+          <glossterm>Auslagen-Informationen - Typ</glossterm>
+          <glossdef>
+            <para>Die Art des zu erstellenden Dokuments - entweder eine Auslagenerstattung oder eine Gutschrift.
+            </para>
+          </glossdef>
+        </glossentry>
+
+        <glossentry>
+          <glossterm>Auslagen-Informationen - Nummer Auslagenerstattung</glossterm>
+          <glossdef>
+            <para>Die Identifikationsnummer dieses Auslagenbelegs. Dies ist Ihre interne Nummer für diesen Beleg.
+              Wenn Sie das Feld leer lassen, wird automatisch eine Nummer generiert. Siehe
+              <xref linkend="counters-book-options" /> für weitere Informationen.
+            </para>
+          </glossdef>
+        </glossentry>
+
+        <glossentry>
+          <glossterm>Auslagen-Informationen - Eröffnungsdatum</glossterm>
+          <glossdef>
+            <para>Das Datum, an dem diese Auslagenerstattung erstellt wurde.
+            </para>
+          </glossdef>
+        </glossentry>
+
+        <glossentry>
+          <glossterm>Abrechnungsdaten - Mitarbeiter</glossterm>
+          <glossdef>
+            <para>Der Mitarbeiter, der diese Auslagenerstattung erhalten soll.
+            </para>
+          </glossdef>
+        </glossentry>
+
+        <glossentry>
+          <glossterm>Abrechnungsdaten - Abrechnungs-ID</glossterm>
+          <glossdef>
+            <para>Dies ist die Identifikationsnummer des Dokumentes (z.B. die Rechnungsnummer eines Parkbelegs).
+            </para>
+          </glossdef>
+        </glossentry>
+
+        <glossentry>
+          <glossterm>Abrechnungsdaten - Zahlungsbedingungen</glossterm>
+          <glossdef>
+            <para>Die Vereinbarung über die <xref linkend="busnss-ar-setupterms" /> für diese Rechnung. Eine Liste
+              der registrierten Bedingungen ist im Auswahlfeld verfügbar. Für die Erstattung an
+              Mitarbeitende bietet sich hier die Zahlung mit der nächsten Gehaltsabrechnung an.
+            </para>
+          </glossdef>
+        </glossentry>
+
+        <glossentry>
+          <glossterm>Kundenauftrag zur Weiterverrechnung - Kunde</glossterm>
+          <glossdef>
+            <para>Der Kunde, dem die Auslagenerstattung zugeordnet werden kann.
+            </para>
+          </glossdef>
+        </glossentry>
+
+        <glossentry>
+          <glossterm>Kundenauftrag zur Weiterverrechnung - Auftrag</glossterm>
+          <glossdef>
+            <para>Der Kundenauftrag, zu dem die Auslagenerstattung zugeordnet werden kann.
+              <note>
+                <para>Sie können dieses Feld nur ausfüllen, wenn ein oder mehrere Aufträge in &app; registriert sind,
+                  die zu dem ausgewählten Kunden zugeordnet sind.
+                </para>
+              </note>
+            </para>
+          </glossdef>
+        </glossentry>
+
+        <glossentry>
+          <glossterm>Bemerkungen</glossterm>
+          <glossdef>
+            <para>Hier können Sie Notizen für eigene Zwecke eintragen. Diese Bemerkungen werden nicht auf der
+              Auslagenerstattung ausgegeben.
+            </para>
+          </glossdef>
+        </glossentry>
+      </glosslist>
+
+      <para>Wenn Sie auf die Schaltfläche <guibutton>OK</guibutton> klicken, wird in einem neuen Register die
+        Auslagenerstattung zur Bearbeitung der Rechnungspositionen geöffnet.
+      </para>
+    </sect2>
+
+    <sect2 id="busnss-emply-vchredit">
+      <title>Auslagenerstattung bearbeiten</title>
+
+      <para>Im Fenster <guilabel>Auslagenerstattung bearbeiten</guilabel> können Sie eine Liste der
+        Aufwendungen, ähnlich wie im Kontenregister, eingeben, die der Mitarbeiter für den Auftrag
+        hatte. Bei Gutschriften geben Sie stattdessen die Positionen ein, die dem Mitarbeiter
+        berechnet wurden.
+      </para>
+
+      <note>
+        <para>Im Nachfolgenden wird anstelle von Waren bzw. Dienstleistungen der allgemeine Begriff
+          <quote>Posten</quote> für die Grundmenge und <quote>Position</quote> als Gesamtmenge,
+          also mit der Anzahl multiplizierten Posten, verwendet.
+        </para>
+      </note>
+
+      <tip>
+        <para>Das gespeicherte Spaltenlayout funktioniert in Auslagenerstattungen etwas anders als in den
+          Kontenregistern: Layouts werden nicht für jeden Auslagenbeleg gespeichert. Stattdessen
+          speichern Sie mit &mc.vw.use-lay-emp; ein Layout, welches als Voreinstellung für alle
+          Auslagenerstattungen verwendet wird. Mit &mc.vw.res-lay-emp; wird die Standardeinstellung
+          mit den ursprünglichen Spaltenbreiten wiederhergestellt.
+        </para>
+      </tip>
+
+      <figure pgwide="1">
+        <title>Die Auslagenerstattung bearbeiten</title>
+
+        <screenshot>
+          <screeninfo>1200x400</screeninfo>
+
+          <mediaobject>
+            <imageobject role="html">
+              <imagedata fileref="figures/Busnss_Voucher_Edit.png" srccredit="Christian Wehling" width="&img-w;" />
+            </imageobject>
+
+            <imageobject role="fo">
+              <imagedata fileref="figures/Busnss_Voucher_Edit.png" srccredit="Christian Wehling" />
+            </imageobject>
+          </mediaobject>
+        </screenshot>
+      </figure>
+
+      <para>Der obere Bereich der Anzeige beinhaltet die Informationen für den Beleg, die Sie mit dem
+        Menüpunkt &mc.ed.edit; nachträglich ändern können. Es öffnet sich das Fenster
+        <xref linkend="busnss-emply-vchrnew" /> in dem Sie Angaben entsprechend modifizieren
+        können.
+      </para>
+
+      <para>Im Bereich <guilabel>Rechnungseinträge</guilabel> gibt es 10 Spalten in denen Sie die einzelnen
+        Positonen für diese Auslagenerstattung erfassen können:
+      </para>
+
+      <glosslist>
+        <glossentry>
+          <glossterm>Datum</glossterm>
+          <glossdef>
+            <para>Das Datum der Auslage.
+            </para>
+          </glossdef>
+        </glossentry>
+
+        <glossentry>
+          <glossterm>Erfasst?</glossterm>
+          <glossdef>
+            <para>Ist der Haken gesetzt — das Feld angeklickt — wird die Position mit dieser Rechnung abgerechnt,
+              ein leeres Kästchen bedeutet, dass die Position in dieser Rechnung nicht enthalten
+              und somit noch nicht in der Summe berücksichtigt ist. Wenn das Feld leer ist, können
+              Sie die Position abrechnen, indem Sie zuerst die Rechnungszeile auswählen und dann in
+              dieses Feld klicken.
+            </para>
+          </glossdef>
+        </glossentry>
+
+        <glossentry>
+          <glossterm>Beschreibung</glossterm>
+          <glossdef>
+            <para>(optional) — Die Bezeichnung der Ware oder Dienstleistung. Geben Sie eine Beschreibung an, um
+              Rückfragen des Mitarbeitenden zu vermeiden.
+            </para>
+          </glossdef>
+        </glossentry>
+
+        <glossentry>
+          <glossterm>Aktion</glossterm>
+          <glossdef>
+            <para>(optional) — Ist ein benutzerdefiniertes Feld. Sie können hier z.B. eine Kostenstelle angeben,
+              eine der 3 vordefinierten Aktionen <quote>Stunden</quote>, <quote>Material</quote>
+              oder <quote>Auftrag</quote> auswählen oder eine für Ihre Anwendung spezifische
+              Angabe eintragen.
+            </para>
+          </glossdef>
+        </glossentry>
+
+        <glossentry>
+          <glossterm>Aufwandskonto</glossterm>
+          <glossdef>
+            <para>Legt fest, welches Aufwandskonto für diese Position belastet werden soll.
+            </para>
+          </glossdef>
+        </glossentry>
+
+        <glossentry>
+          <glossterm>Anzahl</glossterm>
+          <glossdef>
+            <para>Gibt an, welche Menge der Mitarbeitende von diesem Posten gekauft hat.
+            </para>
+          </glossdef>
+        </glossentry>
+
+        <glossentry>
+          <glossterm>Stückpreis</glossterm>
+          <glossdef>
+            <para>Der Preis pro Einheit des Postens.
+            </para>
+          </glossdef>
+        </glossentry>
+
+        <glossentry>
+          <glossterm>Zwischensumme</glossterm>
+          <glossdef>
+            <para>(nicht bearbeitbar) — Ist die berechnete Zwischensumme für diese Position (abzüglich der
+              Steuer).
+            </para>
+          </glossdef>
+        </glossentry>
+
+        <glossentry>
+          <glossterm>Verrechenbar?</glossterm>
+          <glossdef>
+            <para>Kann diese Position dem Kunden oder einem Auftrag weiterverrechnet werden?
+            </para>
+          </glossdef>
+        </glossentry>
+
+        <glossentry>
+          <glossterm>Zahlung</glossterm>
+          <glossdef>
+            <para>Wie der Mitarbeitende die Kosten erstattet bekommt, zulässige Eingaben sind hier
+              <quote>Bargeld</quote> und <quote>Belastung</quote>.
+            </para>
+          </glossdef>
+        </glossentry>
+      </glosslist>
+
+      <tip>
+        <para>Mit dem Menüpunkt &mc.ed.dup; können Sie die ausgewählte Auslagenerstattung duplizieren. Es
+          öffnet sich das Fenster <xref linkend="busnss-emply-vchrnew" />, in welchem Sie die
+          vorhandenen Belegdaten anpassen können. Eine neue Auslagenerstattung wird als Duplikat
+          der vorherigen inklusive aller erfassten Positionen angelegt.
+        </para>
+      </tip>
+
+      <para>Nachdem Sie alle Positionen eingetragen haben, <guilabel>Buchen</guilabel> Sie den Beleg und
+        tätigen Sie die <guilabel>Zahlung</guilabel>.
+      </para>
+
+      <tip>
+        <para>Haben Sie die Notwendigkeit, eine bereits gebuchte Auslagenerstattung nachträglich zu bearbeiten,
+          können Sie mit &mc.ed.unpost; die Buchung löschen und somit zur Bearbeitung wieder
+          freigeben.
+        </para>
+      </tip>
+    </sect2>
+
+    <sect2 id="busnss-emply-vchrfind">
+      <title>Auslagenerstattung suchen</title>
+
+      <para>Suchen Sie nach einer vorhandenen Auslagenerstattung, verwenden Sie den Menüpunkt
+        &mc.bus.emp.find-vchr;. Aus den Ergebnissen der Suche können Sie einen Erstattungsbeleg zur
+        weiteren Verwendung auswählen.
+      </para>
+
+      <note>
+        <para>&app; bietet Ihnen unterschiedliche Möglichkeiten auf eine bestehende Auslagenerstattung
+          zuzugreifen, welche unter <xref linkend="busnss-ar-invoicefind" /> beschrieben sind.
+        </para>
+      </note>
     </sect2>
   </sect1>
 </chapter>

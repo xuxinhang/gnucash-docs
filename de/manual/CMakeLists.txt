@@ -44,6 +44,9 @@ set (figures
         figures/Busnss_Customer_New_1.png
         figures/Busnss_Customer_New_2.png
         figures/Busnss_Customer_New_3.png
+        figures/Busnss_Employee_New_1.png
+        figures/Busnss_Employee_New_2.png
+        figures/Busnss_Employee_New_3.png
         figures/Busnss_Invoice_Edit.png
         figures/Busnss_Invoice_New.png
         figures/Busnss_Invoice_Payment.png
@@ -59,6 +62,8 @@ set (figures
         figures/Busnss_Vendor_Job.png
         figures/Busnss_Vendor_New_1.png
         figures/Busnss_Vendor_New_2.png
+        figures/Busnss_Voucher_Edit.png
+        figures/Busnss_Voucher_New.png
         figures/CSV_Import_transactions_Preview.png
         figures/CSV_Transaction_Import_Assistant.png
         figures/Choose_Export_Settings.png
