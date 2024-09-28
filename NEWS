@@ -1,5 +1,7 @@
 Version History
 ---------------
+ 5.9   - 29 September 2024
+       o Update github CI actions versions.
  5.8   - 7 July 2024
        o Changed name of gnucash-fallback.css in Transactions chapter.
  5.7   - 30 June 2024

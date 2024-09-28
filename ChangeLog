@@ -1,3 +1,31 @@
+2024-09-26 Christian Wehling 
+
+	* L10n:de: help_ch_Tools_Assistant: The "Loan Repayment Calculator" (HEAD -> stable, origin/stable, origin/HEAD)
+
+2024-09-23 Frank H. Ellenberger 
+
+	* Merge PR #341 into stable
+
+2024-09-22 John Ralls 
+
+	* Update github CI actions versions.
+
+2024-07-06 John Ralls 
+
+	* ChangeLog and NEWS for 5.8.
+
+2024-04-28 Christian Wehling 
+
+	* de:manual:ch_Business: german translation of section 'Employee'
+
+2024-08-15 John Ralls 
+
+	* Remove extraneous and incorrect DESTDIR variable.
+
+2024-08-14 John Ralls 
+
+	* Bug 799394 - Error creating directory "/usr/share/doc/HTML"
+
 2024-07-06 John Ralls 
 
 	* Release Documentation for GnuCash 5.8 (HEAD -> stable, origin/stable, origin/HEAD)
